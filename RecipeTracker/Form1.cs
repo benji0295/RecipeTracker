@@ -12,6 +12,10 @@ namespace RecipeTracker
 {
     public partial class Form1 : Form
     {
+
+        /// <summary>
+        /// Main Form Code
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +29,8 @@ namespace RecipeTracker
             GroceryPanel.Visible = false;
             FridgePanel.Visible = false;
             AccountPanel.Visible = false;
+            AddToMealPlanPanel.Visible = false;
+            MealPlanPanel.Visible = false;
             Recipe.InitializeRecipes();
             dataGridViewRecipes.DataSource = Recipe.AllRecipes;
 
@@ -53,6 +59,9 @@ namespace RecipeTracker
                 }
             }
         }
+        /// <summary>
+        /// Menu Panel Code
+        /// </summary>
         private void MainButton_Click(object sender, EventArgs e)
         {
             MainPanel.Visible = true;
@@ -66,6 +75,13 @@ namespace RecipeTracker
             FridgePanel.Visible = false;
             AccountPanel.Visible = false;
             RecipeInfoPanel.Visible = false;
+            AddToMealPlanPanel.Visible = false;
+            MealPlanPanel.Visible = false;
+        }
+        private void MealPlanButton_Click(object sender, EventArgs e)
+        {
+            MealPlanPanel.Visible = true;
+            MealPlanPanel.BringToFront();
         }
 
         private void GroceryButton_Click(object sender, EventArgs e)
@@ -86,6 +102,11 @@ namespace RecipeTracker
             AccountPanel.BringToFront();
         }
 
+        /// <summary>
+        /// My Recipes Code
+        /// </summary>
+
+
         private void BackToRecipeButton_Click(object sender, EventArgs e)
         {
             RecipeInfoPanel.Visible = false;
@@ -98,10 +119,53 @@ namespace RecipeTracker
 
         private void DeleteRecipeButton_Click(object sender, EventArgs e)
         {
+            if (dataGridViewRecipes.SelectedRows.Count > 0)
+            {
+                Recipe selectedRecipe = dataGridViewRecipes.SelectedRows[0].DataBoundItem as Recipe;
+
+                if (selectedRecipe != null)
+                {
+                    DialogResult result = MessageBox.Show($"Are you sure you want to delete your {selectedRecipe.Name} recipe?",
+                        "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        Recipe.AllRecipes.Remove(selectedRecipe);
+                        dataGridViewRecipes.DataSource = null;
+                        dataGridViewRecipes.DataSource = Recipe.AllRecipes;
+                    }
+                }
+            }
+        }
+
+        private void AddToMealPlanButton_Click(object sender, EventArgs e)
+        {
+            AddToMealPlanPanel.Visible = true;
+            AddToMealPlanPanel.BringToFront();
+        }
+        private void CancelAddRecipeButton_Click(object sender, EventArgs e)
+        {
+            AddToMealPlanPanel.Visible = false;
+        }
+
+        /// <summary>
+        /// Ingredients Panel Code
+        /// </summary>
+
+        private void AddIngredientsButton_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void AddIngredientsButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Fridge Panel Code
+        /// </summary>
+
+        private void AddToFridgeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteFromFridgeButton_Click(object sender, EventArgs e)
         {
 
         }

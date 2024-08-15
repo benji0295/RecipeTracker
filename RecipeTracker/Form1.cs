@@ -31,33 +31,12 @@ namespace RecipeTracker
             AccountPanel.Visible = false;
             AddToMealPlanPanel.Visible = false;
             MealPlanPanel.Visible = false;
+            AddRecipePanel.Visible = false;
             Recipe.InitializeRecipes();
             dataGridViewRecipes.DataSource = Recipe.AllRecipes;
 
-            dataGridViewRecipes.SelectionChanged += dataGridViewRecipes_SelectionChanged;
+            dataGridViewRecipes.CellMouseDoubleClick += dataGridViewRecipes_CellMouseDoubleClick;
 
-        }
-        private void dataGridViewRecipes_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dataGridViewRecipes.SelectedRows.Count > 0)
-            {
-                Recipe selectedRecipe = dataGridViewRecipes.SelectedRows[0].DataBoundItem as Recipe;
-
-                if (selectedRecipe != null)
-                {
-                    RecipeNameText.Text = selectedRecipe.Name;
-                    PrepTimeTextBox.Text = $"{selectedRecipe.PrepTime.ToString()} minutes";
-                    CookTimeTextBox.Text = $"{selectedRecipe.CookTime.ToString()} minutes";
-                    TotalTimeTextBox.Text = $"{selectedRecipe.TotalTime.ToString()} minutes";
-                    ServingSizeTextBox.Text = $"{selectedRecipe.Servings.ToString()} servings";
-                    IngredientsTextBox.Text = string.Join("\r\n", selectedRecipe.Ingredients);
-                    InstructionsTextBox.Text = string.Join("\r\n", selectedRecipe.Instructions);
-                    SourceTextBox.Text = selectedRecipe.SourceURL;
-
-                    RecipeInfoPanel.BringToFront();
-                    RecipeInfoPanel.Visible = true;
-                }
-            }
         }
         /// <summary>
         /// Menu Panel Code
@@ -77,6 +56,7 @@ namespace RecipeTracker
             RecipeInfoPanel.Visible = false;
             AddToMealPlanPanel.Visible = false;
             MealPlanPanel.Visible = false;
+            AddRecipePanel.Visible = false;
         }
         private void MealPlanButton_Click(object sender, EventArgs e)
         {
@@ -106,6 +86,28 @@ namespace RecipeTracker
         /// My Recipes Code
         /// </summary>
 
+        private void dataGridViewRecipes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                Recipe selectedRecipe = dataGridViewRecipes.Rows[e.RowIndex].DataBoundItem as Recipe;
+
+                if (selectedRecipe != null)
+                {
+                    RecipeNameText.Text = selectedRecipe.Name;
+                    PrepTimeTextBox.Text = $"{selectedRecipe.PrepTime.ToString()} minutes";
+                    CookTimeTextBox.Text = $"{selectedRecipe.CookTime.ToString()} minutes";
+                    TotalTimeTextBox.Text = $"{selectedRecipe.TotalTime.ToString()} minutes";
+                    ServingSizeTextBox.Text = $"{selectedRecipe.Servings.ToString()} servings";
+                    IngredientsTextBox.Text = string.Join("\r\n", selectedRecipe.Ingredients);
+                    InstructionsTextBox.Text = string.Join("\r\n", selectedRecipe.Instructions);
+                    SourceTextBox.Text = selectedRecipe.SourceURL;
+
+                    RecipeInfoPanel.BringToFront();
+                    RecipeInfoPanel.Visible = true;
+                }
+            }
+        }
 
         private void BackToRecipeButton_Click(object sender, EventArgs e)
         {
@@ -114,7 +116,8 @@ namespace RecipeTracker
 
         private void AddRecipeButton_Click(object sender, EventArgs e)
         {
-
+            AddRecipePanel.Visible = true;
+            AddRecipePanel.BringToFront();
         }
 
         private void DeleteRecipeButton_Click(object sender, EventArgs e)
@@ -132,6 +135,9 @@ namespace RecipeTracker
                         Recipe.AllRecipes.Remove(selectedRecipe);
                         dataGridViewRecipes.DataSource = null;
                         dataGridViewRecipes.DataSource = Recipe.AllRecipes;
+
+                        RecipeInfoPanel.Visible = false;
+                        RecipePanel.Visible = true;
                     }
                 }
             }
@@ -168,6 +174,11 @@ namespace RecipeTracker
         private void DeleteFromFridgeButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CancelAddRecipePanelButton_Click(object sender, EventArgs e)
+        {
+            AddRecipePanel.Visible = false;
         }
     }
 }

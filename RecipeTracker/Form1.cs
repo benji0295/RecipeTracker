@@ -21,6 +21,7 @@ namespace RecipeTracker
         {
             MainPanel.Visible = true;
             RecipePanel.Visible = false;
+            RecipeInfoPanel.Visible = false;
             GroceryPanel.Visible = false;
             FridgePanel.Visible = false;
             AccountPanel.Visible = false;
@@ -43,6 +44,8 @@ namespace RecipeTracker
                     CookTimeTextBox.Text = $"{selectedRecipe.CookTime.ToString()} minutes";
                     TotalTimeTextBox.Text = $"{selectedRecipe.TotalTime.ToString()} minutes";
                     ServingSizeTextBox.Text = $"{selectedRecipe.Servings.ToString()} servings";
+                    IngredientsTextBox.Text = string.Join("\r\n", selectedRecipe.Ingredients);
+                    InstructionsTextBox.Text = string.Join("\r\n", selectedRecipe.Instructions);
                     SourceTextBox.Text = selectedRecipe.SourceURL;
 
                     RecipeInfoPanel.BringToFront();
@@ -86,6 +89,21 @@ namespace RecipeTracker
         private void BackToRecipeButton_Click(object sender, EventArgs e)
         {
             RecipeInfoPanel.Visible = false;
+        }
+
+        private void AddRecipeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteRecipeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddIngredientsButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -43,12 +43,12 @@
             this.CookTimeTextBox = new System.Windows.Forms.TextBox();
             this.PrepTimeTextBox = new System.Windows.Forms.TextBox();
             this.ServingSizeTextBox = new System.Windows.Forms.TextBox();
-            this.StepsTextBox = new System.Windows.Forms.TextBox();
+            this.InstructionsTextBox = new System.Windows.Forms.TextBox();
             this.IngredientsTextBox = new System.Windows.Forms.TextBox();
             this.RecipeNameText = new System.Windows.Forms.TextBox();
             this.BackToRecipeButton = new System.Windows.Forms.Button();
             this.SourceLabel = new System.Windows.Forms.Label();
-            this.StepsLabel = new System.Windows.Forms.Label();
+            this.InstructionsLabel = new System.Windows.Forms.Label();
             this.IngredientsLabel = new System.Windows.Forms.Label();
             this.TotalTimeLabel = new System.Windows.Forms.Label();
             this.ServingSizeLabel = new System.Windows.Forms.Label();
@@ -62,6 +62,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.AccountPanel = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.AddRecipeButton = new System.Windows.Forms.Button();
+            this.DeleteRecipeButton = new System.Windows.Forms.Button();
+            this.AddIngredientsButton = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.RecipePanel.SuspendLayout();
@@ -154,35 +157,37 @@
             // 
             // RecipePanel
             // 
-            this.RecipePanel.Controls.Add(this.RecipeInfoPanel);
+            this.RecipePanel.Controls.Add(this.DeleteRecipeButton);
+            this.RecipePanel.Controls.Add(this.AddRecipeButton);
             this.RecipePanel.Controls.Add(this.dataGridViewRecipes);
             this.RecipePanel.Controls.Add(this.label2);
-            this.RecipePanel.Location = new System.Drawing.Point(321, 0);
+            this.RecipePanel.Location = new System.Drawing.Point(321, 3);
             this.RecipePanel.Name = "RecipePanel";
-            this.RecipePanel.Size = new System.Drawing.Size(1551, 1323);
+            this.RecipePanel.Size = new System.Drawing.Size(1551, 1320);
             this.RecipePanel.TabIndex = 3;
             // 
             // RecipeInfoPanel
             // 
+            this.RecipeInfoPanel.Controls.Add(this.AddIngredientsButton);
             this.RecipeInfoPanel.Controls.Add(this.SourceTextBox);
             this.RecipeInfoPanel.Controls.Add(this.TotalTimeTextBox);
             this.RecipeInfoPanel.Controls.Add(this.CookTimeTextBox);
             this.RecipeInfoPanel.Controls.Add(this.PrepTimeTextBox);
             this.RecipeInfoPanel.Controls.Add(this.ServingSizeTextBox);
-            this.RecipeInfoPanel.Controls.Add(this.StepsTextBox);
+            this.RecipeInfoPanel.Controls.Add(this.InstructionsTextBox);
             this.RecipeInfoPanel.Controls.Add(this.IngredientsTextBox);
             this.RecipeInfoPanel.Controls.Add(this.RecipeNameText);
             this.RecipeInfoPanel.Controls.Add(this.BackToRecipeButton);
             this.RecipeInfoPanel.Controls.Add(this.SourceLabel);
-            this.RecipeInfoPanel.Controls.Add(this.StepsLabel);
+            this.RecipeInfoPanel.Controls.Add(this.InstructionsLabel);
             this.RecipeInfoPanel.Controls.Add(this.IngredientsLabel);
             this.RecipeInfoPanel.Controls.Add(this.TotalTimeLabel);
             this.RecipeInfoPanel.Controls.Add(this.ServingSizeLabel);
             this.RecipeInfoPanel.Controls.Add(this.CookTimeLabel);
             this.RecipeInfoPanel.Controls.Add(this.PrepTimeLabel);
-            this.RecipeInfoPanel.Location = new System.Drawing.Point(4, 3);
+            this.RecipeInfoPanel.Location = new System.Drawing.Point(321, 0);
             this.RecipeInfoPanel.Name = "RecipeInfoPanel";
-            this.RecipeInfoPanel.Size = new System.Drawing.Size(1546, 1314);
+            this.RecipeInfoPanel.Size = new System.Drawing.Size(1548, 1323);
             this.RecipeInfoPanel.TabIndex = 2;
             // 
             // SourceTextBox
@@ -231,15 +236,15 @@
             this.ServingSizeTextBox.Size = new System.Drawing.Size(129, 24);
             this.ServingSizeTextBox.TabIndex = 12;
             // 
-            // StepsTextBox
+            // InstructionsTextBox
             // 
-            this.StepsTextBox.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.StepsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StepsTextBox.Location = new System.Drawing.Point(25, 693);
-            this.StepsTextBox.Multiline = true;
-            this.StepsTextBox.Name = "StepsTextBox";
-            this.StepsTextBox.Size = new System.Drawing.Size(1493, 542);
-            this.StepsTextBox.TabIndex = 11;
+            this.InstructionsTextBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.InstructionsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.InstructionsTextBox.Location = new System.Drawing.Point(25, 693);
+            this.InstructionsTextBox.Multiline = true;
+            this.InstructionsTextBox.Name = "InstructionsTextBox";
+            this.InstructionsTextBox.Size = new System.Drawing.Size(1493, 542);
+            this.InstructionsTextBox.TabIndex = 11;
             // 
             // IngredientsTextBox
             // 
@@ -266,7 +271,7 @@
             // 
             // BackToRecipeButton
             // 
-            this.BackToRecipeButton.Location = new System.Drawing.Point(1360, 1241);
+            this.BackToRecipeButton.Location = new System.Drawing.Point(1342, 1241);
             this.BackToRecipeButton.Name = "BackToRecipeButton";
             this.BackToRecipeButton.Size = new System.Drawing.Size(176, 67);
             this.BackToRecipeButton.TabIndex = 8;
@@ -283,23 +288,23 @@
             this.SourceLabel.TabIndex = 7;
             this.SourceLabel.Text = "Source";
             // 
-            // StepsLabel
+            // InstructionsLabel
             // 
-            this.StepsLabel.AutoSize = true;
-            this.StepsLabel.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StepsLabel.Location = new System.Drawing.Point(705, 652);
-            this.StepsLabel.Name = "StepsLabel";
-            this.StepsLabel.Size = new System.Drawing.Size(102, 38);
-            this.StepsLabel.TabIndex = 6;
-            this.StepsLabel.Text = "Steps";
+            this.InstructionsLabel.AutoSize = true;
+            this.InstructionsLabel.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructionsLabel.Location = new System.Drawing.Point(705, 652);
+            this.InstructionsLabel.Name = "InstructionsLabel";
+            this.InstructionsLabel.Size = new System.Drawing.Size(198, 38);
+            this.InstructionsLabel.TabIndex = 6;
+            this.InstructionsLabel.Text = "Instructions";
             // 
             // IngredientsLabel
             // 
             this.IngredientsLabel.AutoSize = true;
-            this.IngredientsLabel.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IngredientsLabel.Location = new System.Drawing.Point(676, 248);
+            this.IngredientsLabel.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold);
+            this.IngredientsLabel.Location = new System.Drawing.Point(662, 243);
             this.IngredientsLabel.Name = "IngredientsLabel";
-            this.IngredientsLabel.Size = new System.Drawing.Size(165, 33);
+            this.IngredientsLabel.Size = new System.Drawing.Size(186, 38);
             this.IngredientsLabel.TabIndex = 5;
             this.IngredientsLabel.Text = "Ingredients";
             // 
@@ -346,22 +351,23 @@
             this.dataGridViewRecipes.AllowUserToResizeColumns = false;
             this.dataGridViewRecipes.AllowUserToResizeRows = false;
             this.dataGridViewRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRecipes.Location = new System.Drawing.Point(4, 71);
+            this.dataGridViewRecipes.Location = new System.Drawing.Point(3, 119);
             this.dataGridViewRecipes.Name = "dataGridViewRecipes";
             this.dataGridViewRecipes.ReadOnly = true;
             this.dataGridViewRecipes.RowHeadersVisible = false;
             this.dataGridViewRecipes.RowHeadersWidth = 82;
             this.dataGridViewRecipes.RowTemplate.Height = 33;
             this.dataGridViewRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRecipes.Size = new System.Drawing.Size(1547, 1249);
+            this.dataGridViewRecipes.Size = new System.Drawing.Size(1547, 1091);
             this.dataGridViewRecipes.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(720, 18);
+            this.label2.Font = new System.Drawing.Font("Arial Black", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(581, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 25);
+            this.label2.Size = new System.Drawing.Size(404, 83);
             this.label2.TabIndex = 0;
             this.label2.Text = "My Recipes";
             // 
@@ -416,12 +422,43 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "My Account";
             // 
+            // AddRecipeButton
+            // 
+            this.AddRecipeButton.Location = new System.Drawing.Point(502, 1228);
+            this.AddRecipeButton.Name = "AddRecipeButton";
+            this.AddRecipeButton.Size = new System.Drawing.Size(225, 67);
+            this.AddRecipeButton.TabIndex = 2;
+            this.AddRecipeButton.Text = "Add Recipe";
+            this.AddRecipeButton.UseVisualStyleBackColor = true;
+            this.AddRecipeButton.Click += new System.EventHandler(this.AddRecipeButton_Click);
+            // 
+            // DeleteRecipeButton
+            // 
+            this.DeleteRecipeButton.Location = new System.Drawing.Point(875, 1228);
+            this.DeleteRecipeButton.Name = "DeleteRecipeButton";
+            this.DeleteRecipeButton.Size = new System.Drawing.Size(225, 67);
+            this.DeleteRecipeButton.TabIndex = 3;
+            this.DeleteRecipeButton.Text = "Delete Recipe";
+            this.DeleteRecipeButton.UseVisualStyleBackColor = true;
+            this.DeleteRecipeButton.Click += new System.EventHandler(this.DeleteRecipeButton_Click);
+            // 
+            // AddIngredientsButton
+            // 
+            this.AddIngredientsButton.Location = new System.Drawing.Point(25, 1242);
+            this.AddIngredientsButton.Name = "AddIngredientsButton";
+            this.AddIngredientsButton.Size = new System.Drawing.Size(176, 66);
+            this.AddIngredientsButton.TabIndex = 17;
+            this.AddIngredientsButton.Text = "Add Ingredients To Grocery List";
+            this.AddIngredientsButton.UseVisualStyleBackColor = true;
+            this.AddIngredientsButton.Click += new System.EventHandler(this.AddIngredientsButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
+            this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.RecipePanel);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.menuPanel);
@@ -475,7 +512,7 @@
         private System.Windows.Forms.Label TotalTimeLabel;
         private System.Windows.Forms.Button BackToRecipeButton;
         private System.Windows.Forms.Label SourceLabel;
-        private System.Windows.Forms.Label StepsLabel;
+        private System.Windows.Forms.Label InstructionsLabel;
         private System.Windows.Forms.Label IngredientsLabel;
         private System.Windows.Forms.TextBox RecipeNameText;
         private System.Windows.Forms.TextBox SourceTextBox;
@@ -483,8 +520,11 @@
         private System.Windows.Forms.TextBox CookTimeTextBox;
         private System.Windows.Forms.TextBox PrepTimeTextBox;
         private System.Windows.Forms.TextBox ServingSizeTextBox;
-        private System.Windows.Forms.TextBox StepsTextBox;
+        private System.Windows.Forms.TextBox InstructionsTextBox;
         private System.Windows.Forms.TextBox IngredientsTextBox;
+        private System.Windows.Forms.Button DeleteRecipeButton;
+        private System.Windows.Forms.Button AddRecipeButton;
+        private System.Windows.Forms.Button AddIngredientsButton;
     }
 }
 

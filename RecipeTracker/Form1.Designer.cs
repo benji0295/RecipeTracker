@@ -57,7 +57,7 @@
             this.thursdayDinnerCheck = new System.Windows.Forms.CheckBox();
             this.thursdayLunchCheck = new System.Windows.Forms.CheckBox();
             this.thursdayBreakfastCheck = new System.Windows.Forms.CheckBox();
-            this.TuesdayDinnerCheck = new System.Windows.Forms.CheckBox();
+            this.tuesdayDinnerCheck = new System.Windows.Forms.CheckBox();
             this.tuesdayLunchCheck = new System.Windows.Forms.CheckBox();
             this.tuesdayBreakfastCheck = new System.Windows.Forms.CheckBox();
             this.mondayDinnerCheck = new System.Windows.Forms.CheckBox();
@@ -69,20 +69,20 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.CancelAddRecipeButton = new System.Windows.Forms.Button();
-            this.RecipeAddButton = new System.Windows.Forms.Button();
+            this.RecipeAddToMealPlanButton = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.RecipePanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.DeleteRecipeButton = new System.Windows.Forms.Button();
             this.AddRecipeButton = new System.Windows.Forms.Button();
             this.dataGridViewRecipes = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.RecipeInfoPanel = new System.Windows.Forms.Panel();
+            this.TotalTimeTextBox = new System.Windows.Forms.TextBox();
+            this.ServingSizeTextBox = new System.Windows.Forms.TextBox();
             this.InstructionsLabel = new System.Windows.Forms.Label();
             this.IngredientsLabel = new System.Windows.Forms.Label();
-            this.ServingSizeTextBox = new System.Windows.Forms.TextBox();
             this.PrepTimeTextBox = new System.Windows.Forms.TextBox();
             this.CookTimeTextBox = new System.Windows.Forms.TextBox();
-            this.TotalTimeTextBox = new System.Windows.Forms.TextBox();
             this.AddToMealPlanButton = new System.Windows.Forms.Button();
             this.AddIngredientsButton = new System.Windows.Forms.Button();
             this.SourceTextBox = new System.Windows.Forms.TextBox();
@@ -108,6 +108,28 @@
             this.AccountPanel = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.MealPlanPanel = new System.Windows.Forms.Panel();
+            this.ClearMealPlanButton = new System.Windows.Forms.Button();
+            this.thursdayBreakfastText = new System.Windows.Forms.TextBox();
+            this.thursdayLunchText = new System.Windows.Forms.TextBox();
+            this.thursdayDinnerText = new System.Windows.Forms.TextBox();
+            this.fridayBreakfastText = new System.Windows.Forms.TextBox();
+            this.fridayLunchText = new System.Windows.Forms.TextBox();
+            this.fridayDinnerText = new System.Windows.Forms.TextBox();
+            this.saturdayBreakfastText = new System.Windows.Forms.TextBox();
+            this.saturdayLunchText = new System.Windows.Forms.TextBox();
+            this.saturdayDinnerText = new System.Windows.Forms.TextBox();
+            this.wednesdayDinnerText = new System.Windows.Forms.TextBox();
+            this.wednesdayLunchText = new System.Windows.Forms.TextBox();
+            this.wednesdayBreakfastText = new System.Windows.Forms.TextBox();
+            this.tuesdayDinnerText = new System.Windows.Forms.TextBox();
+            this.tuesdayLunchText = new System.Windows.Forms.TextBox();
+            this.tuesdayBreakfastText = new System.Windows.Forms.TextBox();
+            this.mondayDinnerText = new System.Windows.Forms.TextBox();
+            this.mondayLunchText = new System.Windows.Forms.TextBox();
+            this.mondayBreakfastText = new System.Windows.Forms.TextBox();
+            this.sundayDinnerText = new System.Windows.Forms.TextBox();
+            this.sundayLunchText = new System.Windows.Forms.TextBox();
+            this.sundayBreakfastText = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -138,27 +160,27 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.AddRecipePanel = new System.Windows.Forms.Panel();
-            this.AddRecipePanelButton = new System.Windows.Forms.Button();
-            this.CancelAddRecipePanelButton = new System.Windows.Forms.Button();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.NewRecipeNameTextBox = new System.Windows.Forms.TextBox();
-            this.NewRecipeSizeTextBox = new System.Windows.Forms.TextBox();
-            this.NewRecipeSourceTextBox = new System.Windows.Forms.TextBox();
-            this.NewRecipeSourceURLTextBox = new System.Windows.Forms.TextBox();
-            this.NewIngredientsTextBox = new System.Windows.Forms.TextBox();
-            this.NewRecipeCookTextBox = new System.Windows.Forms.TextBox();
-            this.NewRecipePrepTextBox = new System.Windows.Forms.TextBox();
-            this.CuisineTextBox = new System.Windows.Forms.TextBox();
             this.NewInstructionsTextBox = new System.Windows.Forms.TextBox();
+            this.CuisineTextBox = new System.Windows.Forms.TextBox();
+            this.NewRecipePrepTextBox = new System.Windows.Forms.TextBox();
+            this.NewRecipeCookTextBox = new System.Windows.Forms.TextBox();
+            this.NewIngredientsTextBox = new System.Windows.Forms.TextBox();
+            this.NewRecipeSourceURLTextBox = new System.Windows.Forms.TextBox();
+            this.NewRecipeSourceTextBox = new System.Windows.Forms.TextBox();
+            this.NewRecipeSizeTextBox = new System.Windows.Forms.TextBox();
+            this.NewRecipeNameTextBox = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.CancelAddRecipePanelButton = new System.Windows.Forms.Button();
+            this.AddRecipePanelButton = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
@@ -307,7 +329,7 @@
             this.AddToMealPlanPanel.Controls.Add(this.thursdayDinnerCheck);
             this.AddToMealPlanPanel.Controls.Add(this.thursdayLunchCheck);
             this.AddToMealPlanPanel.Controls.Add(this.thursdayBreakfastCheck);
-            this.AddToMealPlanPanel.Controls.Add(this.TuesdayDinnerCheck);
+            this.AddToMealPlanPanel.Controls.Add(this.tuesdayDinnerCheck);
             this.AddToMealPlanPanel.Controls.Add(this.tuesdayLunchCheck);
             this.AddToMealPlanPanel.Controls.Add(this.tuesdayBreakfastCheck);
             this.AddToMealPlanPanel.Controls.Add(this.mondayDinnerCheck);
@@ -319,7 +341,7 @@
             this.AddToMealPlanPanel.Controls.Add(this.label38);
             this.AddToMealPlanPanel.Controls.Add(this.label37);
             this.AddToMealPlanPanel.Controls.Add(this.CancelAddRecipeButton);
-            this.AddToMealPlanPanel.Controls.Add(this.RecipeAddButton);
+            this.AddToMealPlanPanel.Controls.Add(this.RecipeAddToMealPlanButton);
             this.AddToMealPlanPanel.Controls.Add(this.label35);
             this.AddToMealPlanPanel.Location = new System.Drawing.Point(230, 186);
             this.AddToMealPlanPanel.Name = "AddToMealPlanPanel";
@@ -511,16 +533,16 @@
             this.thursdayBreakfastCheck.Text = "Breakfast";
             this.thursdayBreakfastCheck.UseVisualStyleBackColor = true;
             // 
-            // TuesdayDinnerCheck
+            // tuesdayDinnerCheck
             // 
-            this.TuesdayDinnerCheck.AutoSize = true;
-            this.TuesdayDinnerCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.TuesdayDinnerCheck.Location = new System.Drawing.Point(797, 286);
-            this.TuesdayDinnerCheck.Name = "TuesdayDinnerCheck";
-            this.TuesdayDinnerCheck.Size = new System.Drawing.Size(107, 29);
-            this.TuesdayDinnerCheck.TabIndex = 18;
-            this.TuesdayDinnerCheck.Text = "Dinner";
-            this.TuesdayDinnerCheck.UseVisualStyleBackColor = true;
+            this.tuesdayDinnerCheck.AutoSize = true;
+            this.tuesdayDinnerCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tuesdayDinnerCheck.Location = new System.Drawing.Point(797, 286);
+            this.tuesdayDinnerCheck.Name = "tuesdayDinnerCheck";
+            this.tuesdayDinnerCheck.Size = new System.Drawing.Size(107, 29);
+            this.tuesdayDinnerCheck.TabIndex = 18;
+            this.tuesdayDinnerCheck.Text = "Dinner";
+            this.tuesdayDinnerCheck.UseVisualStyleBackColor = true;
             // 
             // tuesdayLunchCheck
             // 
@@ -637,14 +659,15 @@
             this.CancelAddRecipeButton.UseVisualStyleBackColor = true;
             this.CancelAddRecipeButton.Click += new System.EventHandler(this.CancelAddRecipeButton_Click);
             // 
-            // RecipeAddButton
+            // RecipeAddToMealPlanButton
             // 
-            this.RecipeAddButton.Location = new System.Drawing.Point(243, 782);
-            this.RecipeAddButton.Name = "RecipeAddButton";
-            this.RecipeAddButton.Size = new System.Drawing.Size(170, 86);
-            this.RecipeAddButton.TabIndex = 1;
-            this.RecipeAddButton.Text = "Add To Meal Plan";
-            this.RecipeAddButton.UseVisualStyleBackColor = true;
+            this.RecipeAddToMealPlanButton.Location = new System.Drawing.Point(243, 782);
+            this.RecipeAddToMealPlanButton.Name = "RecipeAddToMealPlanButton";
+            this.RecipeAddToMealPlanButton.Size = new System.Drawing.Size(170, 86);
+            this.RecipeAddToMealPlanButton.TabIndex = 1;
+            this.RecipeAddToMealPlanButton.Text = "Add To Meal Plan";
+            this.RecipeAddToMealPlanButton.UseVisualStyleBackColor = true;
+            this.RecipeAddToMealPlanButton.Click += new System.EventHandler(this.RecipeAddToMealPlanButton_Click_1);
             // 
             // label35
             // 
@@ -666,6 +689,16 @@
             this.RecipePanel.Name = "RecipePanel";
             this.RecipePanel.Size = new System.Drawing.Size(1551, 1320);
             this.RecipePanel.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(567, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(404, 83);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "My Recipes";
             // 
             // DeleteRecipeButton
             // 
@@ -704,18 +737,9 @@
             this.dataGridViewRecipes.Size = new System.Drawing.Size(1547, 1077);
             this.dataGridViewRecipes.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(567, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(404, 83);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "My Recipes";
-            // 
             // RecipeInfoPanel
             // 
+            this.RecipeInfoPanel.Controls.Add(this.AddToMealPlanPanel);
             this.RecipeInfoPanel.Controls.Add(this.TotalTimeTextBox);
             this.RecipeInfoPanel.Controls.Add(this.ServingSizeTextBox);
             this.RecipeInfoPanel.Controls.Add(this.InstructionsLabel);
@@ -734,11 +758,28 @@
             this.RecipeInfoPanel.Controls.Add(this.ServingSizeLabel);
             this.RecipeInfoPanel.Controls.Add(this.CookTimeLabel);
             this.RecipeInfoPanel.Controls.Add(this.PrepTimeLabel);
-            this.RecipeInfoPanel.Controls.Add(this.AddToMealPlanPanel);
             this.RecipeInfoPanel.Location = new System.Drawing.Point(321, 0);
             this.RecipeInfoPanel.Name = "RecipeInfoPanel";
             this.RecipeInfoPanel.Size = new System.Drawing.Size(1548, 1323);
             this.RecipeInfoPanel.TabIndex = 2;
+            // 
+            // TotalTimeTextBox
+            // 
+            this.TotalTimeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.TotalTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TotalTimeTextBox.Location = new System.Drawing.Point(124, 214);
+            this.TotalTimeTextBox.Name = "TotalTimeTextBox";
+            this.TotalTimeTextBox.Size = new System.Drawing.Size(100, 24);
+            this.TotalTimeTextBox.TabIndex = 15;
+            // 
+            // ServingSizeTextBox
+            // 
+            this.ServingSizeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ServingSizeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ServingSizeTextBox.Location = new System.Drawing.Point(152, 76);
+            this.ServingSizeTextBox.Name = "ServingSizeTextBox";
+            this.ServingSizeTextBox.Size = new System.Drawing.Size(129, 24);
+            this.ServingSizeTextBox.TabIndex = 12;
             // 
             // InstructionsLabel
             // 
@@ -760,15 +801,6 @@
             this.IngredientsLabel.TabIndex = 5;
             this.IngredientsLabel.Text = "Ingredients";
             // 
-            // ServingSizeTextBox
-            // 
-            this.ServingSizeTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ServingSizeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ServingSizeTextBox.Location = new System.Drawing.Point(152, 76);
-            this.ServingSizeTextBox.Name = "ServingSizeTextBox";
-            this.ServingSizeTextBox.Size = new System.Drawing.Size(129, 24);
-            this.ServingSizeTextBox.TabIndex = 12;
-            // 
             // PrepTimeTextBox
             // 
             this.PrepTimeTextBox.BackColor = System.Drawing.SystemColors.Control;
@@ -786,15 +818,6 @@
             this.CookTimeTextBox.Name = "CookTimeTextBox";
             this.CookTimeTextBox.Size = new System.Drawing.Size(100, 24);
             this.CookTimeTextBox.TabIndex = 14;
-            // 
-            // TotalTimeTextBox
-            // 
-            this.TotalTimeTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.TotalTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TotalTimeTextBox.Location = new System.Drawing.Point(124, 214);
-            this.TotalTimeTextBox.Name = "TotalTimeTextBox";
-            this.TotalTimeTextBox.Size = new System.Drawing.Size(100, 24);
-            this.TotalTimeTextBox.TabIndex = 15;
             // 
             // AddToMealPlanButton
             // 
@@ -1037,6 +1060,28 @@
             // 
             // MealPlanPanel
             // 
+            this.MealPlanPanel.Controls.Add(this.ClearMealPlanButton);
+            this.MealPlanPanel.Controls.Add(this.thursdayBreakfastText);
+            this.MealPlanPanel.Controls.Add(this.thursdayLunchText);
+            this.MealPlanPanel.Controls.Add(this.thursdayDinnerText);
+            this.MealPlanPanel.Controls.Add(this.fridayBreakfastText);
+            this.MealPlanPanel.Controls.Add(this.fridayLunchText);
+            this.MealPlanPanel.Controls.Add(this.fridayDinnerText);
+            this.MealPlanPanel.Controls.Add(this.saturdayBreakfastText);
+            this.MealPlanPanel.Controls.Add(this.saturdayLunchText);
+            this.MealPlanPanel.Controls.Add(this.saturdayDinnerText);
+            this.MealPlanPanel.Controls.Add(this.wednesdayDinnerText);
+            this.MealPlanPanel.Controls.Add(this.wednesdayLunchText);
+            this.MealPlanPanel.Controls.Add(this.wednesdayBreakfastText);
+            this.MealPlanPanel.Controls.Add(this.tuesdayDinnerText);
+            this.MealPlanPanel.Controls.Add(this.tuesdayLunchText);
+            this.MealPlanPanel.Controls.Add(this.tuesdayBreakfastText);
+            this.MealPlanPanel.Controls.Add(this.mondayDinnerText);
+            this.MealPlanPanel.Controls.Add(this.mondayLunchText);
+            this.MealPlanPanel.Controls.Add(this.mondayBreakfastText);
+            this.MealPlanPanel.Controls.Add(this.sundayDinnerText);
+            this.MealPlanPanel.Controls.Add(this.sundayLunchText);
+            this.MealPlanPanel.Controls.Add(this.sundayBreakfastText);
             this.MealPlanPanel.Controls.Add(this.label34);
             this.MealPlanPanel.Controls.Add(this.label33);
             this.MealPlanPanel.Controls.Add(this.label32);
@@ -1070,6 +1115,183 @@
             this.MealPlanPanel.Name = "MealPlanPanel";
             this.MealPlanPanel.Size = new System.Drawing.Size(1547, 1322);
             this.MealPlanPanel.TabIndex = 7;
+            // 
+            // ClearMealPlanButton
+            // 
+            this.ClearMealPlanButton.Location = new System.Drawing.Point(580, 1198);
+            this.ClearMealPlanButton.Name = "ClearMealPlanButton";
+            this.ClearMealPlanButton.Size = new System.Drawing.Size(190, 86);
+            this.ClearMealPlanButton.TabIndex = 50;
+            this.ClearMealPlanButton.Text = "Clear Meal Plan";
+            this.ClearMealPlanButton.UseVisualStyleBackColor = true;
+            // 
+            // thursdayBreakfastText
+            // 
+            this.thursdayBreakfastText.Location = new System.Drawing.Point(1093, 286);
+            this.thursdayBreakfastText.Name = "thursdayBreakfastText";
+            this.thursdayBreakfastText.ReadOnly = true;
+            this.thursdayBreakfastText.Size = new System.Drawing.Size(154, 31);
+            this.thursdayBreakfastText.TabIndex = 49;
+            // 
+            // thursdayLunchText
+            // 
+            this.thursdayLunchText.Location = new System.Drawing.Point(1069, 354);
+            this.thursdayLunchText.Name = "thursdayLunchText";
+            this.thursdayLunchText.ReadOnly = true;
+            this.thursdayLunchText.Size = new System.Drawing.Size(154, 31);
+            this.thursdayLunchText.TabIndex = 48;
+            // 
+            // thursdayDinnerText
+            // 
+            this.thursdayDinnerText.Location = new System.Drawing.Point(1069, 411);
+            this.thursdayDinnerText.Name = "thursdayDinnerText";
+            this.thursdayDinnerText.ReadOnly = true;
+            this.thursdayDinnerText.Size = new System.Drawing.Size(154, 31);
+            this.thursdayDinnerText.TabIndex = 47;
+            // 
+            // fridayBreakfastText
+            // 
+            this.fridayBreakfastText.Location = new System.Drawing.Point(1089, 640);
+            this.fridayBreakfastText.Name = "fridayBreakfastText";
+            this.fridayBreakfastText.ReadOnly = true;
+            this.fridayBreakfastText.Size = new System.Drawing.Size(154, 31);
+            this.fridayBreakfastText.TabIndex = 46;
+            // 
+            // fridayLunchText
+            // 
+            this.fridayLunchText.Location = new System.Drawing.Point(1061, 686);
+            this.fridayLunchText.Name = "fridayLunchText";
+            this.fridayLunchText.ReadOnly = true;
+            this.fridayLunchText.Size = new System.Drawing.Size(154, 31);
+            this.fridayLunchText.TabIndex = 45;
+            // 
+            // fridayDinnerText
+            // 
+            this.fridayDinnerText.Location = new System.Drawing.Point(1061, 740);
+            this.fridayDinnerText.Name = "fridayDinnerText";
+            this.fridayDinnerText.ReadOnly = true;
+            this.fridayDinnerText.Size = new System.Drawing.Size(154, 31);
+            this.fridayDinnerText.TabIndex = 44;
+            // 
+            // saturdayBreakfastText
+            // 
+            this.saturdayBreakfastText.Location = new System.Drawing.Point(1089, 989);
+            this.saturdayBreakfastText.Name = "saturdayBreakfastText";
+            this.saturdayBreakfastText.ReadOnly = true;
+            this.saturdayBreakfastText.Size = new System.Drawing.Size(154, 31);
+            this.saturdayBreakfastText.TabIndex = 43;
+            // 
+            // saturdayLunchText
+            // 
+            this.saturdayLunchText.Location = new System.Drawing.Point(1050, 1031);
+            this.saturdayLunchText.Name = "saturdayLunchText";
+            this.saturdayLunchText.ReadOnly = true;
+            this.saturdayLunchText.Size = new System.Drawing.Size(154, 31);
+            this.saturdayLunchText.TabIndex = 42;
+            // 
+            // saturdayDinnerText
+            // 
+            this.saturdayDinnerText.Location = new System.Drawing.Point(1061, 1090);
+            this.saturdayDinnerText.Name = "saturdayDinnerText";
+            this.saturdayDinnerText.ReadOnly = true;
+            this.saturdayDinnerText.Size = new System.Drawing.Size(154, 31);
+            this.saturdayDinnerText.TabIndex = 41;
+            // 
+            // wednesdayDinnerText
+            // 
+            this.wednesdayDinnerText.Location = new System.Drawing.Point(223, 1174);
+            this.wednesdayDinnerText.Name = "wednesdayDinnerText";
+            this.wednesdayDinnerText.ReadOnly = true;
+            this.wednesdayDinnerText.Size = new System.Drawing.Size(154, 31);
+            this.wednesdayDinnerText.TabIndex = 40;
+            // 
+            // wednesdayLunchText
+            // 
+            this.wednesdayLunchText.Location = new System.Drawing.Point(223, 1129);
+            this.wednesdayLunchText.Name = "wednesdayLunchText";
+            this.wednesdayLunchText.ReadOnly = true;
+            this.wednesdayLunchText.Size = new System.Drawing.Size(154, 31);
+            this.wednesdayLunchText.TabIndex = 39;
+            // 
+            // wednesdayBreakfastText
+            // 
+            this.wednesdayBreakfastText.Location = new System.Drawing.Point(251, 1081);
+            this.wednesdayBreakfastText.Name = "wednesdayBreakfastText";
+            this.wednesdayBreakfastText.ReadOnly = true;
+            this.wednesdayBreakfastText.Size = new System.Drawing.Size(154, 31);
+            this.wednesdayBreakfastText.TabIndex = 38;
+            // 
+            // tuesdayDinnerText
+            // 
+            this.tuesdayDinnerText.Location = new System.Drawing.Point(223, 889);
+            this.tuesdayDinnerText.Name = "tuesdayDinnerText";
+            this.tuesdayDinnerText.ReadOnly = true;
+            this.tuesdayDinnerText.Size = new System.Drawing.Size(154, 31);
+            this.tuesdayDinnerText.TabIndex = 37;
+            // 
+            // tuesdayLunchText
+            // 
+            this.tuesdayLunchText.Location = new System.Drawing.Point(223, 837);
+            this.tuesdayLunchText.Name = "tuesdayLunchText";
+            this.tuesdayLunchText.ReadOnly = true;
+            this.tuesdayLunchText.Size = new System.Drawing.Size(154, 31);
+            this.tuesdayLunchText.TabIndex = 36;
+            // 
+            // tuesdayBreakfastText
+            // 
+            this.tuesdayBreakfastText.Location = new System.Drawing.Point(251, 788);
+            this.tuesdayBreakfastText.Name = "tuesdayBreakfastText";
+            this.tuesdayBreakfastText.ReadOnly = true;
+            this.tuesdayBreakfastText.Size = new System.Drawing.Size(154, 31);
+            this.tuesdayBreakfastText.TabIndex = 35;
+            // 
+            // mondayDinnerText
+            // 
+            this.mondayDinnerText.Location = new System.Drawing.Point(233, 659);
+            this.mondayDinnerText.Name = "mondayDinnerText";
+            this.mondayDinnerText.ReadOnly = true;
+            this.mondayDinnerText.Size = new System.Drawing.Size(154, 31);
+            this.mondayDinnerText.TabIndex = 34;
+            // 
+            // mondayLunchText
+            // 
+            this.mondayLunchText.Location = new System.Drawing.Point(233, 621);
+            this.mondayLunchText.Name = "mondayLunchText";
+            this.mondayLunchText.ReadOnly = true;
+            this.mondayLunchText.Size = new System.Drawing.Size(154, 31);
+            this.mondayLunchText.TabIndex = 33;
+            // 
+            // mondayBreakfastText
+            // 
+            this.mondayBreakfastText.Location = new System.Drawing.Point(274, 571);
+            this.mondayBreakfastText.Name = "mondayBreakfastText";
+            this.mondayBreakfastText.ReadOnly = true;
+            this.mondayBreakfastText.Size = new System.Drawing.Size(154, 31);
+            this.mondayBreakfastText.TabIndex = 32;
+            // 
+            // sundayDinnerText
+            // 
+            this.sundayDinnerText.Location = new System.Drawing.Point(223, 393);
+            this.sundayDinnerText.Name = "sundayDinnerText";
+            this.sundayDinnerText.ReadOnly = true;
+            this.sundayDinnerText.Size = new System.Drawing.Size(154, 31);
+            this.sundayDinnerText.TabIndex = 31;
+            // 
+            // sundayLunchText
+            // 
+            this.sundayLunchText.Location = new System.Drawing.Point(223, 339);
+            this.sundayLunchText.Name = "sundayLunchText";
+            this.sundayLunchText.ReadOnly = true;
+            this.sundayLunchText.Size = new System.Drawing.Size(154, 31);
+            this.sundayLunchText.TabIndex = 30;
+            // 
+            // sundayBreakfastText
+            // 
+            this.sundayBreakfastText.Location = new System.Drawing.Point(261, 289);
+            this.sundayBreakfastText.Name = "sundayBreakfastText";
+            this.sundayBreakfastText.ReadOnly = true;
+            this.sundayBreakfastText.Size = new System.Drawing.Size(154, 31);
+            this.sundayBreakfastText.TabIndex = 29;
             // 
             // label34
             // 
@@ -1333,9 +1555,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(716, 42);
+            this.label6.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(471, 43);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 25);
+            this.label6.Size = new System.Drawing.Size(499, 90);
             this.label6.TabIndex = 0;
             this.label6.Text = "My Meal Plan";
             // 
@@ -1368,24 +1591,151 @@
             this.AddRecipePanel.Size = new System.Drawing.Size(1312, 1066);
             this.AddRecipePanel.TabIndex = 4;
             // 
-            // AddRecipePanelButton
+            // NewInstructionsTextBox
             // 
-            this.AddRecipePanelButton.Location = new System.Drawing.Point(396, 974);
-            this.AddRecipePanelButton.Name = "AddRecipePanelButton";
-            this.AddRecipePanelButton.Size = new System.Drawing.Size(168, 69);
-            this.AddRecipePanelButton.TabIndex = 0;
-            this.AddRecipePanelButton.Text = "Add Recipe";
-            this.AddRecipePanelButton.UseVisualStyleBackColor = true;
+            this.NewInstructionsTextBox.Location = new System.Drawing.Point(236, 685);
+            this.NewInstructionsTextBox.Multiline = true;
+            this.NewInstructionsTextBox.Name = "NewInstructionsTextBox";
+            this.NewInstructionsTextBox.Size = new System.Drawing.Size(939, 238);
+            this.NewInstructionsTextBox.TabIndex = 20;
             // 
-            // CancelAddRecipePanelButton
+            // CuisineTextBox
             // 
-            this.CancelAddRecipePanelButton.Location = new System.Drawing.Point(718, 978);
-            this.CancelAddRecipePanelButton.Name = "CancelAddRecipePanelButton";
-            this.CancelAddRecipePanelButton.Size = new System.Drawing.Size(168, 66);
-            this.CancelAddRecipePanelButton.TabIndex = 1;
-            this.CancelAddRecipePanelButton.Text = "Cancel";
-            this.CancelAddRecipePanelButton.UseVisualStyleBackColor = true;
-            this.CancelAddRecipePanelButton.Click += new System.EventHandler(this.CancelAddRecipePanelButton_Click);
+            this.CuisineTextBox.Location = new System.Drawing.Point(874, 108);
+            this.CuisineTextBox.Name = "CuisineTextBox";
+            this.CuisineTextBox.Size = new System.Drawing.Size(301, 31);
+            this.CuisineTextBox.TabIndex = 19;
+            // 
+            // NewRecipePrepTextBox
+            // 
+            this.NewRecipePrepTextBox.Location = new System.Drawing.Point(874, 191);
+            this.NewRecipePrepTextBox.Name = "NewRecipePrepTextBox";
+            this.NewRecipePrepTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipePrepTextBox.TabIndex = 18;
+            // 
+            // NewRecipeCookTextBox
+            // 
+            this.NewRecipeCookTextBox.Location = new System.Drawing.Point(874, 264);
+            this.NewRecipeCookTextBox.Name = "NewRecipeCookTextBox";
+            this.NewRecipeCookTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeCookTextBox.TabIndex = 17;
+            // 
+            // NewIngredientsTextBox
+            // 
+            this.NewIngredientsTextBox.Location = new System.Drawing.Point(237, 439);
+            this.NewIngredientsTextBox.Multiline = true;
+            this.NewIngredientsTextBox.Name = "NewIngredientsTextBox";
+            this.NewIngredientsTextBox.Size = new System.Drawing.Size(938, 204);
+            this.NewIngredientsTextBox.TabIndex = 16;
+            // 
+            // NewRecipeSourceURLTextBox
+            // 
+            this.NewRecipeSourceURLTextBox.Location = new System.Drawing.Point(245, 342);
+            this.NewRecipeSourceURLTextBox.Name = "NewRecipeSourceURLTextBox";
+            this.NewRecipeSourceURLTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeSourceURLTextBox.TabIndex = 15;
+            // 
+            // NewRecipeSourceTextBox
+            // 
+            this.NewRecipeSourceTextBox.Location = new System.Drawing.Point(244, 263);
+            this.NewRecipeSourceTextBox.Name = "NewRecipeSourceTextBox";
+            this.NewRecipeSourceTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeSourceTextBox.TabIndex = 14;
+            // 
+            // NewRecipeSizeTextBox
+            // 
+            this.NewRecipeSizeTextBox.Location = new System.Drawing.Point(244, 185);
+            this.NewRecipeSizeTextBox.Name = "NewRecipeSizeTextBox";
+            this.NewRecipeSizeTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeSizeTextBox.TabIndex = 13;
+            // 
+            // NewRecipeNameTextBox
+            // 
+            this.NewRecipeNameTextBox.Location = new System.Drawing.Point(244, 108);
+            this.NewRecipeNameTextBox.Name = "NewRecipeNameTextBox";
+            this.NewRecipeNameTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeNameTextBox.TabIndex = 12;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(108, 675);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(122, 25);
+            this.label52.TabIndex = 11;
+            this.label52.Text = "Instructions";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(112, 439);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(118, 25);
+            this.label51.TabIndex = 10;
+            this.label51.Text = "Ingredients";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(102, 348);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(128, 25);
+            this.label50.TabIndex = 9;
+            this.label50.Text = "Source URL";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(151, 267);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(80, 25);
+            this.label49.TabIndex = 8;
+            this.label49.Text = "Source";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(759, 194);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(110, 25);
+            this.label48.TabIndex = 7;
+            this.label48.Text = "Prep Time";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(754, 270);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(115, 25);
+            this.label47.TabIndex = 6;
+            this.label47.Text = "Cook Time";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(98, 191);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(133, 25);
+            this.label46.TabIndex = 5;
+            this.label46.Text = "Serving Size";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(697, 111);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(172, 25);
+            this.label45.TabIndex = 4;
+            this.label45.Text = "Recipe Category";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(97, 114);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(141, 25);
+            this.label44.TabIndex = 3;
+            this.label44.Text = "Recipe Name";
             // 
             // label43
             // 
@@ -1397,151 +1747,24 @@
             this.label43.TabIndex = 2;
             this.label43.Text = "Add A New Recipe";
             // 
-            // label44
+            // CancelAddRecipePanelButton
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(97, 114);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(141, 25);
-            this.label44.TabIndex = 3;
-            this.label44.Text = "Recipe Name";
+            this.CancelAddRecipePanelButton.Location = new System.Drawing.Point(718, 978);
+            this.CancelAddRecipePanelButton.Name = "CancelAddRecipePanelButton";
+            this.CancelAddRecipePanelButton.Size = new System.Drawing.Size(168, 66);
+            this.CancelAddRecipePanelButton.TabIndex = 1;
+            this.CancelAddRecipePanelButton.Text = "Cancel";
+            this.CancelAddRecipePanelButton.UseVisualStyleBackColor = true;
+            this.CancelAddRecipePanelButton.Click += new System.EventHandler(this.CancelAddRecipePanelButton_Click);
             // 
-            // label45
+            // AddRecipePanelButton
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(697, 111);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(172, 25);
-            this.label45.TabIndex = 4;
-            this.label45.Text = "Recipe Category";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(98, 191);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(133, 25);
-            this.label46.TabIndex = 5;
-            this.label46.Text = "Serving Size";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(754, 270);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(115, 25);
-            this.label47.TabIndex = 6;
-            this.label47.Text = "Cook Time";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(759, 194);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(110, 25);
-            this.label48.TabIndex = 7;
-            this.label48.Text = "Prep Time";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(151, 267);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(80, 25);
-            this.label49.TabIndex = 8;
-            this.label49.Text = "Source";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(102, 348);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(128, 25);
-            this.label50.TabIndex = 9;
-            this.label50.Text = "Source URL";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(112, 439);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(118, 25);
-            this.label51.TabIndex = 10;
-            this.label51.Text = "Ingredients";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(108, 675);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(122, 25);
-            this.label52.TabIndex = 11;
-            this.label52.Text = "Instructions";
-            // 
-            // NewRecipeNameTextBox
-            // 
-            this.NewRecipeNameTextBox.Location = new System.Drawing.Point(244, 108);
-            this.NewRecipeNameTextBox.Name = "NewRecipeNameTextBox";
-            this.NewRecipeNameTextBox.Size = new System.Drawing.Size(301, 31);
-            this.NewRecipeNameTextBox.TabIndex = 12;
-            // 
-            // NewRecipeSizeTextBox
-            // 
-            this.NewRecipeSizeTextBox.Location = new System.Drawing.Point(244, 185);
-            this.NewRecipeSizeTextBox.Name = "NewRecipeSizeTextBox";
-            this.NewRecipeSizeTextBox.Size = new System.Drawing.Size(301, 31);
-            this.NewRecipeSizeTextBox.TabIndex = 13;
-            // 
-            // NewRecipeSourceTextBox
-            // 
-            this.NewRecipeSourceTextBox.Location = new System.Drawing.Point(244, 263);
-            this.NewRecipeSourceTextBox.Name = "NewRecipeSourceTextBox";
-            this.NewRecipeSourceTextBox.Size = new System.Drawing.Size(301, 31);
-            this.NewRecipeSourceTextBox.TabIndex = 14;
-            // 
-            // NewRecipeSourceURLTextBox
-            // 
-            this.NewRecipeSourceURLTextBox.Location = new System.Drawing.Point(245, 342);
-            this.NewRecipeSourceURLTextBox.Name = "NewRecipeSourceURLTextBox";
-            this.NewRecipeSourceURLTextBox.Size = new System.Drawing.Size(301, 31);
-            this.NewRecipeSourceURLTextBox.TabIndex = 15;
-            // 
-            // NewIngredientsTextBox
-            // 
-            this.NewIngredientsTextBox.Location = new System.Drawing.Point(237, 439);
-            this.NewIngredientsTextBox.Multiline = true;
-            this.NewIngredientsTextBox.Name = "NewIngredientsTextBox";
-            this.NewIngredientsTextBox.Size = new System.Drawing.Size(938, 204);
-            this.NewIngredientsTextBox.TabIndex = 16;
-            // 
-            // NewRecipeCookTextBox
-            // 
-            this.NewRecipeCookTextBox.Location = new System.Drawing.Point(874, 264);
-            this.NewRecipeCookTextBox.Name = "NewRecipeCookTextBox";
-            this.NewRecipeCookTextBox.Size = new System.Drawing.Size(301, 31);
-            this.NewRecipeCookTextBox.TabIndex = 17;
-            // 
-            // NewRecipePrepTextBox
-            // 
-            this.NewRecipePrepTextBox.Location = new System.Drawing.Point(874, 191);
-            this.NewRecipePrepTextBox.Name = "NewRecipePrepTextBox";
-            this.NewRecipePrepTextBox.Size = new System.Drawing.Size(301, 31);
-            this.NewRecipePrepTextBox.TabIndex = 18;
-            // 
-            // CuisineTextBox
-            // 
-            this.CuisineTextBox.Location = new System.Drawing.Point(874, 108);
-            this.CuisineTextBox.Name = "CuisineTextBox";
-            this.CuisineTextBox.Size = new System.Drawing.Size(301, 31);
-            this.CuisineTextBox.TabIndex = 19;
-            // 
-            // NewInstructionsTextBox
-            // 
-            this.NewInstructionsTextBox.Location = new System.Drawing.Point(236, 685);
-            this.NewInstructionsTextBox.Multiline = true;
-            this.NewInstructionsTextBox.Name = "NewInstructionsTextBox";
-            this.NewInstructionsTextBox.Size = new System.Drawing.Size(939, 238);
-            this.NewInstructionsTextBox.TabIndex = 20;
+            this.AddRecipePanelButton.Location = new System.Drawing.Point(396, 974);
+            this.AddRecipePanelButton.Name = "AddRecipePanelButton";
+            this.AddRecipePanelButton.Size = new System.Drawing.Size(168, 69);
+            this.AddRecipePanelButton.TabIndex = 0;
+            this.AddRecipePanelButton.Text = "Add Recipe";
+            this.AddRecipePanelButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1549,12 +1772,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
+            this.Controls.Add(this.RecipeInfoPanel);
+            this.Controls.Add(this.MealPlanPanel);
             this.Controls.Add(this.AddRecipePanel);
             this.Controls.Add(this.RecipePanel);
             this.Controls.Add(this.MainPanel);
-            this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.FridgePanel);
-            this.Controls.Add(this.MealPlanPanel);
             this.Controls.Add(this.GroceryPanel);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.AccountPanel);
@@ -1671,7 +1894,7 @@
         private System.Windows.Forms.Panel AddToMealPlanPanel;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button CancelAddRecipeButton;
-        private System.Windows.Forms.Button RecipeAddButton;
+        private System.Windows.Forms.Button RecipeAddToMealPlanButton;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
@@ -1691,7 +1914,7 @@
         private System.Windows.Forms.CheckBox wednesdayDinnerCheck;
         private System.Windows.Forms.CheckBox wednesdayLunchCheck;
         private System.Windows.Forms.CheckBox wednesdayBreakfastCheck;
-        private System.Windows.Forms.CheckBox TuesdayDinnerCheck;
+        private System.Windows.Forms.CheckBox tuesdayDinnerCheck;
         private System.Windows.Forms.CheckBox tuesdayLunchCheck;
         private System.Windows.Forms.CheckBox tuesdayBreakfastCheck;
         private System.Windows.Forms.CheckBox mondayDinnerCheck;
@@ -1722,6 +1945,28 @@
         private System.Windows.Forms.TextBox NewRecipeSourceTextBox;
         private System.Windows.Forms.TextBox NewRecipeSizeTextBox;
         private System.Windows.Forms.TextBox NewRecipeNameTextBox;
+        private System.Windows.Forms.TextBox thursdayBreakfastText;
+        private System.Windows.Forms.TextBox thursdayLunchText;
+        private System.Windows.Forms.TextBox thursdayDinnerText;
+        private System.Windows.Forms.TextBox fridayBreakfastText;
+        private System.Windows.Forms.TextBox fridayLunchText;
+        private System.Windows.Forms.TextBox fridayDinnerText;
+        private System.Windows.Forms.TextBox saturdayBreakfastText;
+        private System.Windows.Forms.TextBox saturdayLunchText;
+        private System.Windows.Forms.TextBox saturdayDinnerText;
+        private System.Windows.Forms.TextBox wednesdayDinnerText;
+        private System.Windows.Forms.TextBox wednesdayLunchText;
+        private System.Windows.Forms.TextBox wednesdayBreakfastText;
+        private System.Windows.Forms.TextBox tuesdayDinnerText;
+        private System.Windows.Forms.TextBox tuesdayLunchText;
+        private System.Windows.Forms.TextBox tuesdayBreakfastText;
+        private System.Windows.Forms.TextBox mondayDinnerText;
+        private System.Windows.Forms.TextBox mondayLunchText;
+        private System.Windows.Forms.TextBox mondayBreakfastText;
+        private System.Windows.Forms.TextBox sundayDinnerText;
+        private System.Windows.Forms.TextBox sundayLunchText;
+        private System.Windows.Forms.TextBox sundayBreakfastText;
+        private System.Windows.Forms.Button ClearMealPlanButton;
     }
 }
 

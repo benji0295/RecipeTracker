@@ -148,10 +148,6 @@ namespace RecipeTracker
             AddToMealPlanPanel.Visible = true;
             AddToMealPlanPanel.BringToFront();
         }
-        private void CancelAddRecipeButton_Click(object sender, EventArgs e)
-        {
-            AddToMealPlanPanel.Visible = false;
-        }
 
         /// <summary>
         /// Ingredients Panel Code
@@ -175,10 +171,134 @@ namespace RecipeTracker
         {
 
         }
+        /// <summary>
+        /// Add Recipe To Meal Prep Panel
+        /// </summary>
 
         private void CancelAddRecipePanelButton_Click(object sender, EventArgs e)
         {
             AddRecipePanel.Visible = false;
+        }
+
+        private void CancelAddRecipeButton_Click(object sender, EventArgs e)
+        {
+            AddToMealPlanPanel.Visible = false;
+        }
+
+        private void RecipeAddToMealPlanButton_Click_1(object sender, EventArgs e)
+        {
+            string recipeName = RecipeNameText.Text;
+
+            // Monday
+            if (mondayBreakfastCheck.Checked)
+            {
+                mondayBreakfastText.Text = recipeName;
+            }
+            if (mondayLunchCheck.Checked)
+            {
+                mondayLunchText.Text = recipeName;
+            }
+            if (mondayDinnerCheck.Checked)
+            {
+                mondayDinnerText.Text = recipeName;
+            }
+
+            // Tuesday
+            if (tuesdayBreakfastCheck.Checked)
+            {
+                tuesdayBreakfastText.Text = recipeName;
+            }
+            if (tuesdayLunchCheck.Checked)
+            {
+                tuesdayLunchText.Text = recipeName;
+            }
+            if (tuesdayDinnerCheck.Checked)
+            {
+                tuesdayDinnerText.Text = recipeName;
+            }
+
+            // Wednesday
+            if (wednesdayBreakfastCheck.Checked)
+            {
+                wednesdayBreakfastText.Text = recipeName;
+            }
+            if (wednesdayLunchCheck.Checked)
+            {
+                wednesdayLunchText.Text = recipeName;
+            }
+            if (wednesdayDinnerCheck.Checked)
+            {
+                wednesdayDinnerText.Text = recipeName;
+            }
+            // Thursday
+            if (thursdayBreakfastCheck.Checked)
+            {
+                thursdayBreakfastText.Text = recipeName;
+            }
+            if (thursdayLunchCheck.Checked)
+            {
+                thursdayLunchText.Text = recipeName;
+            }
+            if (thursdayDinnerCheck.Checked)
+            {
+                thursdayDinnerText.Text = recipeName;
+            }
+
+            // Friday
+            if (fridayBreakfastCheck.Checked)
+            {
+                fridayBreakfastText.Text = recipeName;
+            }
+            if (fridayLunchCheck.Checked)
+            {
+                fridayLunchText.Text = recipeName;
+            }
+            if (fridayDinnerCheck.Checked)
+            {
+                fridayDinnerText.Text = recipeName;
+            }
+
+            // Saturday
+            if (saturdayBreakfastCheck.Checked)
+            {
+                saturdayBreakfastText.Text = recipeName;
+            }
+            if (saturdayLunchCheck.Checked)
+            {
+                saturdayLunchText.Text = recipeName;
+            }
+            if (saturdayDinnerCheck.Checked)
+            {
+                saturdayDinnerText.Text = recipeName;
+            }
+
+            // Sunday
+            if (sundayBreakfastCheck.Checked)
+            {
+                sundayBreakfastText.Text = recipeName;
+            }
+            if (sundayLunchCheck.Checked)
+            {
+                sundayLunchText.Text = recipeName;
+            }
+            if (sundayDinnerCheck.Checked)
+            {
+                sundayDinnerText.Text = recipeName;
+            }
+
+            // Clear checkboxes
+            ClearCheckBoxes();
+            AddToMealPlanPanel.Visible = false;
+        }
+        private void ClearCheckBoxes()
+        {
+            foreach (Control control in AddToMealPlanPanel.Controls)
+            {
+                if (control is CheckBox)
+                {
+                    ((CheckBox)control).Checked = false;
+                }
+            }
         }
     }
 }

@@ -181,6 +181,7 @@
             this.label43 = new System.Windows.Forms.Label();
             this.CancelAddRecipePanelButton = new System.Windows.Forms.Button();
             this.AddRecipePanelButton = new System.Windows.Forms.Button();
+            this.AddAMealButton = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
@@ -1060,6 +1061,7 @@
             // 
             // MealPlanPanel
             // 
+            this.MealPlanPanel.Controls.Add(this.AddAMealButton);
             this.MealPlanPanel.Controls.Add(this.ClearMealPlanButton);
             this.MealPlanPanel.Controls.Add(this.thursdayBreakfastText);
             this.MealPlanPanel.Controls.Add(this.thursdayLunchText);
@@ -1118,7 +1120,7 @@
             // 
             // ClearMealPlanButton
             // 
-            this.ClearMealPlanButton.Location = new System.Drawing.Point(580, 1198);
+            this.ClearMealPlanButton.Location = new System.Drawing.Point(753, 1188);
             this.ClearMealPlanButton.Name = "ClearMealPlanButton";
             this.ClearMealPlanButton.Size = new System.Drawing.Size(190, 86);
             this.ClearMealPlanButton.TabIndex = 50;
@@ -1767,6 +1769,16 @@
             this.AddRecipePanelButton.Text = "Add Recipe";
             this.AddRecipePanelButton.UseVisualStyleBackColor = true;
             // 
+            // AddAMealButton
+            // 
+            this.AddAMealButton.Location = new System.Drawing.Point(501, 1187);
+            this.AddAMealButton.Name = "AddAMealButton";
+            this.AddAMealButton.Size = new System.Drawing.Size(190, 87);
+            this.AddAMealButton.TabIndex = 51;
+            this.AddAMealButton.Text = "Add A Meal";
+            this.AddAMealButton.UseVisualStyleBackColor = true;
+            this.AddAMealButton.Click += new System.EventHandler(this.AddAMealButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1968,6 +1980,7 @@
         private System.Windows.Forms.TextBox sundayLunchText;
         private System.Windows.Forms.TextBox sundayBreakfastText;
         private System.Windows.Forms.Button ClearMealPlanButton;
+        private System.Windows.Forms.Button AddAMealButton;
     }
 }
 

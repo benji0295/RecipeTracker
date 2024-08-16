@@ -160,6 +160,11 @@ namespace RecipeTracker
         /// <summary>
         /// Meal Plan Panel
         /// </summary>
+        private void AddAMealButton_Click(object sender, EventArgs e)
+        {
+            RecipePanel.Visible = true;
+            MealPlanPanel.Visible = false;
+        }
         private void ClearMealPlanButton_Click(object sender, EventArgs e)
         {
             foreach (Control control in MealPlanPanel.Controls)

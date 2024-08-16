@@ -157,6 +157,19 @@ namespace RecipeTracker
         {
 
         }
+        /// <summary>
+        /// Meal Plan Panel
+        /// </summary>
+        private void ClearMealPlanButton_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in MealPlanPanel.Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Text = "";
+                }
+            }
+        }
 
         /// <summary>
         /// Fridge Panel Code

@@ -1124,6 +1124,7 @@
             this.ClearMealPlanButton.TabIndex = 50;
             this.ClearMealPlanButton.Text = "Clear Meal Plan";
             this.ClearMealPlanButton.UseVisualStyleBackColor = true;
+            this.ClearMealPlanButton.Click += new System.EventHandler(this.ClearMealPlanButton_Click);
             // 
             // thursdayBreakfastText
             // 
@@ -1772,8 +1773,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
-            this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.MealPlanPanel);
+            this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.AddRecipePanel);
             this.Controls.Add(this.RecipePanel);
             this.Controls.Add(this.MainPanel);

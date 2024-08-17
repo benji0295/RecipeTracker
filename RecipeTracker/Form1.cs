@@ -193,11 +193,6 @@ namespace RecipeTracker
         /// Add Recipe To Meal Prep Panel
         /// </summary>
 
-        private void CancelAddRecipePanelButton_Click(object sender, EventArgs e)
-        {
-            AddRecipePanel.Visible = false;
-        }
-
         private void CancelAddRecipeButton_Click(object sender, EventArgs e)
         {
             AddToMealPlanPanel.Visible = false;
@@ -317,6 +312,34 @@ namespace RecipeTracker
                     ((CheckBox)control).Checked = false;
                 }
             }
+        }
+
+        /// <summary>
+        /// Add New Recipe Panel
+        /// </summary>
+        private void AddRecipePanelButton_Click(object sender, EventArgs e)
+        {
+            Recipe newRecipe = new Recipe();
+            newRecipe.Name = NewRecipeNameTextBox.Text;
+            newRecipe.Category = NewRecipeCategoryTextBox.Text;
+            newRecipe.PrepTime = int.Parse(NewRecipePrepTextBox.Text);
+            newRecipe.CookTime = int.Parse(NewRecipeCookTextBox.Text);
+            newRecipe.TotalTime = (newRecipe.CookTime + newRecipe.PrepTime);
+            newRecipe.Servings = int.Parse(NewRecipeSizeTextBox.Text);
+            newRecipe.Source = NewRecipeSourceTextBox.Text;
+            newRecipe.SourceURL = NewRecipeSourceURLTextBox.Text;
+            newRecipe.Ingredients = NewRecipeIngredientsTextBox.Text.Split('\n').ToList();
+            newRecipe.Instructions = NewRecipeInstructionsTextBox.Text.Split('\n').ToList();
+            Recipe.AllRecipes.Add(newRecipe);
+            dataGridViewRecipes.DataSource = null;
+            dataGridViewRecipes.DataSource = Recipe.AllRecipes;
+            AddRecipePanel.Visible = false;
+
+            
+        }
+        private void CancelAddRecipePanelButton_Click(object sender, EventArgs e)
+        {
+            AddRecipePanel.Visible = false;
         }
     }
 }

@@ -35,6 +35,10 @@ namespace RecipeTracker
             AllRecipes.Add(this);
         }
 
+        public Recipe()
+        {
+        }
+
         public static void InitializeRecipes()
         {
             AllRecipes.Add(new Recipe(

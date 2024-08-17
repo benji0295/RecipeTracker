@@ -30,7 +30,6 @@
         {
             this.menuPanel = new System.Windows.Forms.Panel();
             this.userLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MealPlanButton = new System.Windows.Forms.Button();
             this.MainButton = new System.Windows.Forms.Button();
             this.GroceryButton = new System.Windows.Forms.Button();
@@ -108,6 +107,7 @@
             this.AccountPanel = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.MealPlanPanel = new System.Windows.Forms.Panel();
+            this.AddAMealButton = new System.Windows.Forms.Button();
             this.ClearMealPlanButton = new System.Windows.Forms.Button();
             this.thursdayBreakfastText = new System.Windows.Forms.TextBox();
             this.thursdayLunchText = new System.Windows.Forms.TextBox();
@@ -160,11 +160,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.AddRecipePanel = new System.Windows.Forms.Panel();
-            this.NewInstructionsTextBox = new System.Windows.Forms.TextBox();
-            this.CuisineTextBox = new System.Windows.Forms.TextBox();
+            this.NewRecipeInstructionsTextBox = new System.Windows.Forms.TextBox();
+            this.NewRecipeCategoryTextBox = new System.Windows.Forms.TextBox();
             this.NewRecipePrepTextBox = new System.Windows.Forms.TextBox();
             this.NewRecipeCookTextBox = new System.Windows.Forms.TextBox();
-            this.NewIngredientsTextBox = new System.Windows.Forms.TextBox();
+            this.NewRecipeIngredientsTextBox = new System.Windows.Forms.TextBox();
             this.NewRecipeSourceURLTextBox = new System.Windows.Forms.TextBox();
             this.NewRecipeSourceTextBox = new System.Windows.Forms.TextBox();
             this.NewRecipeSizeTextBox = new System.Windows.Forms.TextBox();
@@ -181,9 +181,9 @@
             this.label43 = new System.Windows.Forms.Label();
             this.CancelAddRecipePanelButton = new System.Windows.Forms.Button();
             this.AddRecipePanelButton = new System.Windows.Forms.Button();
-            this.AddAMealButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label53 = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
             this.AddToMealPlanPanel.SuspendLayout();
             this.RecipePanel.SuspendLayout();
@@ -196,6 +196,7 @@
             this.AccountPanel.SuspendLayout();
             this.MealPlanPanel.SuspendLayout();
             this.AddRecipePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -223,15 +224,6 @@
             this.userLabel.Size = new System.Drawing.Size(102, 45);
             this.userLabel.TabIndex = 7;
             this.userLabel.Text = "User";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.userimage;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 202);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // MealPlanButton
             // 
@@ -295,6 +287,7 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.Controls.Add(this.label53);
             this.MainPanel.Controls.Add(this.label1);
             this.MainPanel.Location = new System.Drawing.Point(321, 0);
             this.MainPanel.Name = "MainPanel";
@@ -304,7 +297,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(680, 43);
+            this.label1.Location = new System.Drawing.Point(727, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 25);
             this.label1.TabIndex = 0;
@@ -1118,6 +1111,16 @@
             this.MealPlanPanel.Size = new System.Drawing.Size(1547, 1322);
             this.MealPlanPanel.TabIndex = 7;
             // 
+            // AddAMealButton
+            // 
+            this.AddAMealButton.Location = new System.Drawing.Point(501, 1187);
+            this.AddAMealButton.Name = "AddAMealButton";
+            this.AddAMealButton.Size = new System.Drawing.Size(190, 87);
+            this.AddAMealButton.TabIndex = 51;
+            this.AddAMealButton.Text = "Add A Meal";
+            this.AddAMealButton.UseVisualStyleBackColor = true;
+            this.AddAMealButton.Click += new System.EventHandler(this.AddAMealButton_Click);
+            // 
             // ClearMealPlanButton
             // 
             this.ClearMealPlanButton.Location = new System.Drawing.Point(753, 1188);
@@ -1568,11 +1571,11 @@
             // AddRecipePanel
             // 
             this.AddRecipePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddRecipePanel.Controls.Add(this.NewInstructionsTextBox);
-            this.AddRecipePanel.Controls.Add(this.CuisineTextBox);
+            this.AddRecipePanel.Controls.Add(this.NewRecipeInstructionsTextBox);
+            this.AddRecipePanel.Controls.Add(this.NewRecipeCategoryTextBox);
             this.AddRecipePanel.Controls.Add(this.NewRecipePrepTextBox);
             this.AddRecipePanel.Controls.Add(this.NewRecipeCookTextBox);
-            this.AddRecipePanel.Controls.Add(this.NewIngredientsTextBox);
+            this.AddRecipePanel.Controls.Add(this.NewRecipeIngredientsTextBox);
             this.AddRecipePanel.Controls.Add(this.NewRecipeSourceURLTextBox);
             this.AddRecipePanel.Controls.Add(this.NewRecipeSourceTextBox);
             this.AddRecipePanel.Controls.Add(this.NewRecipeSizeTextBox);
@@ -1594,20 +1597,20 @@
             this.AddRecipePanel.Size = new System.Drawing.Size(1312, 1066);
             this.AddRecipePanel.TabIndex = 4;
             // 
-            // NewInstructionsTextBox
+            // NewRecipeInstructionsTextBox
             // 
-            this.NewInstructionsTextBox.Location = new System.Drawing.Point(236, 685);
-            this.NewInstructionsTextBox.Multiline = true;
-            this.NewInstructionsTextBox.Name = "NewInstructionsTextBox";
-            this.NewInstructionsTextBox.Size = new System.Drawing.Size(939, 238);
-            this.NewInstructionsTextBox.TabIndex = 20;
+            this.NewRecipeInstructionsTextBox.Location = new System.Drawing.Point(236, 685);
+            this.NewRecipeInstructionsTextBox.Multiline = true;
+            this.NewRecipeInstructionsTextBox.Name = "NewRecipeInstructionsTextBox";
+            this.NewRecipeInstructionsTextBox.Size = new System.Drawing.Size(939, 238);
+            this.NewRecipeInstructionsTextBox.TabIndex = 20;
             // 
-            // CuisineTextBox
+            // NewRecipeCategoryTextBox
             // 
-            this.CuisineTextBox.Location = new System.Drawing.Point(874, 108);
-            this.CuisineTextBox.Name = "CuisineTextBox";
-            this.CuisineTextBox.Size = new System.Drawing.Size(301, 31);
-            this.CuisineTextBox.TabIndex = 19;
+            this.NewRecipeCategoryTextBox.Location = new System.Drawing.Point(874, 108);
+            this.NewRecipeCategoryTextBox.Name = "NewRecipeCategoryTextBox";
+            this.NewRecipeCategoryTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeCategoryTextBox.TabIndex = 19;
             // 
             // NewRecipePrepTextBox
             // 
@@ -1623,13 +1626,13 @@
             this.NewRecipeCookTextBox.Size = new System.Drawing.Size(301, 31);
             this.NewRecipeCookTextBox.TabIndex = 17;
             // 
-            // NewIngredientsTextBox
+            // NewRecipeIngredientsTextBox
             // 
-            this.NewIngredientsTextBox.Location = new System.Drawing.Point(237, 439);
-            this.NewIngredientsTextBox.Multiline = true;
-            this.NewIngredientsTextBox.Name = "NewIngredientsTextBox";
-            this.NewIngredientsTextBox.Size = new System.Drawing.Size(938, 204);
-            this.NewIngredientsTextBox.TabIndex = 16;
+            this.NewRecipeIngredientsTextBox.Location = new System.Drawing.Point(237, 439);
+            this.NewRecipeIngredientsTextBox.Multiline = true;
+            this.NewRecipeIngredientsTextBox.Name = "NewRecipeIngredientsTextBox";
+            this.NewRecipeIngredientsTextBox.Size = new System.Drawing.Size(938, 204);
+            this.NewRecipeIngredientsTextBox.TabIndex = 16;
             // 
             // NewRecipeSourceURLTextBox
             // 
@@ -1768,16 +1771,26 @@
             this.AddRecipePanelButton.TabIndex = 0;
             this.AddRecipePanelButton.Text = "Add Recipe";
             this.AddRecipePanelButton.UseVisualStyleBackColor = true;
+            this.AddRecipePanelButton.Click += new System.EventHandler(this.AddRecipePanelButton_Click);
             // 
-            // AddAMealButton
+            // pictureBox1
             // 
-            this.AddAMealButton.Location = new System.Drawing.Point(501, 1187);
-            this.AddAMealButton.Name = "AddAMealButton";
-            this.AddAMealButton.Size = new System.Drawing.Size(190, 87);
-            this.AddAMealButton.TabIndex = 51;
-            this.AddAMealButton.Text = "Add A Meal";
-            this.AddAMealButton.UseVisualStyleBackColor = true;
-            this.AddAMealButton.Click += new System.EventHandler(this.AddAMealButton_Click);
+            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.userimage;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(206, 202);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(116, 279);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(517, 68);
+            this.label53.TabIndex = 1;
+            this.label53.Text = "Recipe Of The Day";
             // 
             // Form1
             // 
@@ -1785,11 +1798,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
+            this.Controls.Add(this.AddRecipePanel);
+            this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.MealPlanPanel);
             this.Controls.Add(this.RecipeInfoPanel);
-            this.Controls.Add(this.AddRecipePanel);
             this.Controls.Add(this.RecipePanel);
-            this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.FridgePanel);
             this.Controls.Add(this.GroceryPanel);
             this.Controls.Add(this.menuPanel);
@@ -1799,7 +1812,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
             this.AddToMealPlanPanel.ResumeLayout(false);
@@ -1821,6 +1833,7 @@
             this.MealPlanPanel.PerformLayout();
             this.AddRecipePanel.ResumeLayout(false);
             this.AddRecipePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1949,11 +1962,11 @@
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox NewInstructionsTextBox;
-        private System.Windows.Forms.TextBox CuisineTextBox;
+        private System.Windows.Forms.TextBox NewRecipeInstructionsTextBox;
+        private System.Windows.Forms.TextBox NewRecipeCategoryTextBox;
         private System.Windows.Forms.TextBox NewRecipePrepTextBox;
         private System.Windows.Forms.TextBox NewRecipeCookTextBox;
-        private System.Windows.Forms.TextBox NewIngredientsTextBox;
+        private System.Windows.Forms.TextBox NewRecipeIngredientsTextBox;
         private System.Windows.Forms.TextBox NewRecipeSourceURLTextBox;
         private System.Windows.Forms.TextBox NewRecipeSourceTextBox;
         private System.Windows.Forms.TextBox NewRecipeSizeTextBox;
@@ -1981,6 +1994,7 @@
         private System.Windows.Forms.TextBox sundayBreakfastText;
         private System.Windows.Forms.Button ClearMealPlanButton;
         private System.Windows.Forms.Button AddAMealButton;
+        private System.Windows.Forms.Label label53;
     }
 }
 

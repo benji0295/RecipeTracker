@@ -30,6 +30,7 @@
         {
             this.menuPanel = new System.Windows.Forms.Panel();
             this.userLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MealPlanButton = new System.Windows.Forms.Button();
             this.MainButton = new System.Windows.Forms.Button();
             this.GroceryButton = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.RecipeButton = new System.Windows.Forms.Button();
             this.AccountButton = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.label53 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AddToMealPlanPanel = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
@@ -105,6 +107,19 @@
             this.dataGridViewFridge = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.AccountPanel = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.LogOutButton = new System.Windows.Forms.Button();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.MealPlanPanel = new System.Windows.Forms.Panel();
             this.AddAMealButton = new System.Windows.Forms.Button();
@@ -181,9 +196,12 @@
             this.label43 = new System.Windows.Forms.Label();
             this.CancelAddRecipePanelButton = new System.Windows.Forms.Button();
             this.AddRecipePanelButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label53 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.ConfirmNewPasswordButton = new System.Windows.Forms.Button();
+            this.ConfirmNewEmailButton = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
             this.AddToMealPlanPanel.SuspendLayout();
             this.RecipePanel.SuspendLayout();
@@ -196,7 +214,6 @@
             this.AccountPanel.SuspendLayout();
             this.MealPlanPanel.SuspendLayout();
             this.AddRecipePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -224,6 +241,15 @@
             this.userLabel.Size = new System.Drawing.Size(102, 45);
             this.userLabel.TabIndex = 7;
             this.userLabel.Text = "User";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.userimage;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(206, 202);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // MealPlanButton
             // 
@@ -293,6 +319,16 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1554, 1323);
             this.MainPanel.TabIndex = 2;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(116, 279);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(517, 68);
+            this.label53.TabIndex = 1;
+            this.label53.Text = "Recipe Of The Day";
             // 
             // label1
             // 
@@ -1037,18 +1073,148 @@
             // 
             // AccountPanel
             // 
+            this.AccountPanel.Controls.Add(this.ConfirmNewEmailButton);
+            this.AccountPanel.Controls.Add(this.ConfirmNewPasswordButton);
+            this.AccountPanel.Controls.Add(this.textBox6);
+            this.AccountPanel.Controls.Add(this.textBox5);
+            this.AccountPanel.Controls.Add(this.textBox4);
+            this.AccountPanel.Controls.Add(this.textBox3);
+            this.AccountPanel.Controls.Add(this.textBox2);
+            this.AccountPanel.Controls.Add(this.textBox1);
+            this.AccountPanel.Controls.Add(this.label61);
+            this.AccountPanel.Controls.Add(this.label60);
+            this.AccountPanel.Controls.Add(this.label59);
+            this.AccountPanel.Controls.Add(this.label58);
+            this.AccountPanel.Controls.Add(this.label57);
+            this.AccountPanel.Controls.Add(this.label56);
+            this.AccountPanel.Controls.Add(this.LogOutButton);
+            this.AccountPanel.Controls.Add(this.label55);
+            this.AccountPanel.Controls.Add(this.label54);
             this.AccountPanel.Controls.Add(this.label5);
             this.AccountPanel.Location = new System.Drawing.Point(321, 0);
             this.AccountPanel.Name = "AccountPanel";
             this.AccountPanel.Size = new System.Drawing.Size(1554, 1323);
             this.AccountPanel.TabIndex = 6;
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(1062, 411);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(300, 31);
+            this.textBox4.TabIndex = 13;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(276, 587);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(300, 31);
+            this.textBox3.TabIndex = 12;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(276, 494);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(300, 31);
+            this.textBox2.TabIndex = 11;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(276, 408);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(300, 31);
+            this.textBox1.TabIndex = 10;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(911, 593);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(145, 25);
+            this.label61.TabIndex = 9;
+            this.label61.Text = "Confirm Email";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(82, 594);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(186, 25);
+            this.label60.TabIndex = 8;
+            this.label60.Text = "Confirm Password";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(939, 497);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(113, 25);
+            this.label59.TabIndex = 7;
+            this.label59.Text = "New Email";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(914, 417);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(142, 25);
+            this.label58.TabIndex = 6;
+            this.label58.Text = "Current Email";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(114, 497);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(154, 25);
+            this.label57.TabIndex = 5;
+            this.label57.Text = "New Password";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(87, 414);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(183, 25);
+            this.label56.TabIndex = 4;
+            this.label56.Text = "Current Password";
+            // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(1286, 1202);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(202, 86);
+            this.LogOutButton.TabIndex = 3;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(979, 310);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(293, 52);
+            this.label55.TabIndex = 2;
+            this.label55.Text = "Update Email";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(149, 307);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(385, 52);
+            this.label54.TabIndex = 1;
+            this.label54.Text = "Change Password";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(664, 40);
+            this.label5.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(536, 40);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 25);
+            this.label5.Size = new System.Drawing.Size(451, 90);
             this.label5.TabIndex = 0;
             this.label5.Text = "My Account";
             // 
@@ -1773,24 +1939,39 @@
             this.AddRecipePanelButton.UseVisualStyleBackColor = true;
             this.AddRecipePanelButton.Click += new System.EventHandler(this.AddRecipePanelButton_Click);
             // 
-            // pictureBox1
+            // textBox5
             // 
-            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.userimage;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 202);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.textBox5.Location = new System.Drawing.Point(1062, 491);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(300, 31);
+            this.textBox5.TabIndex = 14;
             // 
-            // label53
+            // textBox6
             // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(116, 279);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(517, 68);
-            this.label53.TabIndex = 1;
-            this.label53.Text = "Recipe Of The Day";
+            this.textBox6.Location = new System.Drawing.Point(1062, 587);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(300, 31);
+            this.textBox6.TabIndex = 15;
+            // 
+            // ConfirmNewPasswordButton
+            // 
+            this.ConfirmNewPasswordButton.Location = new System.Drawing.Point(230, 689);
+            this.ConfirmNewPasswordButton.Name = "ConfirmNewPasswordButton";
+            this.ConfirmNewPasswordButton.Size = new System.Drawing.Size(202, 86);
+            this.ConfirmNewPasswordButton.TabIndex = 16;
+            this.ConfirmNewPasswordButton.Text = "Confirm";
+            this.ConfirmNewPasswordButton.UseVisualStyleBackColor = true;
+            this.ConfirmNewPasswordButton.Click += new System.EventHandler(this.ConfirmNewPasswordButton_Click);
+            // 
+            // ConfirmNewEmailButton
+            // 
+            this.ConfirmNewEmailButton.Location = new System.Drawing.Point(1070, 688);
+            this.ConfirmNewEmailButton.Name = "ConfirmNewEmailButton";
+            this.ConfirmNewEmailButton.Size = new System.Drawing.Size(202, 86);
+            this.ConfirmNewEmailButton.TabIndex = 17;
+            this.ConfirmNewEmailButton.Text = "Confirm";
+            this.ConfirmNewEmailButton.UseVisualStyleBackColor = true;
+            this.ConfirmNewEmailButton.Click += new System.EventHandler(this.ConfirmNewEmailButton_Click);
             // 
             // Form1
             // 
@@ -1798,6 +1979,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
+            this.Controls.Add(this.AccountPanel);
             this.Controls.Add(this.AddRecipePanel);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.MealPlanPanel);
@@ -1806,12 +1988,12 @@
             this.Controls.Add(this.FridgePanel);
             this.Controls.Add(this.GroceryPanel);
             this.Controls.Add(this.menuPanel);
-            this.Controls.Add(this.AccountPanel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
             this.AddToMealPlanPanel.ResumeLayout(false);
@@ -1833,7 +2015,6 @@
             this.MealPlanPanel.PerformLayout();
             this.AddRecipePanel.ResumeLayout(false);
             this.AddRecipePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1995,6 +2176,23 @@
         private System.Windows.Forms.Button ClearMealPlanButton;
         private System.Windows.Forms.Button AddAMealButton;
         private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Button LogOutButton;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button ConfirmNewEmailButton;
+        private System.Windows.Forms.Button ConfirmNewPasswordButton;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
 

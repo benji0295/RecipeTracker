@@ -13,9 +13,9 @@ namespace RecipeTracker
     public partial class Form1 : Form
     {
 
-        /// <summary>
-        /// Main Form Code
-        /// </summary>
+        //
+        // Main Form Code
+        //
         public Form1()
         {
             InitializeComponent();
@@ -38,9 +38,9 @@ namespace RecipeTracker
             dataGridViewRecipes.CellMouseDoubleClick += dataGridViewRecipes_CellMouseDoubleClick;
 
         }
-        /// <summary>
-        /// Menu Panel Code
-        /// </summary>
+        //
+        // Menu Panel Code
+        //
         private void MainButton_Click(object sender, EventArgs e)
         {
             MainPanel.Visible = true;
@@ -82,9 +82,9 @@ namespace RecipeTracker
             AccountPanel.BringToFront();
         }
 
-        /// <summary>
-        /// My Recipes Code
-        /// </summary>
+        //
+        // My Recipes Code
+        //
 
         private void dataGridViewRecipes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -149,17 +149,17 @@ namespace RecipeTracker
             AddToMealPlanPanel.BringToFront();
         }
 
-        /// <summary>
-        /// Ingredients Panel Code
-        /// </summary>
+        //
+        // Ingredients Panel Code
+        //
 
         private void AddIngredientsButton_Click(object sender, EventArgs e)
         {
 
         }
-        /// <summary>
-        /// Meal Plan Panel
-        /// </summary>
+        //
+        // Meal Plan Panel
+        //
         private void AddAMealButton_Click(object sender, EventArgs e)
         {
             RecipePanel.Visible = true;
@@ -176,9 +176,9 @@ namespace RecipeTracker
             }
         }
 
-        /// <summary>
-        /// Fridge Panel Code
-        /// </summary>
+        //
+        // Fridge Panel Code
+        //
 
         private void AddToFridgeButton_Click(object sender, EventArgs e)
         {
@@ -189,9 +189,9 @@ namespace RecipeTracker
         {
 
         }
-        /// <summary>
-        /// Add Recipe To Meal Prep Panel
-        /// </summary>
+        //
+        // Add Recipe To Meal Prep Panel
+        //
 
         private void CancelAddRecipeButton_Click(object sender, EventArgs e)
         {
@@ -314,9 +314,9 @@ namespace RecipeTracker
             }
         }
 
-        /// <summary>
-        /// Add New Recipe Panel
-        /// </summary>
+        //
+        // Add New Recipe Panel
+        //
         private void AddRecipePanelButton_Click(object sender, EventArgs e)
         {
             Recipe newRecipe = new Recipe();
@@ -340,6 +340,26 @@ namespace RecipeTracker
         private void CancelAddRecipePanelButton_Click(object sender, EventArgs e)
         {
             AddRecipePanel.Visible = false;
+        }
+
+        //
+        // Account Panel
+        //
+        private void ConfirmNewPasswordButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfirmNewEmailButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

@@ -19,17 +19,21 @@ namespace RecipeTracker
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
 
         private void createAccountLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            LoginPanel.Visible = false;
+            CreateAccountPanel.Visible = true;
         }
 
         private void forgotPasswordLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            LoginPanel.Visible = false;
+            ResetPasswordPanel.Visible = true;
         }
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
@@ -40,6 +44,7 @@ namespace RecipeTracker
         private void CancelCreateAccountButton_Click(object sender, EventArgs e)
         {
             CreateAccountPanel.Visible = false;
+            LoginPanel.Visible = true;
         }
 
         private void ResetButtonPassword_Click(object sender, EventArgs e)
@@ -50,6 +55,7 @@ namespace RecipeTracker
         private void CancelResetButton_Click(object sender, EventArgs e)
         {
             ResetPasswordPanel.Visible = false;
+            LoginPanel.Visible = true;
         }
     }
 }

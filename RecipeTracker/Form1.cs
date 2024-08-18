@@ -32,12 +32,44 @@ namespace RecipeTracker
             AddToMealPlanPanel.Visible = false;
             MealPlanPanel.Visible = false;
             AddRecipePanel.Visible = false;
-            Recipe.InitializeRecipes();
+
+            Recipe recipeOfTheDay = Recipe.GetRandomRecipe();
+
+            RecipeOfTheDayLabel.Text = recipeOfTheDay.Name;
+
+            RecipeOfTheDayLabel.Tag = recipeOfTheDay;
+
+            RecipeOfTheDayLabel.Click += RecipeOfTheDayLabel_Click;
+
+            dataGridViewRecipes.DataSource = null;
+
             dataGridViewRecipes.DataSource = Recipe.AllRecipes;
 
             dataGridViewRecipes.CellMouseDoubleClick += dataGridViewRecipes_CellMouseDoubleClick;
 
         }
+
+        private void RecipeOfTheDayLabel_Click(object sender, EventArgs e)
+        {
+            Label recipeLabel = sender as Label; 
+            Recipe selectedRecipe = recipeLabel.Tag as Recipe;
+
+            if (selectedRecipe != null)
+            {
+                RecipeNameText.Text = selectedRecipe.Name;
+                PrepTimeTextBox.Text = $"{selectedRecipe.PrepTime.ToString()} minutes";
+                CookTimeTextBox.Text = $"{selectedRecipe.CookTime.ToString()} minutes";
+                TotalTimeTextBox.Text = $"{selectedRecipe.TotalTime.ToString()} minutes";
+                ServingSizeTextBox.Text = $"{selectedRecipe.Servings.ToString()} servings";
+                IngredientsTextBox.Text = string.Join("\r\n", selectedRecipe.Ingredients);
+                InstructionsTextBox.Text = string.Join("\r\n", selectedRecipe.Instructions);
+                SourceTextBox.Text = selectedRecipe.SourceURL;
+
+                RecipeInfoPanel.BringToFront();
+                RecipeInfoPanel.Visible = true;
+            }
+        }
+
         //
         // Menu Panel Code
         //
@@ -163,6 +195,7 @@ namespace RecipeTracker
         private void AddAMealButton_Click(object sender, EventArgs e)
         {
             RecipePanel.Visible = true;
+            RecipePanel.BringToFront();
             MealPlanPanel.Visible = false;
         }
         private void ClearMealPlanButton_Click(object sender, EventArgs e)
@@ -196,6 +229,7 @@ namespace RecipeTracker
         private void CancelAddRecipeButton_Click(object sender, EventArgs e)
         {
             AddToMealPlanPanel.Visible = false;
+            ClearCheckBoxes();
         }
 
         private void RecipeAddToMealPlanButton_Click_1(object sender, EventArgs e)

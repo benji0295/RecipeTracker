@@ -12,6 +12,7 @@ namespace RecipeTracker
 {
     public partial class Form1 : Form
     {
+        private Recipe selectedRecipe;
         private GroceryList groceryList;
         //
         // Main Form Code
@@ -134,7 +135,7 @@ namespace RecipeTracker
         {
             if (e.RowIndex >= 0)
             {
-                Recipe selectedRecipe = dataGridViewRecipes.Rows[e.RowIndex].DataBoundItem as Recipe;
+                selectedRecipe = dataGridViewRecipes.Rows[e.RowIndex].DataBoundItem as Recipe;
 
                 if (selectedRecipe != null)
                 {
@@ -187,19 +188,29 @@ namespace RecipeTracker
             }
         }
 
+        //
+        // Recipe Info Panel Code
+        //
         private void AddToMealPlanButton_Click(object sender, EventArgs e)
         {
             AddToMealPlanPanel.Visible = true;
             AddToMealPlanPanel.BringToFront();
         }
 
-        //
-        // Ingredients Panel Code
-        //
-
         private void AddIngredientsButton_Click(object sender, EventArgs e)
         {
+            if (selectedRecipe != null)
+            {
+                foreach (var ingredient in selectedRecipe.Ingredients)
+                {
+                    groceryList.AddItem(ingredient);
+                }
 
+                dataGridViewGrocery.DataSource = null;
+                dataGridViewGrocery.DataSource = groceryList.Items;
+
+                MessageBox.Show("Ingredients added to your grocery list.");
+            }
         }
         //
         // Meal Plan Panel

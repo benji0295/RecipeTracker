@@ -52,7 +52,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fridge.cs" />
+    <Compile Include="FridgeItem.cs" />
+    <Compile Include="GroceryItem.cs" />
     <Compile Include="GroceryList.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>

@@ -12,7 +12,7 @@ namespace RecipeTracker
 {
     public partial class Form1 : Form
     {
-
+        private GroceryList groceryList;
         //
         // Main Form Code
         //
@@ -32,6 +32,7 @@ namespace RecipeTracker
             AddToMealPlanPanel.Visible = false;
             MealPlanPanel.Visible = false;
             AddRecipePanel.Visible = false;
+            AddGroceryItemPanel.Visible = false;
 
             Recipe recipeOfTheDay = Recipe.GetRandomRecipe();
 
@@ -47,6 +48,17 @@ namespace RecipeTracker
 
             dataGridViewRecipes.CellMouseDoubleClick += dataGridViewRecipes_CellMouseDoubleClick;
 
+            // Grocery List Grid View
+            groceryList = new GroceryList();
+            groceryList.InitializeGroceryList();
+
+            dataGridViewGrocery.AutoGenerateColumns = true;
+            dataGridViewGrocery.DataSource = groceryList.Items;
+
+            dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
+            dataGridViewGrocery.Columns["Name"].ReadOnly = true;
+
+            dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
         }
 
         private void RecipeOfTheDayLabel_Click(object sender, EventArgs e)
@@ -394,6 +406,100 @@ namespace RecipeTracker
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
+        }
+
+        //
+        // Grocery List Panel
+        //
+        private void AddGroceryButton_Click(object sender, EventArgs e)
+        {
+            AddGroceryItemPanel.Visible = true;
+            AddGroceryItemPanel.BringToFront();
+        }
+
+        private void DeleteGroceryButton_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewGrocery.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewGrocery.SelectedRows[0].Index;
+
+                if (selectedIndex >= 0 && selectedIndex < groceryList.Items.Count)
+                {
+                    groceryList.Items.RemoveAt(selectedIndex);
+
+                    dataGridViewGrocery.DataSource = null;
+                    dataGridViewGrocery.DataSource = groceryList.Items;
+
+                    dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
+                    dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an item to delete.");
+            }
+        }
+
+        private void ClearSelectedGroceryButton_Click(object sender, EventArgs e)
+        {
+            groceryList.Items.RemoveAll(item => item.IsBought);
+
+            dataGridViewGrocery.DataSource = null;
+            dataGridViewGrocery.DataSource = groceryList.Items;
+
+            dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
+            dataGridViewGrocery.Columns["Name"].ReadOnly = true;
+
+            dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
+        }
+
+        private void ClearGroceryListButton_Click(object sender, EventArgs e)
+        {
+            groceryList.ClearList();
+
+            dataGridViewGrocery.DataSource = null;
+            dataGridViewGrocery.DataSource = groceryList.Items;
+
+            dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
+            dataGridViewGrocery.Columns["Name"].ReadOnly = true;
+
+            dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
+        }
+
+        //
+        // Add Grocery Item Panel
+        //
+        private void AddGroceryItemButton_Click(object sender, EventArgs e)
+        {
+            string newItemName = NewGroceryItemText.Text;
+
+            if (!string.IsNullOrEmpty(newItemName))
+            {
+                newItemName = char.ToUpper(newItemName[0]) + newItemName.Substring(1).ToLower();
+
+                groceryList.AddItem(newItemName);
+
+                NewGroceryItemText.Clear();
+
+                AddGroceryItemPanel.Visible = false;
+
+                dataGridViewGrocery.DataSource = null;
+                dataGridViewGrocery.DataSource = groceryList.Items;
+
+                dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
+                dataGridViewGrocery.Columns["Name"].ReadOnly = true;
+
+                dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
+            }
+            else
+            {
+                MessageBox.Show("Please enter a grocery item to add.");
+            }
+        }
+
+        private void CancelAddGroceryItemButton_Click(object sender, EventArgs e)
+        {
+            AddGroceryItemPanel.Visible = false;
         }
     }
 }

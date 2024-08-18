@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RecipeTracker
 {
-    internal class Fridge
+    internal class FridgeItem
     {
     }
 }

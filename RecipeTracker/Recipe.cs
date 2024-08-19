@@ -21,7 +21,7 @@ namespace RecipeTracker
         public string Source { get; set; }
         public string SourceURL { get; set; }
 
-        public static List<Recipe> AllRecipes = new List<Recipe>();
+        public static Dictionary<string, Recipe> AllRecipes = new Dictionary<string, Recipe>();
         public Recipe(string name, List<string> ingredients, List<string> instructions, string category, int servings, int prepTime, int cookTime, int totalTime, string source, string sourceURL)
         {
             Name = name;
@@ -48,14 +48,15 @@ namespace RecipeTracker
 
             Random random = new Random();
             int index = random.Next(AllRecipes.Count);
-            return AllRecipes[index];
+            var randomRecipe = AllRecipes.ElementAt(index).Value;
+            return randomRecipe;
         }
 
         public static void InitializeRecipes()
         {
             AllRecipes.Clear();
 
-            AllRecipes.Add(new Recipe(
+            AllRecipes.Add("Spaghetti", new Recipe(
             "Spaghetti",
             new List<string> { "1 lb. spaghetti", "1 jar spaghetti sauce", "1 lb. ground beef" },
             new List<string> { "1. Boil water", "2. Brown beef", "3. Combine" },
@@ -68,7 +69,7 @@ namespace RecipeTracker
             "http://www.mom.com/recipes/spaghetti"
         ));
 
-            AllRecipes.Add(new Recipe(
+            AllRecipes.Add("Chicken Parmesan", new Recipe(
                 "Chicken Parmesan",
                 new List<string> { "2 chicken breasts", "1 cup marinara sauce", "1 cup mozzarella cheese" },
                 new List<string> { "1. Bread the chicken", "2. Fry chicken", "3. Top with sauce and cheese", "4. Bake until golden" },
@@ -81,7 +82,7 @@ namespace RecipeTracker
                 "http://www.grandma.com/recipes/chicken-parmesan"
             ));
 
-            AllRecipes.Add(new Recipe(
+            AllRecipes.Add("Beef Stew", new Recipe(
                 "Beef Stew",
                 new List<string> { "2 lbs. beef", "4 carrots", "4 potatoes", "1 onion" },
                 new List<string> { "1. Brown beef", "2. Add vegetables", "3. Simmer for 2 hours" },

@@ -45,7 +45,7 @@ namespace RecipeTracker
 
             dataGridViewRecipes.DataSource = null;
             Recipe.InitializeRecipes();
-            dataGridViewRecipes.DataSource = Recipe.AllRecipes;
+            dataGridViewRecipes.DataSource = Recipe.AllRecipes.Values.ToList();
 
             dataGridViewRecipes.CellMouseDoubleClick += dataGridViewRecipes_CellMouseDoubleClick;
 
@@ -189,7 +189,8 @@ namespace RecipeTracker
                         "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
-                        Recipe.AllRecipes.Remove(selectedRecipe);
+                        Recipe.AllRecipes.Remove(selectedRecipe.Name);
+
                         dataGridViewRecipes.DataSource = null;
                         dataGridViewRecipes.DataSource = Recipe.AllRecipes;
 
@@ -214,6 +215,8 @@ namespace RecipeTracker
         private void BackToRecipeButton_Click(object sender, EventArgs e)
         {
             RecipeInfoPanel.Visible = false;
+            RecipePanel.Visible = true;
+            RecipePanel.BringToFront();
         }
 
         private void AddIngredientsButton_Click(object sender, EventArgs e)
@@ -508,9 +511,12 @@ namespace RecipeTracker
             newRecipe.SourceURL = NewRecipeSourceURLTextBox.Text;
             newRecipe.Ingredients = NewRecipeIngredientsTextBox.Text.Split('\n').ToList();
             newRecipe.Instructions = NewRecipeInstructionsTextBox.Text.Split('\n').ToList();
-            Recipe.AllRecipes.Add(newRecipe);
+
+            Recipe.AllRecipes.Add(newRecipe.Name, newRecipe);
+
             dataGridViewRecipes.DataSource = null;
-            dataGridViewRecipes.DataSource = Recipe.AllRecipes;
+            dataGridViewRecipes.DataSource = Recipe.AllRecipes.Values.ToList();
+
             AddRecipePanel.Visible = false;
 
 

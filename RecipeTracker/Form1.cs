@@ -12,6 +12,7 @@ namespace RecipeTracker
 {
     public partial class Form1 : Form
     {
+        private Fridge fridge;
         private Recipe selectedRecipe;
         private GroceryList groceryList;
         //
@@ -60,6 +61,9 @@ namespace RecipeTracker
             dataGridViewGrocery.Columns["Name"].ReadOnly = true;
 
             dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
+
+            // Fridge
+            fridge = new Fridge();
         }
 
         private void RecipeOfTheDayLabel_Click(object sender, EventArgs e)
@@ -426,6 +430,38 @@ namespace RecipeTracker
         {
             AddGroceryItemPanel.Visible = true;
             AddGroceryItemPanel.BringToFront();
+        }
+        private void AddGroceriesToFridgeButton_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewGrocery.Rows)
+            {
+                bool isBought = (bool)row.Cells["IsBought"].Value;
+
+                if (isBought)
+                {
+                    GroceryItem groceryItem = row.DataBoundItem as GroceryItem;
+
+                    if (groceryItem != null)
+                    {
+                        fridge.AddItem(groceryItem);
+                    }
+                }
+            }
+
+            dataGridViewFridge.DataSource = null;
+            dataGridViewFridge.DataSource = fridge.Items;
+
+            groceryList.Items.RemoveAll(item => item.IsBought);
+
+            dataGridViewGrocery.DataSource = null;
+            dataGridViewGrocery.DataSource = groceryList.Items;
+        }
+        private void SelectAllGroceryItemsButton_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewGrocery.Rows)
+            {
+                row.Cells["IsBought"].Value = true;
+            }
         }
 
         private void DeleteGroceryButton_Click(object sender, EventArgs e)

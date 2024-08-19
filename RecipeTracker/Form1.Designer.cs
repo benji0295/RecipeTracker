@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuPanel = new System.Windows.Forms.Panel();
             this.userLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,6 +40,7 @@
             this.RecipeButton = new System.Windows.Forms.Button();
             this.AccountButton = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.RecipeOfTheDayLabel = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AddRecipePanel = new System.Windows.Forms.Panel();
@@ -120,6 +122,10 @@
             this.CookTimeLabel = new System.Windows.Forms.Label();
             this.PrepTimeLabel = new System.Windows.Forms.Label();
             this.GroceryPanel = new System.Windows.Forms.Panel();
+            this.SelectAllGroceryItemsButton = new System.Windows.Forms.Button();
+            this.AddGroceriesToFridgeButton = new System.Windows.Forms.Button();
+            this.ClearGroceryListButton = new System.Windows.Forms.Button();
+            this.ClearSelectedGroceryButton = new System.Windows.Forms.Button();
             this.DeleteGroceryButton = new System.Windows.Forms.Button();
             this.AddGroceryButton = new System.Windows.Forms.Button();
             this.dataGridViewGrocery = new System.Windows.Forms.DataGridView();
@@ -201,15 +207,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.RecipeOfTheDayLabel = new System.Windows.Forms.Label();
-            this.ClearSelectedGroceryButton = new System.Windows.Forms.Button();
-            this.ClearGroceryListButton = new System.Windows.Forms.Button();
             this.AddGroceryItemPanel = new System.Windows.Forms.Panel();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.NewGroceryItemText = new System.Windows.Forms.TextBox();
-            this.AddGroceryItemButton = new System.Windows.Forms.Button();
             this.CancelAddGroceryItemButton = new System.Windows.Forms.Button();
+            this.AddGroceryItemButton = new System.Windows.Forms.Button();
+            this.NewGroceryItemText = new System.Windows.Forms.TextBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
@@ -247,7 +250,7 @@
             // 
             this.userLabel.AutoSize = true;
             this.userLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLabel.Location = new System.Drawing.Point(108, 217);
+            this.userLabel.Location = new System.Drawing.Point(115, 292);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(102, 45);
             this.userLabel.TabIndex = 7;
@@ -255,10 +258,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.userimage;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
+            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.file;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 202);
+            this.pictureBox1.Size = new System.Drawing.Size(313, 299);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -331,6 +334,16 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1554, 1323);
             this.MainPanel.TabIndex = 2;
+            // 
+            // RecipeOfTheDayLabel
+            // 
+            this.RecipeOfTheDayLabel.AutoSize = true;
+            this.RecipeOfTheDayLabel.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecipeOfTheDayLabel.Location = new System.Drawing.Point(153, 390);
+            this.RecipeOfTheDayLabel.Name = "RecipeOfTheDayLabel";
+            this.RecipeOfTheDayLabel.Size = new System.Drawing.Size(400, 52);
+            this.RecipeOfTheDayLabel.TabIndex = 2;
+            this.RecipeOfTheDayLabel.Text = "Recipe Of The Day";
             // 
             // label53
             // 
@@ -1103,6 +1116,7 @@
             this.InstructionsTextBox.Location = new System.Drawing.Point(25, 767);
             this.InstructionsTextBox.Multiline = true;
             this.InstructionsTextBox.Name = "InstructionsTextBox";
+            this.InstructionsTextBox.ReadOnly = true;
             this.InstructionsTextBox.Size = new System.Drawing.Size(1493, 468);
             this.InstructionsTextBox.TabIndex = 11;
             // 
@@ -1113,6 +1127,7 @@
             this.IngredientsTextBox.Location = new System.Drawing.Point(25, 310);
             this.IngredientsTextBox.Multiline = true;
             this.IngredientsTextBox.Name = "IngredientsTextBox";
+            this.IngredientsTextBox.ReadOnly = true;
             this.IngredientsTextBox.Size = new System.Drawing.Size(1493, 358);
             this.IngredientsTextBox.TabIndex = 10;
             // 
@@ -1191,6 +1206,8 @@
             // 
             // GroceryPanel
             // 
+            this.GroceryPanel.Controls.Add(this.SelectAllGroceryItemsButton);
+            this.GroceryPanel.Controls.Add(this.AddGroceriesToFridgeButton);
             this.GroceryPanel.Controls.Add(this.ClearGroceryListButton);
             this.GroceryPanel.Controls.Add(this.ClearSelectedGroceryButton);
             this.GroceryPanel.Controls.Add(this.DeleteGroceryButton);
@@ -1202,9 +1219,49 @@
             this.GroceryPanel.Size = new System.Drawing.Size(1551, 1320);
             this.GroceryPanel.TabIndex = 4;
             // 
+            // SelectAllGroceryItemsButton
+            // 
+            this.SelectAllGroceryItemsButton.Location = new System.Drawing.Point(1160, 729);
+            this.SelectAllGroceryItemsButton.Name = "SelectAllGroceryItemsButton";
+            this.SelectAllGroceryItemsButton.Size = new System.Drawing.Size(342, 107);
+            this.SelectAllGroceryItemsButton.TabIndex = 7;
+            this.SelectAllGroceryItemsButton.Text = "Select All Items";
+            this.SelectAllGroceryItemsButton.UseVisualStyleBackColor = true;
+            this.SelectAllGroceryItemsButton.Click += new System.EventHandler(this.SelectAllGroceryItemsButton_Click);
+            // 
+            // AddGroceriesToFridgeButton
+            // 
+            this.AddGroceriesToFridgeButton.Location = new System.Drawing.Point(1160, 873);
+            this.AddGroceriesToFridgeButton.Name = "AddGroceriesToFridgeButton";
+            this.AddGroceriesToFridgeButton.Size = new System.Drawing.Size(342, 110);
+            this.AddGroceriesToFridgeButton.TabIndex = 6;
+            this.AddGroceriesToFridgeButton.Text = "Add Selected Items To Fridge";
+            this.AddGroceriesToFridgeButton.UseVisualStyleBackColor = true;
+            this.AddGroceriesToFridgeButton.Click += new System.EventHandler(this.AddGroceriesToFridgeButton_Click);
+            // 
+            // ClearGroceryListButton
+            // 
+            this.ClearGroceryListButton.Location = new System.Drawing.Point(1160, 1173);
+            this.ClearGroceryListButton.Name = "ClearGroceryListButton";
+            this.ClearGroceryListButton.Size = new System.Drawing.Size(342, 114);
+            this.ClearGroceryListButton.TabIndex = 5;
+            this.ClearGroceryListButton.Text = "Clear Grocery List";
+            this.ClearGroceryListButton.UseVisualStyleBackColor = true;
+            this.ClearGroceryListButton.Click += new System.EventHandler(this.ClearGroceryListButton_Click);
+            // 
+            // ClearSelectedGroceryButton
+            // 
+            this.ClearSelectedGroceryButton.Location = new System.Drawing.Point(1160, 1015);
+            this.ClearSelectedGroceryButton.Name = "ClearSelectedGroceryButton";
+            this.ClearSelectedGroceryButton.Size = new System.Drawing.Size(342, 114);
+            this.ClearSelectedGroceryButton.TabIndex = 4;
+            this.ClearSelectedGroceryButton.Text = "Clear Selected Items";
+            this.ClearSelectedGroceryButton.UseVisualStyleBackColor = true;
+            this.ClearSelectedGroceryButton.Click += new System.EventHandler(this.ClearSelectedGroceryButton_Click);
+            // 
             // DeleteGroceryButton
             // 
-            this.DeleteGroceryButton.Location = new System.Drawing.Point(1160, 856);
+            this.DeleteGroceryButton.Location = new System.Drawing.Point(1160, 571);
             this.DeleteGroceryButton.Name = "DeleteGroceryButton";
             this.DeleteGroceryButton.Size = new System.Drawing.Size(342, 114);
             this.DeleteGroceryButton.TabIndex = 3;
@@ -1214,7 +1271,7 @@
             // 
             // AddGroceryButton
             // 
-            this.AddGroceryButton.Location = new System.Drawing.Point(1160, 697);
+            this.AddGroceryButton.Location = new System.Drawing.Point(1160, 415);
             this.AddGroceryButton.Name = "AddGroceryButton";
             this.AddGroceryButton.Size = new System.Drawing.Size(342, 110);
             this.AddGroceryButton.TabIndex = 2;
@@ -1288,9 +1345,21 @@
             // 
             // dataGridViewFridge
             // 
+            this.dataGridViewFridge.AllowUserToAddRows = false;
+            this.dataGridViewFridge.AllowUserToDeleteRows = false;
+            this.dataGridViewFridge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewFridge.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewFridge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFridge.Location = new System.Drawing.Point(0, 121);
             this.dataGridViewFridge.Name = "dataGridViewFridge";
+            this.dataGridViewFridge.RowHeadersVisible = false;
             this.dataGridViewFridge.RowHeadersWidth = 82;
             this.dataGridViewFridge.RowTemplate.Height = 33;
             this.dataGridViewFridge.Size = new System.Drawing.Size(1084, 1202);
@@ -2002,36 +2071,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "My Meal Plan";
             // 
-            // RecipeOfTheDayLabel
-            // 
-            this.RecipeOfTheDayLabel.AutoSize = true;
-            this.RecipeOfTheDayLabel.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecipeOfTheDayLabel.Location = new System.Drawing.Point(153, 390);
-            this.RecipeOfTheDayLabel.Name = "RecipeOfTheDayLabel";
-            this.RecipeOfTheDayLabel.Size = new System.Drawing.Size(400, 52);
-            this.RecipeOfTheDayLabel.TabIndex = 2;
-            this.RecipeOfTheDayLabel.Text = "Recipe Of The Day";
-            // 
-            // ClearSelectedGroceryButton
-            // 
-            this.ClearSelectedGroceryButton.Location = new System.Drawing.Point(1160, 1015);
-            this.ClearSelectedGroceryButton.Name = "ClearSelectedGroceryButton";
-            this.ClearSelectedGroceryButton.Size = new System.Drawing.Size(342, 114);
-            this.ClearSelectedGroceryButton.TabIndex = 4;
-            this.ClearSelectedGroceryButton.Text = "Clear Selected Items";
-            this.ClearSelectedGroceryButton.UseVisualStyleBackColor = true;
-            this.ClearSelectedGroceryButton.Click += new System.EventHandler(this.ClearSelectedGroceryButton_Click);
-            // 
-            // ClearGroceryListButton
-            // 
-            this.ClearGroceryListButton.Location = new System.Drawing.Point(1160, 1173);
-            this.ClearGroceryListButton.Name = "ClearGroceryListButton";
-            this.ClearGroceryListButton.Size = new System.Drawing.Size(342, 114);
-            this.ClearGroceryListButton.TabIndex = 5;
-            this.ClearGroceryListButton.Text = "Clear Grocery List";
-            this.ClearGroceryListButton.UseVisualStyleBackColor = true;
-            this.ClearGroceryListButton.Click += new System.EventHandler(this.ClearGroceryListButton_Click);
-            // 
             // AddGroceryItemPanel
             // 
             this.AddGroceryItemPanel.Controls.Add(this.CancelAddGroceryItemButton);
@@ -2044,32 +2083,15 @@
             this.AddGroceryItemPanel.Size = new System.Drawing.Size(448, 350);
             this.AddGroceryItemPanel.TabIndex = 8;
             // 
-            // label62
+            // CancelAddGroceryItemButton
             // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(33, 42);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(381, 52);
-            this.label62.TabIndex = 0;
-            this.label62.Text = "Add Grocery Item";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(40, 164);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(67, 31);
-            this.label63.TabIndex = 1;
-            this.label63.Text = "Item";
-            // 
-            // NewGroceryItemText
-            // 
-            this.NewGroceryItemText.Location = new System.Drawing.Point(114, 164);
-            this.NewGroceryItemText.Name = "NewGroceryItemText";
-            this.NewGroceryItemText.Size = new System.Drawing.Size(300, 31);
-            this.NewGroceryItemText.TabIndex = 2;
+            this.CancelAddGroceryItemButton.Location = new System.Drawing.Point(257, 267);
+            this.CancelAddGroceryItemButton.Name = "CancelAddGroceryItemButton";
+            this.CancelAddGroceryItemButton.Size = new System.Drawing.Size(143, 52);
+            this.CancelAddGroceryItemButton.TabIndex = 4;
+            this.CancelAddGroceryItemButton.Text = "Cancel";
+            this.CancelAddGroceryItemButton.UseVisualStyleBackColor = true;
+            this.CancelAddGroceryItemButton.Click += new System.EventHandler(this.CancelAddGroceryItemButton_Click);
             // 
             // AddGroceryItemButton
             // 
@@ -2081,15 +2103,32 @@
             this.AddGroceryItemButton.UseVisualStyleBackColor = true;
             this.AddGroceryItemButton.Click += new System.EventHandler(this.AddGroceryItemButton_Click);
             // 
-            // CancelAddGroceryItemButton
+            // NewGroceryItemText
             // 
-            this.CancelAddGroceryItemButton.Location = new System.Drawing.Point(257, 267);
-            this.CancelAddGroceryItemButton.Name = "CancelAddGroceryItemButton";
-            this.CancelAddGroceryItemButton.Size = new System.Drawing.Size(143, 52);
-            this.CancelAddGroceryItemButton.TabIndex = 4;
-            this.CancelAddGroceryItemButton.Text = "Cancel";
-            this.CancelAddGroceryItemButton.UseVisualStyleBackColor = true;
-            this.CancelAddGroceryItemButton.Click += new System.EventHandler(this.CancelAddGroceryItemButton_Click);
+            this.NewGroceryItemText.Location = new System.Drawing.Point(114, 164);
+            this.NewGroceryItemText.Name = "NewGroceryItemText";
+            this.NewGroceryItemText.Size = new System.Drawing.Size(300, 31);
+            this.NewGroceryItemText.TabIndex = 2;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(40, 164);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(67, 31);
+            this.label63.TabIndex = 1;
+            this.label63.Text = "Item";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(33, 42);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(381, 52);
+            this.label62.TabIndex = 0;
+            this.label62.Text = "Add Grocery Item";
             // 
             // Form1
             // 
@@ -2097,13 +2136,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
+            this.Controls.Add(this.GroceryPanel);
+            this.Controls.Add(this.FridgePanel);
             this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.AddGroceryItemPanel);
-            this.Controls.Add(this.GroceryPanel);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.AddToMealPlanPanel);
             this.Controls.Add(this.RecipePanel);
-            this.Controls.Add(this.FridgePanel);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.AccountPanel);
             this.Controls.Add(this.MealPlanPanel);
@@ -2324,6 +2363,8 @@
         private System.Windows.Forms.TextBox NewGroceryItemText;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Button AddGroceriesToFridgeButton;
+        private System.Windows.Forms.Button SelectAllGroceryItemsButton;
     }
 }
 

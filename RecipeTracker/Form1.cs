@@ -38,15 +38,12 @@ namespace RecipeTracker
             AddGroceryItemPanel.Visible = false;
 
             Recipe recipeOfTheDay = Recipe.GetRandomRecipe();
-
             RecipeOfTheDayLabel.Text = recipeOfTheDay.Name;
-
             RecipeOfTheDayLabel.Tag = recipeOfTheDay;
-
             RecipeOfTheDayLabel.Click += RecipeOfTheDayLabel_Click;
 
             dataGridViewRecipes.DataSource = null;
-
+            Recipe.InitializeRecipes();
             dataGridViewRecipes.DataSource = Recipe.AllRecipes;
 
             dataGridViewRecipes.CellMouseDoubleClick += dataGridViewRecipes_CellMouseDoubleClick;

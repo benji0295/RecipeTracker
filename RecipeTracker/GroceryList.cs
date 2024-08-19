@@ -15,12 +15,6 @@ namespace RecipeTracker
         {
             Items = new List<GroceryItem>();
         }
-        public void InitializeGroceryList()
-        {
-            Items.Add(new GroceryItem("Milk"));
-            Items.Add(new GroceryItem("Eggs"));
-            Items.Add(new GroceryItem("Bread"));
-        }
 
         public void AddItem(string name)
         {

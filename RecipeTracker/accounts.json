@@ -1,0 +1,141 @@
+[
+  {
+    "Username": "ben",
+    "Password": "ben",
+    "FirstName": "Ben",
+    "LastName": "Smith",
+    "Email": "bensmith@example.com",
+    "Recipes": {
+      "Spaghetti": {
+        "Name": "Spaghetti",
+        "Ingredients": [ "1 lb. spaghetti", "1 jar spaghetti sauce", "1 lb. ground beef" ],
+        "Instructions": [ "Boil water", "Cook beef", "Combine" ],
+        "Category": "Main Dish",
+        "Servings": 4,
+        "PrepTime": 10,
+        "CookTime": 20,
+        "TotalTime": 30,
+        "Source": "Mom",
+        "SourceURL": "http://example.com/spaghetti"
+      },
+      "Tacos": {
+        "Name": "Tacos",
+        "Ingredients": [ "1 lb. ground beef", "1 packet taco seasoning", "1 package taco shells" ],
+        "Instructions": [ "Cook beef", "Add seasoning", "Serve" ],
+        "Category": "Main Dish",
+        "Servings": 4,
+        "PrepTime": 10,
+        "CookTime": 10,
+        "TotalTime": 20,
+        "Source": "Mom",
+        "SourceURL": "http://example.com/tacos"
+      },
+      "Pancakes": {
+        "Name": "Pancakes",
+        "Ingredients": [ "1 cup flour", "1 cup milk", "1 egg" ],
+        "Instructions": [ "Mix", "Cook", "Serve" ],
+        "Category": "Breakfast",
+        "Servings": 4,
+        "PrepTime": 5,
+        "CookTime": 10,
+        "TotalTime": 15,
+        "Source": "Mom",
+        "SourceURL": "http://example.com/pancakes"
+      },
+      "Grilled Cheese": {
+        "Name": "Grilled Cheese",
+        "Ingredients": [ "2 slices bread", "1 slice cheese", "1 tbsp butter" ],
+        "Instructions": [ "Butter bread", "Add cheese", "Cook" ],
+        "Category": "Lunch",
+        "Servings": 1,
+        "PrepTime": 5,
+        "CookTime": 5,
+        "TotalTime": 10,
+        "Source": "Mom",
+        "SourceURL": "http://example.com/grilledcheese"
+      },
+      "PB&J": {
+        "Name": "PB&J",
+        "Ingredients": [ "2 slices bread", "2 tbsp peanut butter", "2 tbsp jelly" ],
+        "Instructions": [ "Spread peanut butter", "Spread jelly", "Combine" ],
+        "Category": "Lunch",
+        "Servings": 1,
+        "PrepTime": 5,
+        "CookTime": 0,
+        "TotalTime": 5,
+        "Source": "Mom",
+        "SourceURL": "http://example.com/pbj"
+      }
+    },
+    "GroceryList": [
+      {
+        "Name": "Milk",
+        "IsBought": false
+      },
+      {
+        "Name": "Eggs",
+        "IsBought": false
+      },
+      {
+        "Name": "Bread",
+        "IsBought": false
+      }
+    ],
+    "FridgeItems": [
+      {
+        "Name": "Butter",
+        "IsBought": false
+      },
+      {
+        "Name": "Ketchup",
+        "IsBought": false
+      }
+    ]
+  },
+
+  {
+    "Username": "admin",
+    "Password": "admin",
+    "FirstName": "Admin",
+    "LastName": "User",
+    "Email": "admin@admin.com",
+    "Recipes": {
+      "Spaghetti": {
+        "Name": "Spaghetti",
+        "Ingredients": [ "1 lb. spaghetti", "1 jar spaghetti sauce", "1 lb. ground beef" ],
+        "Instructions": [ "Boil water", "Cook beef", "Combine" ],
+        "Category": "Main Dish",
+        "Servings": 4,
+        "PrepTime": 10,
+        "CookTime": 20,
+        "TotalTime": 30,
+        "Source": "Mom",
+        "SourceURL": "http://example.com/spaghetti"
+      }
+    },
+    "GroceryList": [
+      {
+        "Name": "Milk",
+        "IsBought": false
+      },
+      {
+        "Name": "Eggs",
+        "IsBought": false
+      },
+      {
+        "Name": "Bread",
+        "IsBought": false
+      }
+    ],
+    "FridgeItems": [
+      {
+        "Name": "Butter",
+        "IsBought": false
+      },
+      {
+        "Name": "Ketchup",
+        "IsBought": false
+      }
+    ]
+  }
+]

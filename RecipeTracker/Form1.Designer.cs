@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuPanel = new System.Windows.Forms.Panel();
             this.userLabel = new System.Windows.Forms.Label();
@@ -132,6 +132,9 @@
             this.dataGridViewGrocery = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.FridgePanel = new System.Windows.Forms.Panel();
+            this.AddSelectedFridgeToGroceryButton = new System.Windows.Forms.Button();
+            this.DeleteSelectedFridgeButton = new System.Windows.Forms.Button();
+            this.SelectAllFridgeButton = new System.Windows.Forms.Button();
             this.DeleteFromFridgeButton = new System.Windows.Forms.Button();
             this.AddToFridgeButton = new System.Windows.Forms.Button();
             this.dataGridViewFridge = new System.Windows.Forms.DataGridView();
@@ -214,15 +217,12 @@
             this.NewGroceryItemText = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
-            this.SelectAllFridgeButton = new System.Windows.Forms.Button();
-            this.DeleteSelectedFridgeButton = new System.Windows.Forms.Button();
-            this.AddSelectedFridgeToGroceryButton = new System.Windows.Forms.Button();
             this.AddFridgeItemPanel = new System.Windows.Forms.Panel();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.AddFridgeItemText = new System.Windows.Forms.TextBox();
-            this.AddNewFridgeItemButton = new System.Windows.Forms.Button();
             this.CancelAddFridgeItem = new System.Windows.Forms.Button();
+            this.AddNewFridgeItemButton = new System.Windows.Forms.Button();
+            this.AddFridgeItemText = new System.Windows.Forms.TextBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
@@ -998,6 +998,7 @@
             this.dataGridViewRecipes.AllowUserToDeleteRows = false;
             this.dataGridViewRecipes.AllowUserToResizeColumns = false;
             this.dataGridViewRecipes.AllowUserToResizeRows = false;
+            this.dataGridViewRecipes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRecipes.Location = new System.Drawing.Point(0, 119);
             this.dataGridViewRecipes.Name = "dataGridViewRecipes";
@@ -1296,14 +1297,15 @@
             this.dataGridViewGrocery.AllowUserToAddRows = false;
             this.dataGridViewGrocery.AllowUserToDeleteRows = false;
             this.dataGridViewGrocery.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGrocery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewGrocery.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGrocery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewGrocery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGrocery.Location = new System.Drawing.Point(0, 167);
             this.dataGridViewGrocery.Name = "dataGridViewGrocery";
@@ -1338,6 +1340,36 @@
             this.FridgePanel.Size = new System.Drawing.Size(1554, 1323);
             this.FridgePanel.TabIndex = 5;
             // 
+            // AddSelectedFridgeToGroceryButton
+            // 
+            this.AddSelectedFridgeToGroceryButton.Location = new System.Drawing.Point(1146, 856);
+            this.AddSelectedFridgeToGroceryButton.Name = "AddSelectedFridgeToGroceryButton";
+            this.AddSelectedFridgeToGroceryButton.Size = new System.Drawing.Size(340, 109);
+            this.AddSelectedFridgeToGroceryButton.TabIndex = 6;
+            this.AddSelectedFridgeToGroceryButton.Text = "Add Selected Items To Grocery List";
+            this.AddSelectedFridgeToGroceryButton.UseVisualStyleBackColor = true;
+            this.AddSelectedFridgeToGroceryButton.Click += new System.EventHandler(this.AddSelectedFridgeToGroceryButton_Click);
+            // 
+            // DeleteSelectedFridgeButton
+            // 
+            this.DeleteSelectedFridgeButton.Location = new System.Drawing.Point(1148, 1015);
+            this.DeleteSelectedFridgeButton.Name = "DeleteSelectedFridgeButton";
+            this.DeleteSelectedFridgeButton.Size = new System.Drawing.Size(340, 110);
+            this.DeleteSelectedFridgeButton.TabIndex = 5;
+            this.DeleteSelectedFridgeButton.Text = "Delete Selected Items";
+            this.DeleteSelectedFridgeButton.UseVisualStyleBackColor = true;
+            this.DeleteSelectedFridgeButton.Click += new System.EventHandler(this.DeleteSelectedFridgeButton_Click);
+            // 
+            // SelectAllFridgeButton
+            // 
+            this.SelectAllFridgeButton.Location = new System.Drawing.Point(1146, 696);
+            this.SelectAllFridgeButton.Name = "SelectAllFridgeButton";
+            this.SelectAllFridgeButton.Size = new System.Drawing.Size(341, 110);
+            this.SelectAllFridgeButton.TabIndex = 4;
+            this.SelectAllFridgeButton.Text = "Select All Items";
+            this.SelectAllFridgeButton.UseVisualStyleBackColor = true;
+            this.SelectAllFridgeButton.Click += new System.EventHandler(this.SelectAllFridgeButton_Click);
+            // 
             // DeleteFromFridgeButton
             // 
             this.DeleteFromFridgeButton.Location = new System.Drawing.Point(1146, 1164);
@@ -1361,14 +1393,15 @@
             // dataGridViewFridge
             // 
             this.dataGridViewFridge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewFridge.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewFridge.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewFridge.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewFridge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFridge.Location = new System.Drawing.Point(0, 121);
             this.dataGridViewFridge.Name = "dataGridViewFridge";
@@ -1631,7 +1664,7 @@
             // 
             // AddAMealButton
             // 
-            this.AddAMealButton.Location = new System.Drawing.Point(501, 1187);
+            this.AddAMealButton.Location = new System.Drawing.Point(514, 1181);
             this.AddAMealButton.Name = "AddAMealButton";
             this.AddAMealButton.Size = new System.Drawing.Size(190, 87);
             this.AddAMealButton.TabIndex = 51;
@@ -1641,7 +1674,7 @@
             // 
             // ClearMealPlanButton
             // 
-            this.ClearMealPlanButton.Location = new System.Drawing.Point(753, 1188);
+            this.ClearMealPlanButton.Location = new System.Drawing.Point(797, 1182);
             this.ClearMealPlanButton.Name = "ClearMealPlanButton";
             this.ClearMealPlanButton.Size = new System.Drawing.Size(190, 86);
             this.ClearMealPlanButton.TabIndex = 50;
@@ -1651,358 +1684,400 @@
             // 
             // thursdayBreakfastText
             // 
-            this.thursdayBreakfastText.Location = new System.Drawing.Point(1093, 286);
+            this.thursdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.thursdayBreakfastText.Location = new System.Drawing.Point(1044, 277);
             this.thursdayBreakfastText.Name = "thursdayBreakfastText";
             this.thursdayBreakfastText.ReadOnly = true;
-            this.thursdayBreakfastText.Size = new System.Drawing.Size(268, 31);
+            this.thursdayBreakfastText.Size = new System.Drawing.Size(268, 24);
             this.thursdayBreakfastText.TabIndex = 49;
             // 
             // thursdayLunchText
             // 
-            this.thursdayLunchText.Location = new System.Drawing.Point(1069, 354);
+            this.thursdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.thursdayLunchText.Location = new System.Drawing.Point(1044, 335);
             this.thursdayLunchText.Name = "thursdayLunchText";
             this.thursdayLunchText.ReadOnly = true;
-            this.thursdayLunchText.Size = new System.Drawing.Size(271, 31);
+            this.thursdayLunchText.Size = new System.Drawing.Size(271, 24);
             this.thursdayLunchText.TabIndex = 48;
             // 
             // thursdayDinnerText
             // 
-            this.thursdayDinnerText.Location = new System.Drawing.Point(1069, 411);
+            this.thursdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.thursdayDinnerText.Location = new System.Drawing.Point(1044, 399);
             this.thursdayDinnerText.Name = "thursdayDinnerText";
             this.thursdayDinnerText.ReadOnly = true;
-            this.thursdayDinnerText.Size = new System.Drawing.Size(249, 31);
+            this.thursdayDinnerText.Size = new System.Drawing.Size(271, 24);
             this.thursdayDinnerText.TabIndex = 47;
             // 
             // fridayBreakfastText
             // 
-            this.fridayBreakfastText.Location = new System.Drawing.Point(1089, 640);
+            this.fridayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fridayBreakfastText.Location = new System.Drawing.Point(1033, 587);
             this.fridayBreakfastText.Name = "fridayBreakfastText";
             this.fridayBreakfastText.ReadOnly = true;
-            this.fridayBreakfastText.Size = new System.Drawing.Size(251, 31);
+            this.fridayBreakfastText.Size = new System.Drawing.Size(271, 24);
             this.fridayBreakfastText.TabIndex = 46;
             // 
             // fridayLunchText
             // 
-            this.fridayLunchText.Location = new System.Drawing.Point(1061, 686);
+            this.fridayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fridayLunchText.Location = new System.Drawing.Point(1033, 652);
             this.fridayLunchText.Name = "fridayLunchText";
             this.fridayLunchText.ReadOnly = true;
-            this.fridayLunchText.Size = new System.Drawing.Size(257, 31);
+            this.fridayLunchText.Size = new System.Drawing.Size(271, 24);
             this.fridayLunchText.TabIndex = 45;
             // 
             // fridayDinnerText
             // 
-            this.fridayDinnerText.Location = new System.Drawing.Point(1061, 740);
+            this.fridayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fridayDinnerText.Location = new System.Drawing.Point(1033, 723);
             this.fridayDinnerText.Name = "fridayDinnerText";
             this.fridayDinnerText.ReadOnly = true;
-            this.fridayDinnerText.Size = new System.Drawing.Size(257, 31);
+            this.fridayDinnerText.Size = new System.Drawing.Size(271, 24);
             this.fridayDinnerText.TabIndex = 44;
             // 
             // saturdayBreakfastText
             // 
-            this.saturdayBreakfastText.Location = new System.Drawing.Point(1089, 989);
+            this.saturdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.saturdayBreakfastText.Location = new System.Drawing.Point(1033, 895);
             this.saturdayBreakfastText.Name = "saturdayBreakfastText";
             this.saturdayBreakfastText.ReadOnly = true;
-            this.saturdayBreakfastText.Size = new System.Drawing.Size(251, 31);
+            this.saturdayBreakfastText.Size = new System.Drawing.Size(271, 24);
             this.saturdayBreakfastText.TabIndex = 43;
             // 
             // saturdayLunchText
             // 
-            this.saturdayLunchText.Location = new System.Drawing.Point(1050, 1031);
+            this.saturdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.saturdayLunchText.Location = new System.Drawing.Point(1033, 963);
             this.saturdayLunchText.Name = "saturdayLunchText";
             this.saturdayLunchText.ReadOnly = true;
-            this.saturdayLunchText.Size = new System.Drawing.Size(268, 31);
+            this.saturdayLunchText.Size = new System.Drawing.Size(268, 24);
             this.saturdayLunchText.TabIndex = 42;
             // 
             // saturdayDinnerText
             // 
-            this.saturdayDinnerText.Location = new System.Drawing.Point(1061, 1090);
+            this.saturdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.saturdayDinnerText.Location = new System.Drawing.Point(1033, 1034);
             this.saturdayDinnerText.Name = "saturdayDinnerText";
             this.saturdayDinnerText.ReadOnly = true;
-            this.saturdayDinnerText.Size = new System.Drawing.Size(279, 31);
+            this.saturdayDinnerText.Size = new System.Drawing.Size(279, 24);
             this.saturdayDinnerText.TabIndex = 41;
             // 
             // wednesdayDinnerText
             // 
-            this.wednesdayDinnerText.Location = new System.Drawing.Point(223, 1174);
+            this.wednesdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.wednesdayDinnerText.Location = new System.Drawing.Point(223, 1126);
             this.wednesdayDinnerText.Name = "wednesdayDinnerText";
             this.wednesdayDinnerText.ReadOnly = true;
-            this.wednesdayDinnerText.Size = new System.Drawing.Size(271, 31);
+            this.wednesdayDinnerText.Size = new System.Drawing.Size(271, 24);
             this.wednesdayDinnerText.TabIndex = 40;
             // 
             // wednesdayLunchText
             // 
-            this.wednesdayLunchText.Location = new System.Drawing.Point(223, 1129);
+            this.wednesdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.wednesdayLunchText.Location = new System.Drawing.Point(223, 1063);
             this.wednesdayLunchText.Name = "wednesdayLunchText";
             this.wednesdayLunchText.ReadOnly = true;
-            this.wednesdayLunchText.Size = new System.Drawing.Size(271, 31);
+            this.wednesdayLunchText.Size = new System.Drawing.Size(271, 24);
             this.wednesdayLunchText.TabIndex = 39;
             // 
             // wednesdayBreakfastText
             // 
-            this.wednesdayBreakfastText.Location = new System.Drawing.Point(251, 1081);
+            this.wednesdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.wednesdayBreakfastText.Location = new System.Drawing.Point(223, 1003);
             this.wednesdayBreakfastText.Name = "wednesdayBreakfastText";
             this.wednesdayBreakfastText.ReadOnly = true;
-            this.wednesdayBreakfastText.Size = new System.Drawing.Size(254, 31);
+            this.wednesdayBreakfastText.Size = new System.Drawing.Size(254, 24);
             this.wednesdayBreakfastText.TabIndex = 38;
             // 
             // tuesdayDinnerText
             // 
-            this.tuesdayDinnerText.Location = new System.Drawing.Point(223, 889);
+            this.tuesdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tuesdayDinnerText.Location = new System.Drawing.Point(219, 873);
             this.tuesdayDinnerText.Name = "tuesdayDinnerText";
             this.tuesdayDinnerText.ReadOnly = true;
-            this.tuesdayDinnerText.Size = new System.Drawing.Size(271, 31);
+            this.tuesdayDinnerText.Size = new System.Drawing.Size(271, 24);
             this.tuesdayDinnerText.TabIndex = 37;
             // 
             // tuesdayLunchText
             // 
-            this.tuesdayLunchText.Location = new System.Drawing.Point(223, 837);
+            this.tuesdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tuesdayLunchText.Location = new System.Drawing.Point(219, 807);
             this.tuesdayLunchText.Name = "tuesdayLunchText";
             this.tuesdayLunchText.ReadOnly = true;
-            this.tuesdayLunchText.Size = new System.Drawing.Size(271, 31);
+            this.tuesdayLunchText.Size = new System.Drawing.Size(271, 24);
             this.tuesdayLunchText.TabIndex = 36;
             // 
             // tuesdayBreakfastText
             // 
-            this.tuesdayBreakfastText.Location = new System.Drawing.Point(251, 788);
+            this.tuesdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tuesdayBreakfastText.Location = new System.Drawing.Point(223, 744);
             this.tuesdayBreakfastText.Name = "tuesdayBreakfastText";
             this.tuesdayBreakfastText.ReadOnly = true;
-            this.tuesdayBreakfastText.Size = new System.Drawing.Size(243, 31);
+            this.tuesdayBreakfastText.Size = new System.Drawing.Size(267, 24);
             this.tuesdayBreakfastText.TabIndex = 35;
             // 
             // mondayDinnerText
             // 
-            this.mondayDinnerText.Location = new System.Drawing.Point(233, 659);
+            this.mondayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mondayDinnerText.Location = new System.Drawing.Point(219, 637);
             this.mondayDinnerText.Name = "mondayDinnerText";
             this.mondayDinnerText.ReadOnly = true;
-            this.mondayDinnerText.Size = new System.Drawing.Size(261, 31);
+            this.mondayDinnerText.Size = new System.Drawing.Size(261, 24);
             this.mondayDinnerText.TabIndex = 34;
             // 
             // mondayLunchText
             // 
-            this.mondayLunchText.Location = new System.Drawing.Point(233, 621);
+            this.mondayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mondayLunchText.Location = new System.Drawing.Point(219, 568);
             this.mondayLunchText.Name = "mondayLunchText";
             this.mondayLunchText.ReadOnly = true;
-            this.mondayLunchText.Size = new System.Drawing.Size(261, 31);
+            this.mondayLunchText.Size = new System.Drawing.Size(261, 24);
             this.mondayLunchText.TabIndex = 33;
             // 
             // mondayBreakfastText
             // 
-            this.mondayBreakfastText.Location = new System.Drawing.Point(274, 571);
+            this.mondayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mondayBreakfastText.Location = new System.Drawing.Point(219, 508);
             this.mondayBreakfastText.Name = "mondayBreakfastText";
             this.mondayBreakfastText.ReadOnly = true;
-            this.mondayBreakfastText.Size = new System.Drawing.Size(220, 31);
+            this.mondayBreakfastText.Size = new System.Drawing.Size(255, 24);
             this.mondayBreakfastText.TabIndex = 32;
             // 
             // sundayDinnerText
             // 
-            this.sundayDinnerText.Location = new System.Drawing.Point(223, 393);
+            this.sundayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sundayDinnerText.Location = new System.Drawing.Point(219, 399);
             this.sundayDinnerText.Name = "sundayDinnerText";
             this.sundayDinnerText.ReadOnly = true;
-            this.sundayDinnerText.Size = new System.Drawing.Size(262, 31);
+            this.sundayDinnerText.Size = new System.Drawing.Size(262, 24);
             this.sundayDinnerText.TabIndex = 31;
             // 
             // sundayLunchText
             // 
-            this.sundayLunchText.Location = new System.Drawing.Point(223, 339);
+            this.sundayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sundayLunchText.Location = new System.Drawing.Point(219, 338);
             this.sundayLunchText.Name = "sundayLunchText";
             this.sundayLunchText.ReadOnly = true;
-            this.sundayLunchText.Size = new System.Drawing.Size(262, 31);
+            this.sundayLunchText.Size = new System.Drawing.Size(262, 24);
             this.sundayLunchText.TabIndex = 30;
             // 
             // sundayBreakfastText
             // 
-            this.sundayBreakfastText.Location = new System.Drawing.Point(261, 289);
+            this.sundayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sundayBreakfastText.Location = new System.Drawing.Point(219, 273);
             this.sundayBreakfastText.Name = "sundayBreakfastText";
             this.sundayBreakfastText.ReadOnly = true;
-            this.sundayBreakfastText.Size = new System.Drawing.Size(224, 31);
+            this.sundayBreakfastText.Size = new System.Drawing.Size(252, 24);
             this.sundayBreakfastText.TabIndex = 29;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(974, 1090);
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label34.Location = new System.Drawing.Point(938, 1040);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(81, 25);
+            this.label34.Size = new System.Drawing.Size(88, 25);
             this.label34.TabIndex = 28;
             this.label34.Text = "Dinner:";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(978, 740);
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label33.Location = new System.Drawing.Point(938, 729);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(81, 25);
+            this.label33.Size = new System.Drawing.Size(88, 25);
             this.label33.TabIndex = 27;
             this.label33.Text = "Dinner:";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(982, 411);
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label32.Location = new System.Drawing.Point(948, 400);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(81, 25);
+            this.label32.Size = new System.Drawing.Size(88, 25);
             this.label32.TabIndex = 26;
             this.label32.Text = "Dinner:";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(146, 1174);
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label31.Location = new System.Drawing.Point(136, 1132);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(81, 25);
+            this.label31.Size = new System.Drawing.Size(88, 25);
             this.label31.TabIndex = 25;
             this.label31.Text = "Dinner:";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(146, 889);
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label30.Location = new System.Drawing.Point(132, 876);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(81, 25);
+            this.label30.Size = new System.Drawing.Size(88, 25);
             this.label30.TabIndex = 24;
             this.label30.Text = "Dinner:";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(152, 659);
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(132, 636);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(81, 25);
+            this.label29.Size = new System.Drawing.Size(88, 25);
             this.label29.TabIndex = 23;
             this.label29.Text = "Dinner:";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(146, 396);
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(132, 400);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(81, 25);
+            this.label28.Size = new System.Drawing.Size(88, 25);
             this.label28.TabIndex = 22;
             this.label28.Text = "Dinner:";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(974, 1034);
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label27.Location = new System.Drawing.Point(942, 966);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(77, 25);
+            this.label27.Size = new System.Drawing.Size(83, 25);
             this.label27.TabIndex = 21;
             this.label27.Text = "Lunch:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(978, 686);
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label26.Location = new System.Drawing.Point(942, 660);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(77, 25);
+            this.label26.Size = new System.Drawing.Size(83, 25);
             this.label26.TabIndex = 20;
             this.label26.Text = "Lunch:";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(982, 354);
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label25.Location = new System.Drawing.Point(953, 336);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(77, 25);
+            this.label25.Size = new System.Drawing.Size(83, 25);
             this.label25.TabIndex = 19;
             this.label25.Text = "Lunch:";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(146, 1132);
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label24.Location = new System.Drawing.Point(140, 1069);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(77, 25);
+            this.label24.Size = new System.Drawing.Size(83, 25);
             this.label24.TabIndex = 18;
             this.label24.Text = "Lunch:";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(146, 837);
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label23.Location = new System.Drawing.Point(136, 813);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 25);
+            this.label23.Size = new System.Drawing.Size(83, 25);
             this.label23.TabIndex = 17;
             this.label23.Text = "Lunch:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(156, 624);
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(136, 575);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(77, 25);
+            this.label22.Size = new System.Drawing.Size(83, 25);
             this.label22.TabIndex = 16;
             this.label22.Text = "Lunch:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(146, 345);
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(136, 337);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(77, 25);
+            this.label21.Size = new System.Drawing.Size(83, 25);
             this.label21.TabIndex = 15;
             this.label21.Text = "Lunch:";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(974, 989);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label20.Location = new System.Drawing.Point(910, 898);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(109, 25);
+            this.label20.Size = new System.Drawing.Size(119, 25);
             this.label20.TabIndex = 14;
             this.label20.Text = "Breakfast:";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(974, 643);
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label19.Location = new System.Drawing.Point(910, 590);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(109, 25);
+            this.label19.Size = new System.Drawing.Size(119, 25);
             this.label19.TabIndex = 13;
             this.label19.Text = "Breakfast:";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(978, 292);
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label18.Location = new System.Drawing.Point(921, 277);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(109, 25);
+            this.label18.Size = new System.Drawing.Size(119, 25);
             this.label18.TabIndex = 12;
             this.label18.Text = "Breakfast:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(146, 1081);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label17.Location = new System.Drawing.Point(108, 1009);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(109, 25);
+            this.label17.Size = new System.Drawing.Size(119, 25);
             this.label17.TabIndex = 11;
             this.label17.Text = "Breakfast:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(146, 790);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(108, 750);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 25);
+            this.label16.Size = new System.Drawing.Size(119, 25);
             this.label16.TabIndex = 10;
             this.label16.Text = "Breakfast:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(171, 574);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(104, 514);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(109, 25);
+            this.label15.Size = new System.Drawing.Size(119, 25);
             this.label15.TabIndex = 9;
             this.label15.Text = "Breakfast:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(146, 292);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(108, 277);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(109, 25);
+            this.label14.Size = new System.Drawing.Size(119, 25);
             this.label14.TabIndex = 8;
             this.label14.Text = "Breakfast:";
             // 
@@ -2020,7 +2095,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1070, 948);
+            this.label12.Location = new System.Drawing.Point(1056, 837);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(116, 30);
             this.label12.TabIndex = 6;
@@ -2030,7 +2105,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1070, 600);
+            this.label11.Location = new System.Drawing.Point(1056, 542);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(83, 30);
             this.label11.TabIndex = 5;
@@ -2040,7 +2115,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1032, 247);
+            this.label10.Location = new System.Drawing.Point(1056, 232);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(121, 30);
             this.label10.TabIndex = 4;
@@ -2050,7 +2125,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(234, 1015);
+            this.label9.Location = new System.Drawing.Point(257, 948);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(143, 30);
             this.label9.TabIndex = 3;
@@ -2060,7 +2135,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(234, 744);
+            this.label8.Location = new System.Drawing.Point(257, 697);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 30);
             this.label8.TabIndex = 2;
@@ -2070,7 +2145,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(234, 528);
+            this.label7.Location = new System.Drawing.Point(257, 460);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 30);
             this.label7.TabIndex = 1;
@@ -2080,7 +2155,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(471, 43);
+            this.label6.Location = new System.Drawing.Point(499, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(499, 90);
             this.label6.TabIndex = 0;
@@ -2145,36 +2220,6 @@
             this.label62.TabIndex = 0;
             this.label62.Text = "Add Grocery Item";
             // 
-            // SelectAllFridgeButton
-            // 
-            this.SelectAllFridgeButton.Location = new System.Drawing.Point(1146, 696);
-            this.SelectAllFridgeButton.Name = "SelectAllFridgeButton";
-            this.SelectAllFridgeButton.Size = new System.Drawing.Size(341, 110);
-            this.SelectAllFridgeButton.TabIndex = 4;
-            this.SelectAllFridgeButton.Text = "Select All Items";
-            this.SelectAllFridgeButton.UseVisualStyleBackColor = true;
-            this.SelectAllFridgeButton.Click += new System.EventHandler(this.SelectAllFridgeButton_Click);
-            // 
-            // DeleteSelectedFridgeButton
-            // 
-            this.DeleteSelectedFridgeButton.Location = new System.Drawing.Point(1148, 1015);
-            this.DeleteSelectedFridgeButton.Name = "DeleteSelectedFridgeButton";
-            this.DeleteSelectedFridgeButton.Size = new System.Drawing.Size(340, 110);
-            this.DeleteSelectedFridgeButton.TabIndex = 5;
-            this.DeleteSelectedFridgeButton.Text = "Delete Selected Items";
-            this.DeleteSelectedFridgeButton.UseVisualStyleBackColor = true;
-            this.DeleteSelectedFridgeButton.Click += new System.EventHandler(this.DeleteSelectedFridgeButton_Click);
-            // 
-            // AddSelectedFridgeToGroceryButton
-            // 
-            this.AddSelectedFridgeToGroceryButton.Location = new System.Drawing.Point(1146, 856);
-            this.AddSelectedFridgeToGroceryButton.Name = "AddSelectedFridgeToGroceryButton";
-            this.AddSelectedFridgeToGroceryButton.Size = new System.Drawing.Size(340, 109);
-            this.AddSelectedFridgeToGroceryButton.TabIndex = 6;
-            this.AddSelectedFridgeToGroceryButton.Text = "Add Selected Items To Grocery List";
-            this.AddSelectedFridgeToGroceryButton.UseVisualStyleBackColor = true;
-            this.AddSelectedFridgeToGroceryButton.Click += new System.EventHandler(this.AddSelectedFridgeToGroceryButton_Click);
-            // 
             // AddFridgeItemPanel
             // 
             this.AddFridgeItemPanel.Controls.Add(this.CancelAddFridgeItem);
@@ -2187,32 +2232,15 @@
             this.AddFridgeItemPanel.Size = new System.Drawing.Size(431, 350);
             this.AddFridgeItemPanel.TabIndex = 7;
             // 
-            // label64
+            // CancelAddFridgeItem
             // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(47, 29);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(344, 52);
-            this.label64.TabIndex = 0;
-            this.label64.Text = "Add Fridge Item";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(37, 160);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(67, 31);
-            this.label65.TabIndex = 1;
-            this.label65.Text = "Item";
-            // 
-            // AddFridgeItemText
-            // 
-            this.AddFridgeItemText.Location = new System.Drawing.Point(107, 160);
-            this.AddFridgeItemText.Name = "AddFridgeItemText";
-            this.AddFridgeItemText.Size = new System.Drawing.Size(276, 31);
-            this.AddFridgeItemText.TabIndex = 2;
+            this.CancelAddFridgeItem.Location = new System.Drawing.Point(236, 252);
+            this.CancelAddFridgeItem.Name = "CancelAddFridgeItem";
+            this.CancelAddFridgeItem.Size = new System.Drawing.Size(137, 54);
+            this.CancelAddFridgeItem.TabIndex = 4;
+            this.CancelAddFridgeItem.Text = "Cancel";
+            this.CancelAddFridgeItem.UseVisualStyleBackColor = true;
+            this.CancelAddFridgeItem.Click += new System.EventHandler(this.CancelAddFridgeItem_Click);
             // 
             // AddNewFridgeItemButton
             // 
@@ -2224,15 +2252,32 @@
             this.AddNewFridgeItemButton.UseVisualStyleBackColor = true;
             this.AddNewFridgeItemButton.Click += new System.EventHandler(this.AddNewFridgeItemButton_Click);
             // 
-            // CancelAddFridgeItem
+            // AddFridgeItemText
             // 
-            this.CancelAddFridgeItem.Location = new System.Drawing.Point(236, 252);
-            this.CancelAddFridgeItem.Name = "CancelAddFridgeItem";
-            this.CancelAddFridgeItem.Size = new System.Drawing.Size(137, 54);
-            this.CancelAddFridgeItem.TabIndex = 4;
-            this.CancelAddFridgeItem.Text = "Cancel";
-            this.CancelAddFridgeItem.UseVisualStyleBackColor = true;
-            this.CancelAddFridgeItem.Click += new System.EventHandler(this.CancelAddFridgeItem_Click);
+            this.AddFridgeItemText.Location = new System.Drawing.Point(107, 160);
+            this.AddFridgeItemText.Name = "AddFridgeItemText";
+            this.AddFridgeItemText.Size = new System.Drawing.Size(276, 31);
+            this.AddFridgeItemText.TabIndex = 2;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(37, 160);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(67, 31);
+            this.label65.TabIndex = 1;
+            this.label65.Text = "Item";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(47, 29);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(344, 52);
+            this.label64.TabIndex = 0;
+            this.label64.Text = "Add Fridge Item";
             // 
             // Form1
             // 
@@ -2240,16 +2285,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
-            this.Controls.Add(this.MainPanel);
-            this.Controls.Add(this.AddFridgeItemPanel);
+            this.Controls.Add(this.RecipeInfoPanel);
+            this.Controls.Add(this.RecipePanel);
             this.Controls.Add(this.FridgePanel);
             this.Controls.Add(this.GroceryPanel);
-            this.Controls.Add(this.RecipeInfoPanel);
+            this.Controls.Add(this.MealPlanPanel);
+            this.Controls.Add(this.MainPanel);
+            this.Controls.Add(this.AddFridgeItemPanel);
             this.Controls.Add(this.AddToMealPlanPanel);
-            this.Controls.Add(this.RecipePanel);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.AccountPanel);
-            this.Controls.Add(this.MealPlanPanel);
             this.Controls.Add(this.AddRecipePanel);
             this.Controls.Add(this.AddGroceryItemPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

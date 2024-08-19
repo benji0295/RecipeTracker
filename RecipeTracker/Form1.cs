@@ -12,16 +12,18 @@ namespace RecipeTracker
 {
     public partial class Form1 : Form
     {
-        private Fridge fridge;
+        private Account loggedInAccount;
         private Recipe selectedRecipe;
-        private GroceryList groceryList;
+
         //
         // Main Form Code
         //
         #region Main Form
-        public Form1()
+        public Form1(Account account)
         {
             InitializeComponent();
+            loggedInAccount = account;
+            userLabel.Text = loggedInAccount.FirstName;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,38 +40,38 @@ namespace RecipeTracker
             AddGroceryItemPanel.Visible = false;
             AddFridgeItemPanel.Visible = false;
 
-            Recipe recipeOfTheDay = Recipe.GetRandomRecipe();
-            RecipeOfTheDayLabel.Text = recipeOfTheDay.Name;
-            RecipeOfTheDayLabel.Tag = recipeOfTheDay;
-            RecipeOfTheDayLabel.Click += RecipeOfTheDayLabel_Click;
+            try
+            {
+                Recipe recipeOfTheDay = Recipe.GetRandomRecipe(loggedInAccount);
+                RecipeOfTheDayLabel.Text = recipeOfTheDay.Name;
+                RecipeOfTheDayLabel.Tag = recipeOfTheDay;
+                RecipeOfTheDayLabel.Click += RecipeOfTheDayLabel_Click;
+            }
+            catch (InvalidOperationException)
+            {
+                RecipeOfTheDayLabel.Text = "No recipes available.";
+            }
 
+            // Populate Recipes DataGridView
             dataGridViewRecipes.DataSource = null;
-            Recipe.InitializeRecipes();
-            dataGridViewRecipes.DataSource = Recipe.AllRecipes.Values.ToList();
+            dataGridViewRecipes.DataSource = loggedInAccount.Recipes.Values.ToList();  // Use the logged-in account's recipes
+            dataGridViewRecipes.Columns["Name"].HeaderText = "Recipe Name";
+            dataGridViewRecipes.Columns["Name"].ReadOnly = true;
 
             dataGridViewRecipes.CellMouseDoubleClick += dataGridViewRecipes_CellMouseDoubleClick;
 
-            // Grocery List Grid View
-            groceryList = new GroceryList();
-            groceryList.InitializeGroceryList();
-
-            dataGridViewGrocery.AutoGenerateColumns = true;
-            dataGridViewGrocery.DataSource = groceryList.Items;
-
+            // Populate GroceryList DataGridView
+            dataGridViewGrocery.DataSource = null;
+            dataGridViewGrocery.DataSource = loggedInAccount.GroceryList;
             dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
             dataGridViewGrocery.Columns["Name"].ReadOnly = true;
-
             dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
 
-            // Fridge
-            fridge = new Fridge();
-
-            dataGridViewFridge.AutoGenerateColumns = true;
-            dataGridViewFridge.DataSource = fridge.Items;
-
+            // Populate FridgeItems DataGridView
+            dataGridViewFridge.DataSource = null;
+            dataGridViewFridge.DataSource = loggedInAccount.FridgeItems;
             dataGridViewFridge.Columns["Name"].HeaderText = "Item";
             dataGridViewFridge.Columns["Name"].ReadOnly = true;
-
             dataGridViewFridge.Columns["IsBought"].HeaderText = "Used";
             dataGridViewFridge.Columns["IsBought"].ReadOnly = false;
 
@@ -77,22 +79,29 @@ namespace RecipeTracker
 
         private void RecipeOfTheDayLabel_Click(object sender, EventArgs e)
         {
-            Label recipeLabel = sender as Label;
-            Recipe selectedRecipe = recipeLabel.Tag as Recipe;
-
-            if (selectedRecipe != null)
+            if (RecipeOfTheDayLabel.Tag != null)
             {
-                RecipeNameText.Text = selectedRecipe.Name;
-                PrepTimeTextBox.Text = $"{selectedRecipe.PrepTime.ToString()} minutes";
-                CookTimeTextBox.Text = $"{selectedRecipe.CookTime.ToString()} minutes";
-                TotalTimeTextBox.Text = $"{selectedRecipe.TotalTime.ToString()} minutes";
-                ServingSizeTextBox.Text = $"{selectedRecipe.Servings.ToString()} servings";
-                IngredientsTextBox.Text = string.Join("\r\n", selectedRecipe.Ingredients);
-                InstructionsTextBox.Text = string.Join("\r\n", selectedRecipe.Instructions);
-                SourceTextBox.Text = selectedRecipe.SourceURL;
+                Label recipeLabel = sender as Label;
+                Recipe selectedRecipe = recipeLabel.Tag as Recipe;
 
-                RecipeInfoPanel.BringToFront();
-                RecipeInfoPanel.Visible = true;
+                if (selectedRecipe != null)
+                {
+                    RecipeNameText.Text = selectedRecipe.Name;
+                    PrepTimeTextBox.Text = $"{selectedRecipe.PrepTime.ToString()} minutes";
+                    CookTimeTextBox.Text = $"{selectedRecipe.CookTime.ToString()} minutes";
+                    TotalTimeTextBox.Text = $"{selectedRecipe.TotalTime.ToString()} minutes";
+                    ServingSizeTextBox.Text = $"{selectedRecipe.Servings.ToString()} servings";
+                    IngredientsTextBox.Text = string.Join("\r\n", selectedRecipe.Ingredients);
+                    InstructionsTextBox.Text = string.Join("\r\n", selectedRecipe.Instructions);
+                    SourceTextBox.Text = selectedRecipe.SourceURL;
+
+                    RecipeInfoPanel.BringToFront();
+                    RecipeInfoPanel.Visible = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No recipe available.");
             }
         }
         #endregion
@@ -153,7 +162,7 @@ namespace RecipeTracker
         {
             if (e.RowIndex >= 0)
             {
-                selectedRecipe = dataGridViewRecipes.Rows[e.RowIndex].DataBoundItem as Recipe;
+                Recipe selectedRecipe = dataGridViewRecipes.Rows[e.RowIndex].DataBoundItem as Recipe;
 
                 if (selectedRecipe != null)
                 {
@@ -187,12 +196,15 @@ namespace RecipeTracker
                 {
                     DialogResult result = MessageBox.Show($"Are you sure you want to delete your {selectedRecipe.Name} recipe?",
                         "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
                     if (result == DialogResult.Yes)
                     {
-                        Recipe.AllRecipes.Remove(selectedRecipe.Name);
+                        loggedInAccount.Recipes.Remove(selectedRecipe.Name);
 
                         dataGridViewRecipes.DataSource = null;
-                        dataGridViewRecipes.DataSource = Recipe.AllRecipes;
+                        dataGridViewRecipes.DataSource = loggedInAccount.Recipes.Values.ToList();
+
+                        AccountManager.SaveAccounts();
 
                         RecipeInfoPanel.Visible = false;
                         RecipePanel.Visible = true;
@@ -225,11 +237,11 @@ namespace RecipeTracker
             {
                 foreach (var ingredient in selectedRecipe.Ingredients)
                 {
-                    groceryList.AddItem(ingredient);
+                    loggedInAccount.GroceryList.Add(new GroceryItem(ingredient));
                 }
 
                 dataGridViewGrocery.DataSource = null;
-                dataGridViewGrocery.DataSource = groceryList.Items;
+                dataGridViewGrocery.DataSource = loggedInAccount.GroceryList;
 
                 MessageBox.Show("Ingredients added to your grocery list.");
             }
@@ -290,18 +302,18 @@ namespace RecipeTracker
 
                     if (fridgeItem != null)
                     {
-                        groceryList.AddItem(fridgeItem.Name);
+                        loggedInAccount.GroceryList.Add(new GroceryItem(fridgeItem.Name));
                         itemsToRemove.Add(fridgeItem);
                     }
                 }
             }
             foreach (var item in itemsToRemove)
             {
-                fridge.Items.Remove(item);
+                loggedInAccount.FridgeItems.Remove(item);
             }
 
             dataGridViewFridge.DataSource = null;
-            dataGridViewFridge.DataSource = fridge.Items;
+            dataGridViewFridge.DataSource = loggedInAccount.FridgeItems;
 
             dataGridViewFridge.Columns["Name"].HeaderText = "Item";
             dataGridViewFridge.Columns["Name"].ReadOnly = true;
@@ -309,7 +321,7 @@ namespace RecipeTracker
             dataGridViewFridge.Columns["IsBought"].HeaderText = "Used";
 
             dataGridViewGrocery.DataSource = null;
-            dataGridViewGrocery.DataSource = groceryList.Items;
+            dataGridViewGrocery.DataSource = loggedInAccount.GroceryList;
 
             dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
             dataGridViewGrocery.Columns["Name"].ReadOnly = true;
@@ -325,10 +337,10 @@ namespace RecipeTracker
 
         private void DeleteSelectedFridgeButton_Click(object sender, EventArgs e)
         {
-            fridge.Items.RemoveAll(item => item.IsBought);
+            loggedInAccount.FridgeItems.RemoveAll(item => item.IsBought);
 
             dataGridViewFridge.DataSource = null;
-            dataGridViewFridge.DataSource = fridge.Items;
+            dataGridViewFridge.DataSource = loggedInAccount.FridgeItems;
 
             dataGridViewFridge.Columns["Name"].HeaderText = "Item";
             dataGridViewFridge.Columns["Name"].ReadOnly = true;
@@ -344,12 +356,12 @@ namespace RecipeTracker
             {
                 int selectedIndex = dataGridViewFridge.SelectedRows[0].Index;
 
-                if (selectedIndex >= 0 && selectedIndex < fridge.Items.Count)
+                if (selectedIndex >= 0 && selectedIndex < loggedInAccount.FridgeItems.Count)
                 {
-                    fridge.Items.RemoveAt(selectedIndex);
+                    loggedInAccount.FridgeItems.RemoveAt(selectedIndex);
 
                     dataGridViewFridge.DataSource = null;
-                    dataGridViewFridge.DataSource = fridge.Items;
+                    dataGridViewFridge.DataSource = loggedInAccount.FridgeItems;
 
                     dataGridViewFridge.Columns["Name"].HeaderText = "Item";
                     dataGridViewFridge.Columns["Name"].ReadOnly = true;
@@ -501,6 +513,7 @@ namespace RecipeTracker
         private void AddRecipePanelButton_Click(object sender, EventArgs e)
         {
             Recipe newRecipe = new Recipe();
+
             newRecipe.Name = NewRecipeNameTextBox.Text;
             newRecipe.Category = NewRecipeCategoryTextBox.Text;
             newRecipe.PrepTime = int.Parse(NewRecipePrepTextBox.Text);
@@ -512,14 +525,22 @@ namespace RecipeTracker
             newRecipe.Ingredients = NewRecipeIngredientsTextBox.Text.Split('\n').ToList();
             newRecipe.Instructions = NewRecipeInstructionsTextBox.Text.Split('\n').ToList();
 
-            Recipe.AllRecipes.Add(newRecipe.Name, newRecipe);
+            if (!loggedInAccount.Recipes.ContainsKey(newRecipe.Name))
+            {
+                loggedInAccount.Recipes.Add(newRecipe.Name, newRecipe);
+            }
+            else
+            {
+                MessageBox.Show("A recipe with this name already exists");
+                return;
+            }
 
             dataGridViewRecipes.DataSource = null;
-            dataGridViewRecipes.DataSource = Recipe.AllRecipes.Values.ToList();
+            dataGridViewRecipes.DataSource = loggedInAccount.Recipes.Values.ToList();
 
             AddRecipePanel.Visible = false;
 
-
+            AccountManager.SaveAccounts();
         }
         private void CancelAddRecipePanelButton_Click(object sender, EventArgs e)
         {
@@ -574,22 +595,22 @@ namespace RecipeTracker
                     {
                         var newFridgeItem = new GroceryItem(groceryItem.Name);
 
-                        fridge.AddItem(newFridgeItem);
+                        loggedInAccount.FridgeItems.Add(newFridgeItem);
                         itemsToMove.Add(groceryItem);
                     }
                 }
             }
             foreach (var item in itemsToMove)
             {
-                groceryList.Items.Remove(item);
+                loggedInAccount.GroceryList.Remove(item);
             }
 
             var groceryBindingSource = new BindingSource();
-            groceryBindingSource.DataSource = groceryList.Items;
+            groceryBindingSource.DataSource = loggedInAccount.GroceryList;
             dataGridViewGrocery.DataSource = groceryBindingSource;
 
             var fridgeBindingSource = new BindingSource();
-            fridgeBindingSource.DataSource = fridge.Items;
+            fridgeBindingSource.DataSource = loggedInAccount.FridgeItems;
             dataGridViewFridge.DataSource = fridgeBindingSource;
 
             dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
@@ -615,12 +636,12 @@ namespace RecipeTracker
             {
                 int selectedIndex = dataGridViewGrocery.SelectedRows[0].Index;
 
-                if (selectedIndex >= 0 && selectedIndex < groceryList.Items.Count)
+                if (selectedIndex >= 0 && selectedIndex < loggedInAccount.GroceryList.Count)
                 {
-                    groceryList.Items.RemoveAt(selectedIndex);
+                    loggedInAccount.GroceryList.RemoveAt(selectedIndex);
 
                     dataGridViewGrocery.DataSource = null;
-                    dataGridViewGrocery.DataSource = groceryList.Items;
+                    dataGridViewGrocery.DataSource = loggedInAccount.GroceryList;
 
                     dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
                     dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
@@ -634,10 +655,10 @@ namespace RecipeTracker
 
         private void ClearSelectedGroceryButton_Click(object sender, EventArgs e)
         {
-            groceryList.Items.RemoveAll(item => item.IsBought);
+            loggedInAccount.GroceryList.RemoveAll(item => item.IsBought);
 
             dataGridViewGrocery.DataSource = null;
-            dataGridViewGrocery.DataSource = groceryList.Items;
+            dataGridViewGrocery.DataSource = loggedInAccount.GroceryList;
 
             dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
             dataGridViewGrocery.Columns["Name"].ReadOnly = true;
@@ -647,10 +668,10 @@ namespace RecipeTracker
 
         private void ClearGroceryListButton_Click(object sender, EventArgs e)
         {
-            groceryList.ClearList();
+            loggedInAccount.GroceryList.Clear();
 
             dataGridViewGrocery.DataSource = null;
-            dataGridViewGrocery.DataSource = groceryList.Items;
+            dataGridViewGrocery.DataSource = loggedInAccount.GroceryList    ;
 
             dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
             dataGridViewGrocery.Columns["Name"].ReadOnly = true;
@@ -671,14 +692,14 @@ namespace RecipeTracker
             {
                 newItemName = char.ToUpper(newItemName[0]) + newItemName.Substring(1).ToLower();
 
-                groceryList.AddItem(newItemName);
+                loggedInAccount.GroceryList.Add(new GroceryItem(newItemName));
 
                 NewGroceryItemText.Clear();
 
                 AddGroceryItemPanel.Visible = false;
 
                 dataGridViewGrocery.DataSource = null;
-                dataGridViewGrocery.DataSource = groceryList.Items;
+                dataGridViewGrocery.DataSource = loggedInAccount.GroceryList;
 
                 dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
                 dataGridViewGrocery.Columns["Name"].ReadOnly = true;
@@ -709,13 +730,13 @@ namespace RecipeTracker
             {
                 newItemName = char.ToUpper(newItemName[0]) + newItemName.Substring(1).ToLower();
 
-                if (!fridge.Items.Any(item => item.Name == newItemName))
+                if (!loggedInAccount.FridgeItems.Any(item => item.Name == newItemName))
                 {
                     var newFridgeItem = new GroceryItem(newItemName);
-                    fridge.AddItem(newFridgeItem);
+                    loggedInAccount.FridgeItems.Add(newFridgeItem);
 
                     var bindingSource = new BindingSource();
-                    bindingSource.DataSource = fridge.Items;
+                    bindingSource.DataSource = loggedInAccount.FridgeItems;
                     dataGridViewFridge.DataSource = bindingSource;
                 }
                 else

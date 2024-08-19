@@ -54,15 +54,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ResetPasswordPanel = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.ResetButtonPassword = new System.Windows.Forms.Button();
-            this.CancelResetButton = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.ResetPassUsernameText = new System.Windows.Forms.TextBox();
-            this.ResetPasswordText = new System.Windows.Forms.TextBox();
             this.ConfirmNewPassText = new System.Windows.Forms.TextBox();
+            this.ResetPasswordText = new System.Windows.Forms.TextBox();
+            this.ResetPassUsernameText = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CancelResetButton = new System.Windows.Forms.Button();
+            this.ResetButtonPassword = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.LoginPanel.SuspendLayout();
             this.CreateAccountPanel.SuspendLayout();
             this.ResetPasswordPanel.SuspendLayout();
@@ -321,25 +321,53 @@
             this.ResetPasswordPanel.Size = new System.Drawing.Size(786, 786);
             this.ResetPasswordPanel.TabIndex = 10;
             // 
-            // label11
+            // ConfirmNewPassText
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(83, 21);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(599, 90);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Reset Password";
+            this.ConfirmNewPassText.Location = new System.Drawing.Point(313, 464);
+            this.ConfirmNewPassText.Name = "ConfirmNewPassText";
+            this.ConfirmNewPassText.Size = new System.Drawing.Size(301, 31);
+            this.ConfirmNewPassText.TabIndex = 8;
             // 
-            // ResetButtonPassword
+            // ResetPasswordText
             // 
-            this.ResetButtonPassword.Location = new System.Drawing.Point(132, 637);
-            this.ResetButtonPassword.Name = "ResetButtonPassword";
-            this.ResetButtonPassword.Size = new System.Drawing.Size(198, 96);
-            this.ResetButtonPassword.TabIndex = 1;
-            this.ResetButtonPassword.Text = "Reset Password";
-            this.ResetButtonPassword.UseVisualStyleBackColor = true;
-            this.ResetButtonPassword.Click += new System.EventHandler(this.ResetButtonPassword_Click);
+            this.ResetPasswordText.Location = new System.Drawing.Point(313, 357);
+            this.ResetPasswordText.Name = "ResetPasswordText";
+            this.ResetPasswordText.Size = new System.Drawing.Size(301, 31);
+            this.ResetPasswordText.TabIndex = 7;
+            // 
+            // ResetPassUsernameText
+            // 
+            this.ResetPassUsernameText.Location = new System.Drawing.Point(313, 255);
+            this.ResetPassUsernameText.Name = "ResetPassUsernameText";
+            this.ResetPassUsernameText.Size = new System.Drawing.Size(301, 31);
+            this.ResetPassUsernameText.TabIndex = 6;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(61, 467);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(234, 25);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Confirm New Password";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(141, 363);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(154, 25);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "New Password";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(185, 261);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(110, 25);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Username";
             // 
             // CancelResetButton
             // 
@@ -351,61 +379,33 @@
             this.CancelResetButton.UseVisualStyleBackColor = true;
             this.CancelResetButton.Click += new System.EventHandler(this.CancelResetButton_Click);
             // 
-            // label12
+            // ResetButtonPassword
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(185, 261);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 25);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Username";
+            this.ResetButtonPassword.Location = new System.Drawing.Point(132, 637);
+            this.ResetButtonPassword.Name = "ResetButtonPassword";
+            this.ResetButtonPassword.Size = new System.Drawing.Size(198, 96);
+            this.ResetButtonPassword.TabIndex = 1;
+            this.ResetButtonPassword.Text = "Reset Password";
+            this.ResetButtonPassword.UseVisualStyleBackColor = true;
+            this.ResetButtonPassword.Click += new System.EventHandler(this.ResetButtonPassword_Click);
             // 
-            // label13
+            // label11
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(141, 363);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(154, 25);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "New Password";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(61, 467);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(234, 25);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Confirm New Password";
-            // 
-            // ResetPassUsernameText
-            // 
-            this.ResetPassUsernameText.Location = new System.Drawing.Point(313, 255);
-            this.ResetPassUsernameText.Name = "ResetPassUsernameText";
-            this.ResetPassUsernameText.Size = new System.Drawing.Size(301, 31);
-            this.ResetPassUsernameText.TabIndex = 6;
-            // 
-            // ResetPasswordText
-            // 
-            this.ResetPasswordText.Location = new System.Drawing.Point(313, 357);
-            this.ResetPasswordText.Name = "ResetPasswordText";
-            this.ResetPasswordText.Size = new System.Drawing.Size(301, 31);
-            this.ResetPasswordText.TabIndex = 7;
-            // 
-            // ConfirmNewPassText
-            // 
-            this.ConfirmNewPassText.Location = new System.Drawing.Point(313, 464);
-            this.ConfirmNewPassText.Name = "ConfirmNewPassText";
-            this.ConfirmNewPassText.Size = new System.Drawing.Size(301, 31);
-            this.ConfirmNewPassText.TabIndex = 8;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(83, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(599, 90);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Reset Password";
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 785);
-            this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccountPanel);
+            this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.ResetPasswordPanel);
             this.Name = "LoginForm";
             this.Text = "LoginForm";

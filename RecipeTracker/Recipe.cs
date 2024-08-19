@@ -39,61 +39,16 @@ namespace RecipeTracker
         public Recipe()
         {
         }
-        public static Recipe GetRandomRecipe()
+        public static Recipe GetRandomRecipe(Account loggedInAccount)
         {
-            if (AllRecipes.Count == 0)
+            if (loggedInAccount.Recipes.Count == 0)
             {
-                InitializeRecipes();
+                throw new InvalidOperationException("No recipes available for this account.");
             }
 
             Random random = new Random();
-            int index = random.Next(AllRecipes.Count);
-            var randomRecipe = AllRecipes.ElementAt(index).Value;
-            return randomRecipe;
-        }
-
-        public static void InitializeRecipes()
-        {
-            AllRecipes.Clear();
-
-            AllRecipes.Add("Spaghetti", new Recipe(
-            "Spaghetti",
-            new List<string> { "1 lb. spaghetti", "1 jar spaghetti sauce", "1 lb. ground beef" },
-            new List<string> { "1. Boil water", "2. Brown beef", "3. Combine" },
-            "Main Dish",
-            4,
-            10,
-            20,
-            30,
-            "Mom",
-            "http://www.mom.com/recipes/spaghetti"
-        ));
-
-            AllRecipes.Add("Chicken Parmesan", new Recipe(
-                "Chicken Parmesan",
-                new List<string> { "2 chicken breasts", "1 cup marinara sauce", "1 cup mozzarella cheese" },
-                new List<string> { "1. Bread the chicken", "2. Fry chicken", "3. Top with sauce and cheese", "4. Bake until golden" },
-                "Main Dish",
-                2,
-                15,
-                25,
-                40,
-                "Grandma",
-                "http://www.grandma.com/recipes/chicken-parmesan"
-            ));
-
-            AllRecipes.Add("Beef Stew", new Recipe(
-                "Beef Stew",
-                new List<string> { "2 lbs. beef", "4 carrots", "4 potatoes", "1 onion" },
-                new List<string> { "1. Brown beef", "2. Add vegetables", "3. Simmer for 2 hours" },
-                "Main Dish",
-                6,
-                20,
-                120,
-                140,
-                "Dad",
-                "http://www.dad.com/recipes/beef-stew"
-            ));
+            int index = random.Next(loggedInAccount.Recipes.Count);
+            return loggedInAccount.Recipes.ElementAt(index).Value;
         }
     }
 }

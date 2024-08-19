@@ -15,13 +15,28 @@ namespace RecipeTracker
         public LoginForm()
         {
             InitializeComponent();
+            LoginPanel.Visible = true;
+            LoginPanel.BringToFront();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
+            string username=  usernameTextBox.Text;
+            string password = passwordTextBox.Text;
+
+            Account loggedInAccount = AccountManager.ValidateLogin(username, password);
+
+            if (loggedInAccount != null)
+            {
+                Form1 form1 = new Form1(loggedInAccount);
+                form1.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password. Please try again.");
+                passwordTextBox.Text = "";
+            }
         }
 
         private void createAccountLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -38,7 +53,23 @@ namespace RecipeTracker
 
         private void CreateAccountButton_Click(object sender, EventArgs e)
         {
+            string username = CreateUsernameTextBox.Text;
+            string password = CreatePasswordTextBox.Text;
+            string firstName = FirstNameTextBox.Text;
+            string lastName = LastNameTextBox.Text;
+            string email = EmailTextBox.Text;
 
+
+            if (!AccountManager.AccountExists(username))
+            {
+                Account newAccount = new Account(username, password, firstName, lastName, email);
+                AccountManager.AddAccount(newAccount);
+                MessageBox.Show("Account created successfully. Please login.");
+            }
+            else
+            {
+                MessageBox.Show("Account already exists. Please login or create a new account.");
+            }
         }
 
         private void CancelCreateAccountButton_Click(object sender, EventArgs e)

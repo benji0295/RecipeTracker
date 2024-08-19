@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuPanel = new System.Windows.Forms.Panel();
             this.userLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -213,6 +213,9 @@
             this.NewGroceryItemText = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
+            this.SelectAllFridgeButton = new System.Windows.Forms.Button();
+            this.DeleteSelectedFridgeButton = new System.Windows.Forms.Button();
+            this.AddSelectedFridgeToGroceryButton = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
@@ -1284,14 +1287,14 @@
             this.dataGridViewGrocery.AllowUserToAddRows = false;
             this.dataGridViewGrocery.AllowUserToDeleteRows = false;
             this.dataGridViewGrocery.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGrocery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGrocery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewGrocery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGrocery.Location = new System.Drawing.Point(0, 167);
             this.dataGridViewGrocery.Name = "dataGridViewGrocery";
@@ -1314,6 +1317,9 @@
             // 
             // FridgePanel
             // 
+            this.FridgePanel.Controls.Add(this.AddSelectedFridgeToGroceryButton);
+            this.FridgePanel.Controls.Add(this.DeleteSelectedFridgeButton);
+            this.FridgePanel.Controls.Add(this.SelectAllFridgeButton);
             this.FridgePanel.Controls.Add(this.DeleteFromFridgeButton);
             this.FridgePanel.Controls.Add(this.AddToFridgeButton);
             this.FridgePanel.Controls.Add(this.dataGridViewFridge);
@@ -1325,9 +1331,9 @@
             // 
             // DeleteFromFridgeButton
             // 
-            this.DeleteFromFridgeButton.Location = new System.Drawing.Point(1199, 744);
+            this.DeleteFromFridgeButton.Location = new System.Drawing.Point(1146, 1164);
             this.DeleteFromFridgeButton.Name = "DeleteFromFridgeButton";
-            this.DeleteFromFridgeButton.Size = new System.Drawing.Size(218, 87);
+            this.DeleteFromFridgeButton.Size = new System.Drawing.Size(341, 110);
             this.DeleteFromFridgeButton.TabIndex = 3;
             this.DeleteFromFridgeButton.Text = "Delete Item";
             this.DeleteFromFridgeButton.UseVisualStyleBackColor = true;
@@ -1335,9 +1341,9 @@
             // 
             // AddToFridgeButton
             // 
-            this.AddToFridgeButton.Location = new System.Drawing.Point(1199, 581);
+            this.AddToFridgeButton.Location = new System.Drawing.Point(1146, 542);
             this.AddToFridgeButton.Name = "AddToFridgeButton";
-            this.AddToFridgeButton.Size = new System.Drawing.Size(218, 87);
+            this.AddToFridgeButton.Size = new System.Drawing.Size(342, 110);
             this.AddToFridgeButton.TabIndex = 2;
             this.AddToFridgeButton.Text = "Add Item";
             this.AddToFridgeButton.UseVisualStyleBackColor = true;
@@ -1345,32 +1351,32 @@
             // 
             // dataGridViewFridge
             // 
-            this.dataGridViewFridge.AllowUserToAddRows = false;
-            this.dataGridViewFridge.AllowUserToDeleteRows = false;
             this.dataGridViewFridge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewFridge.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewFridge.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewFridge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFridge.Location = new System.Drawing.Point(0, 121);
             this.dataGridViewFridge.Name = "dataGridViewFridge";
             this.dataGridViewFridge.RowHeadersVisible = false;
             this.dataGridViewFridge.RowHeadersWidth = 82;
             this.dataGridViewFridge.RowTemplate.Height = 33;
+            this.dataGridViewFridge.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewFridge.Size = new System.Drawing.Size(1084, 1202);
             this.dataGridViewFridge.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(680, 43);
+            this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(555, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 25);
+            this.label4.Size = new System.Drawing.Size(377, 90);
             this.label4.TabIndex = 0;
             this.label4.Text = "My Fridge";
             // 
@@ -2130,14 +2136,44 @@
             this.label62.TabIndex = 0;
             this.label62.Text = "Add Grocery Item";
             // 
+            // SelectAllFridgeButton
+            // 
+            this.SelectAllFridgeButton.Location = new System.Drawing.Point(1146, 696);
+            this.SelectAllFridgeButton.Name = "SelectAllFridgeButton";
+            this.SelectAllFridgeButton.Size = new System.Drawing.Size(341, 110);
+            this.SelectAllFridgeButton.TabIndex = 4;
+            this.SelectAllFridgeButton.Text = "Select All Items";
+            this.SelectAllFridgeButton.UseVisualStyleBackColor = true;
+            this.SelectAllFridgeButton.Click += new System.EventHandler(this.SelectAllFridgeButton_Click);
+            // 
+            // DeleteSelectedFridgeButton
+            // 
+            this.DeleteSelectedFridgeButton.Location = new System.Drawing.Point(1148, 1015);
+            this.DeleteSelectedFridgeButton.Name = "DeleteSelectedFridgeButton";
+            this.DeleteSelectedFridgeButton.Size = new System.Drawing.Size(340, 110);
+            this.DeleteSelectedFridgeButton.TabIndex = 5;
+            this.DeleteSelectedFridgeButton.Text = "Delete Selected Items";
+            this.DeleteSelectedFridgeButton.UseVisualStyleBackColor = true;
+            this.DeleteSelectedFridgeButton.Click += new System.EventHandler(this.DeleteSelectedFridgeButton_Click);
+            // 
+            // AddSelectedFridgeToGroceryButton
+            // 
+            this.AddSelectedFridgeToGroceryButton.Location = new System.Drawing.Point(1146, 856);
+            this.AddSelectedFridgeToGroceryButton.Name = "AddSelectedFridgeToGroceryButton";
+            this.AddSelectedFridgeToGroceryButton.Size = new System.Drawing.Size(340, 109);
+            this.AddSelectedFridgeToGroceryButton.TabIndex = 6;
+            this.AddSelectedFridgeToGroceryButton.Text = "Add Selected Items To Grocery List";
+            this.AddSelectedFridgeToGroceryButton.UseVisualStyleBackColor = true;
+            this.AddSelectedFridgeToGroceryButton.Click += new System.EventHandler(this.AddSelectedFridgeToGroceryButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
-            this.Controls.Add(this.GroceryPanel);
             this.Controls.Add(this.FridgePanel);
+            this.Controls.Add(this.GroceryPanel);
             this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.AddGroceryItemPanel);
             this.Controls.Add(this.MainPanel);
@@ -2365,6 +2401,9 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Button AddGroceriesToFridgeButton;
         private System.Windows.Forms.Button SelectAllGroceryItemsButton;
+        private System.Windows.Forms.Button SelectAllFridgeButton;
+        private System.Windows.Forms.Button AddSelectedFridgeToGroceryButton;
+        private System.Windows.Forms.Button DeleteSelectedFridgeButton;
     }
 }
 

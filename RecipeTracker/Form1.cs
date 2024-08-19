@@ -18,6 +18,7 @@ namespace RecipeTracker
         //
         // Main Form Code
         //
+        #region Main Form
         public Form1()
         {
             InitializeComponent();
@@ -64,11 +65,21 @@ namespace RecipeTracker
 
             // Fridge
             fridge = new Fridge();
+
+            dataGridViewFridge.AutoGenerateColumns = true;
+            dataGridViewFridge.DataSource = fridge.Items;
+
+            dataGridViewFridge.Columns["Name"].HeaderText = "Item";
+            dataGridViewFridge.Columns["Name"].ReadOnly = true;
+
+            dataGridViewFridge.Columns["IsBought"].HeaderText = "Used";
+            dataGridViewFridge.Columns["IsBought"].ReadOnly = false;
+
         }
 
         private void RecipeOfTheDayLabel_Click(object sender, EventArgs e)
         {
-            Label recipeLabel = sender as Label; 
+            Label recipeLabel = sender as Label;
             Recipe selectedRecipe = recipeLabel.Tag as Recipe;
 
             if (selectedRecipe != null)
@@ -86,10 +97,13 @@ namespace RecipeTracker
                 RecipeInfoPanel.Visible = true;
             }
         }
+        #endregion
 
         //
         // Menu Panel Code
         //
+
+        #region Menu Panel
         private void MainButton_Click(object sender, EventArgs e)
         {
             MainPanel.Visible = true;
@@ -130,11 +144,13 @@ namespace RecipeTracker
             AccountPanel.Visible = true;
             AccountPanel.BringToFront();
         }
+        #endregion
 
         //
         // My Recipes Code
         //
 
+        #region Recipe Panel
         private void dataGridViewRecipes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -157,12 +173,6 @@ namespace RecipeTracker
                 }
             }
         }
-
-        private void BackToRecipeButton_Click(object sender, EventArgs e)
-        {
-            RecipeInfoPanel.Visible = false;
-        }
-
         private void AddRecipeButton_Click(object sender, EventArgs e)
         {
             AddRecipePanel.Visible = true;
@@ -191,14 +201,21 @@ namespace RecipeTracker
                 }
             }
         }
+        #endregion
 
         //
         // Recipe Info Panel Code
         //
+
+        #region Recipe Info Panel
         private void AddToMealPlanButton_Click(object sender, EventArgs e)
         {
             AddToMealPlanPanel.Visible = true;
             AddToMealPlanPanel.BringToFront();
+        }
+        private void BackToRecipeButton_Click(object sender, EventArgs e)
+        {
+            RecipeInfoPanel.Visible = false;
         }
 
         private void AddIngredientsButton_Click(object sender, EventArgs e)
@@ -216,9 +233,12 @@ namespace RecipeTracker
                 MessageBox.Show("Ingredients added to your grocery list.");
             }
         }
+        #endregion
+        
         //
         // Meal Plan Panel
         //
+        #region Meal Plan Panel
         private void AddAMealButton_Click(object sender, EventArgs e)
         {
             RecipePanel.Visible = true;
@@ -235,24 +255,119 @@ namespace RecipeTracker
                 }
             }
         }
+        #endregion
 
         //
         // Fridge Panel Code
         //
 
+        #region Fridge Panel
         private void AddToFridgeButton_Click(object sender, EventArgs e)
         {
 
         }
+        private void SelectAllFridgeButton_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewFridge.Rows)
+            {
+                row.Cells["IsBought"].Value = true;
+            }
+        }
+
+        private void AddSelectedFridgeToGroceryButton_Click(object sender, EventArgs e)
+        {
+            List<GroceryItem> itemsToRemove = new List<GroceryItem>();
+
+            foreach (DataGridViewRow row in dataGridViewFridge.Rows)
+            {
+                bool isBought = (bool)row.Cells["IsBought"].Value;
+
+                if (isBought)
+                {
+                    GroceryItem fridgeItem = row.DataBoundItem as GroceryItem;
+
+                    if (fridgeItem != null)
+                    {
+                        groceryList.AddItem(fridgeItem.Name);
+                        itemsToRemove.Add(fridgeItem);
+                    }
+                }
+            }
+            foreach (var item in itemsToRemove)
+            {
+                fridge.Items.Remove(item);
+            }
+
+            dataGridViewFridge.DataSource = null;
+            dataGridViewFridge.DataSource = fridge.Items;
+
+            dataGridViewFridge.Columns["Name"].HeaderText = "Item";
+            dataGridViewFridge.Columns["Name"].ReadOnly = true;
+
+            dataGridViewFridge.Columns["IsBought"].HeaderText = "Used";
+
+            dataGridViewGrocery.DataSource = null;
+            dataGridViewGrocery.DataSource = groceryList.Items;
+
+            dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
+            dataGridViewGrocery.Columns["Name"].ReadOnly = true;
+
+            dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
+
+
+            foreach (DataGridViewRow row in dataGridViewFridge.Rows)
+            {
+                row.Cells["IsBought"].Value = false;
+            }
+        }
+
+        private void DeleteSelectedFridgeButton_Click(object sender, EventArgs e)
+        {
+            fridge.Items.RemoveAll(item => item.IsBought);
+
+            dataGridViewFridge.DataSource = null;
+            dataGridViewFridge.DataSource = fridge.Items;
+
+            dataGridViewFridge.Columns["Name"].HeaderText = "Item";
+            dataGridViewFridge.Columns["Name"].ReadOnly = true;
+
+            dataGridViewFridge.Columns["IsBought"].HeaderText = "Used";
+            dataGridViewFridge.Columns["IsBought"].ReadOnly = false;
+        }
 
         private void DeleteFromFridgeButton_Click(object sender, EventArgs e)
         {
+            // delete selected row from fridge
+            if (dataGridViewFridge.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewFridge.SelectedRows[0].Index;
 
+                if (selectedIndex >= 0 && selectedIndex < fridge.Items.Count)
+                {
+                    fridge.Items.RemoveAt(selectedIndex);
+
+                    dataGridViewFridge.DataSource = null;
+                    dataGridViewFridge.DataSource = fridge.Items;
+
+                    dataGridViewFridge.Columns["Name"].HeaderText = "Item";
+                    dataGridViewFridge.Columns["Name"].ReadOnly = true;
+
+                    dataGridViewFridge.Columns["IsBought"].HeaderText = "Used";
+                    dataGridViewFridge.Columns["IsBought"].ReadOnly = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an item to delete.");
+            }
         }
+        #endregion
+
         //
         // Add Recipe To Meal Prep Panel
         //
 
+        #region Add Recipe To Meal Plan Panel
         private void CancelAddRecipeButton_Click(object sender, EventArgs e)
         {
             AddToMealPlanPanel.Visible = false;
@@ -374,10 +489,13 @@ namespace RecipeTracker
                 }
             }
         }
+        #endregion
 
         //
         // Add New Recipe Panel
         //
+
+        #region Add New Recipe Panel
         private void AddRecipePanelButton_Click(object sender, EventArgs e)
         {
             Recipe newRecipe = new Recipe();
@@ -396,16 +514,18 @@ namespace RecipeTracker
             dataGridViewRecipes.DataSource = Recipe.AllRecipes;
             AddRecipePanel.Visible = false;
 
-            
+
         }
         private void CancelAddRecipePanelButton_Click(object sender, EventArgs e)
         {
             AddRecipePanel.Visible = false;
         }
+        #endregion
 
         //
         // Account Panel
         //
+        #region Account Panel
         private void ConfirmNewPasswordButton_Click(object sender, EventArgs e)
         {
 
@@ -422,10 +542,12 @@ namespace RecipeTracker
             loginForm.Show();
             this.Hide();
         }
+        #endregion
 
         //
         // Grocery List Panel
         //
+        #region Grocery List Panel
         private void AddGroceryButton_Click(object sender, EventArgs e)
         {
             AddGroceryItemPanel.Visible = true;
@@ -455,6 +577,23 @@ namespace RecipeTracker
 
             dataGridViewGrocery.DataSource = null;
             dataGridViewGrocery.DataSource = groceryList.Items;
+
+            dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
+            dataGridViewGrocery.Columns["Name"].ReadOnly = true;
+
+            dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
+
+
+            dataGridViewFridge.Columns["Name"].HeaderText = "Item";
+            dataGridViewFridge.Columns["Name"].ReadOnly = true;
+
+            dataGridViewFridge.Columns["IsBought"].HeaderText = "Used";
+            dataGridViewFridge.Columns["IsBought"].ReadOnly = false;
+
+            foreach (DataGridViewRow row in dataGridViewFridge.Rows)
+            {
+                row.Cells["IsBought"].Value = false;
+            }
         }
         private void SelectAllGroceryItemsButton_Click(object sender, EventArgs e)
         {
@@ -512,10 +651,12 @@ namespace RecipeTracker
 
             dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
         }
+        #endregion
 
         //
         // Add Grocery Item Panel
         //
+        #region Add Grocery Item Panel
         private void AddGroceryItemButton_Click(object sender, EventArgs e)
         {
             string newItemName = NewGroceryItemText.Text;
@@ -547,6 +688,7 @@ namespace RecipeTracker
         private void CancelAddGroceryItemButton_Click(object sender, EventArgs e)
         {
             AddGroceryItemPanel.Visible = false;
-        }
+        } 
+        #endregion
     }
 }

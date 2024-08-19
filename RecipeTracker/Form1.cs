@@ -36,6 +36,7 @@ namespace RecipeTracker
             MealPlanPanel.Visible = false;
             AddRecipePanel.Visible = false;
             AddGroceryItemPanel.Visible = false;
+            AddFridgeItemPanel.Visible = false;
 
             Recipe recipeOfTheDay = Recipe.GetRandomRecipe();
             RecipeOfTheDayLabel.Text = recipeOfTheDay.Name;
@@ -261,7 +262,8 @@ namespace RecipeTracker
         #region Fridge Panel
         private void AddToFridgeButton_Click(object sender, EventArgs e)
         {
-
+            AddFridgeItemPanel.Visible = true;
+            AddFridgeItemPanel.BringToFront();
         }
         private void SelectAllFridgeButton_Click(object sender, EventArgs e)
         {
@@ -552,6 +554,8 @@ namespace RecipeTracker
         }
         private void AddGroceriesToFridgeButton_Click(object sender, EventArgs e)
         {
+            List<GroceryItem> itemsToMove = new List<GroceryItem>();
+
             foreach (DataGridViewRow row in dataGridViewGrocery.Rows)
             {
                 bool isBought = (bool)row.Cells["IsBought"].Value;
@@ -562,35 +566,34 @@ namespace RecipeTracker
 
                     if (groceryItem != null)
                     {
-                        fridge.AddItem(groceryItem);
+                        var newFridgeItem = new GroceryItem(groceryItem.Name);
+
+                        fridge.AddItem(newFridgeItem);
+                        itemsToMove.Add(groceryItem);
                     }
                 }
             }
+            foreach (var item in itemsToMove)
+            {
+                groceryList.Items.Remove(item);
+            }
 
-            dataGridViewFridge.DataSource = null;
-            dataGridViewFridge.DataSource = fridge.Items;
+            var groceryBindingSource = new BindingSource();
+            groceryBindingSource.DataSource = groceryList.Items;
+            dataGridViewGrocery.DataSource = groceryBindingSource;
 
-            groceryList.Items.RemoveAll(item => item.IsBought);
-
-            dataGridViewGrocery.DataSource = null;
-            dataGridViewGrocery.DataSource = groceryList.Items;
+            var fridgeBindingSource = new BindingSource();
+            fridgeBindingSource.DataSource = fridge.Items;
+            dataGridViewFridge.DataSource = fridgeBindingSource;
 
             dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
             dataGridViewGrocery.Columns["Name"].ReadOnly = true;
-
             dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
-
 
             dataGridViewFridge.Columns["Name"].HeaderText = "Item";
             dataGridViewFridge.Columns["Name"].ReadOnly = true;
-
             dataGridViewFridge.Columns["IsBought"].HeaderText = "Used";
             dataGridViewFridge.Columns["IsBought"].ReadOnly = false;
-
-            foreach (DataGridViewRow row in dataGridViewFridge.Rows)
-            {
-                row.Cells["IsBought"].Value = false;
-            }
         }
         private void SelectAllGroceryItemsButton_Click(object sender, EventArgs e)
         {
@@ -685,7 +688,48 @@ namespace RecipeTracker
         private void CancelAddGroceryItemButton_Click(object sender, EventArgs e)
         {
             AddGroceryItemPanel.Visible = false;
-        } 
+        }
+        #endregion
+
+        //
+        // Add New Fridge Item
+        //
+        #region Add New Fridge Item
+        private void AddNewFridgeItemButton_Click(object sender, EventArgs e)
+        {
+            string newItemName = AddFridgeItemText.Text;
+
+            if (!string.IsNullOrEmpty(newItemName))
+            {
+                newItemName = char.ToUpper(newItemName[0]) + newItemName.Substring(1).ToLower();
+
+                if (!fridge.Items.Any(item => item.Name == newItemName))
+                {
+                    var newFridgeItem = new GroceryItem(newItemName);
+                    fridge.AddItem(newFridgeItem);
+
+                    var bindingSource = new BindingSource();
+                    bindingSource.DataSource = fridge.Items;
+                    dataGridViewFridge.DataSource = bindingSource;
+                }
+                else
+                {
+                    MessageBox.Show("Item already exists in fridge.");
+                }
+
+                AddFridgeItemText.Clear();
+                AddFridgeItemPanel.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Please enter a grocery item to add.");
+            }
+        }
+
+        private void CancelAddFridgeItem_Click(object sender, EventArgs e)
+        {
+            AddFridgeItemPanel.Visible = false;
+        }
         #endregion
     }
 }

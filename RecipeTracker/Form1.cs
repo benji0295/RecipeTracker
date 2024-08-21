@@ -233,6 +233,8 @@ namespace RecipeTracker
 
         private void AddIngredientsButton_Click(object sender, EventArgs e)
         {
+            Recipe selectedRecipe = dataGridViewRecipes.SelectedRows[0].DataBoundItem as Recipe;
+
             if (selectedRecipe != null)
             {
                 foreach (var ingredient in selectedRecipe.Ingredients)
@@ -489,6 +491,8 @@ namespace RecipeTracker
                 sundayDinnerText.Text = recipeName;
             }
 
+            MessageBox.Show("Recipe added to meal plan.");
+
             // Clear checkboxes
             ClearCheckBoxes();
             AddToMealPlanPanel.Visible = false;
@@ -554,12 +558,44 @@ namespace RecipeTracker
         #region Account Panel
         private void ConfirmNewPasswordButton_Click(object sender, EventArgs e)
         {
-
+            if (CurrentPasswordText.Text != loggedInAccount.Password)
+            {
+                MessageBox.Show("Current password is incorrect.");
+            }
+            else if (loggedInAccount.Password == ConfirmPasswordText.Text)
+            {
+                MessageBox.Show("New password cannot be the same as the current password.");
+            }
+            else if (NewPasswordText.Text != ConfirmPasswordText.Text)
+            {
+                MessageBox.Show("New password does not match.");
+            }
+            else
+            {
+                loggedInAccount.Password = NewPasswordText.Text;
+                MessageBox.Show("Password changed successfully.");
+            }
         }
 
         private void ConfirmNewEmailButton_Click(object sender, EventArgs e)
         {
-
+            if (CurrentEmailText.Text != loggedInAccount.Email)
+            {
+                MessageBox.Show("Current email is incorrect.");
+            }
+            else if (loggedInAccount.Email == NewEmailText.Text)
+            {
+                MessageBox.Show("New email cannot be the same as the current email.");
+            }
+            else if (NewEmailText.Text != ConfirmNewEmailText.Text)
+            {
+                MessageBox.Show("New email does not match.");
+            }
+            else
+            {
+                loggedInAccount.Email = NewEmailText.Text;
+                MessageBox.Show("Email changed successfully.");
+            }
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)

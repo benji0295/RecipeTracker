@@ -142,12 +142,12 @@
             this.AccountPanel = new System.Windows.Forms.Panel();
             this.ConfirmNewEmailButton = new System.Windows.Forms.Button();
             this.ConfirmNewPasswordButton = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ConfirmNewEmailText = new System.Windows.Forms.TextBox();
+            this.NewEmailText = new System.Windows.Forms.TextBox();
+            this.CurrentEmailText = new System.Windows.Forms.TextBox();
+            this.ConfirmPasswordText = new System.Windows.Forms.TextBox();
+            this.NewPasswordText = new System.Windows.Forms.TextBox();
+            this.CurrentPasswordText = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -260,19 +260,19 @@
             // userLabel
             // 
             this.userLabel.AutoSize = true;
-            this.userLabel.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLabel.Location = new System.Drawing.Point(115, 292);
+            this.userLabel.Font = new System.Drawing.Font("Arial Black", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLabel.Location = new System.Drawing.Point(83, 256);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(102, 45);
+            this.userLabel.Size = new System.Drawing.Size(167, 74);
             this.userLabel.TabIndex = 7;
             this.userLabel.Text = "User";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.file;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.file__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(54, 60);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(313, 299);
+            this.pictureBox1.Size = new System.Drawing.Size(231, 202);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -1426,12 +1426,12 @@
             // 
             this.AccountPanel.Controls.Add(this.ConfirmNewEmailButton);
             this.AccountPanel.Controls.Add(this.ConfirmNewPasswordButton);
-            this.AccountPanel.Controls.Add(this.textBox6);
-            this.AccountPanel.Controls.Add(this.textBox5);
-            this.AccountPanel.Controls.Add(this.textBox4);
-            this.AccountPanel.Controls.Add(this.textBox3);
-            this.AccountPanel.Controls.Add(this.textBox2);
-            this.AccountPanel.Controls.Add(this.textBox1);
+            this.AccountPanel.Controls.Add(this.ConfirmNewEmailText);
+            this.AccountPanel.Controls.Add(this.NewEmailText);
+            this.AccountPanel.Controls.Add(this.CurrentEmailText);
+            this.AccountPanel.Controls.Add(this.ConfirmPasswordText);
+            this.AccountPanel.Controls.Add(this.NewPasswordText);
+            this.AccountPanel.Controls.Add(this.CurrentPasswordText);
             this.AccountPanel.Controls.Add(this.label61);
             this.AccountPanel.Controls.Add(this.label60);
             this.AccountPanel.Controls.Add(this.label59);
@@ -1467,47 +1467,47 @@
             this.ConfirmNewPasswordButton.UseVisualStyleBackColor = true;
             this.ConfirmNewPasswordButton.Click += new System.EventHandler(this.ConfirmNewPasswordButton_Click);
             // 
-            // textBox6
+            // ConfirmNewEmailText
             // 
-            this.textBox6.Location = new System.Drawing.Point(1062, 587);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(300, 31);
-            this.textBox6.TabIndex = 15;
+            this.ConfirmNewEmailText.Location = new System.Drawing.Point(1062, 587);
+            this.ConfirmNewEmailText.Name = "ConfirmNewEmailText";
+            this.ConfirmNewEmailText.Size = new System.Drawing.Size(300, 31);
+            this.ConfirmNewEmailText.TabIndex = 15;
             // 
-            // textBox5
+            // NewEmailText
             // 
-            this.textBox5.Location = new System.Drawing.Point(1062, 491);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(300, 31);
-            this.textBox5.TabIndex = 14;
+            this.NewEmailText.Location = new System.Drawing.Point(1062, 491);
+            this.NewEmailText.Name = "NewEmailText";
+            this.NewEmailText.Size = new System.Drawing.Size(300, 31);
+            this.NewEmailText.TabIndex = 14;
             // 
-            // textBox4
+            // CurrentEmailText
             // 
-            this.textBox4.Location = new System.Drawing.Point(1062, 411);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(300, 31);
-            this.textBox4.TabIndex = 13;
+            this.CurrentEmailText.Location = new System.Drawing.Point(1062, 411);
+            this.CurrentEmailText.Name = "CurrentEmailText";
+            this.CurrentEmailText.Size = new System.Drawing.Size(300, 31);
+            this.CurrentEmailText.TabIndex = 13;
             // 
-            // textBox3
+            // ConfirmPasswordText
             // 
-            this.textBox3.Location = new System.Drawing.Point(276, 587);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(300, 31);
-            this.textBox3.TabIndex = 12;
+            this.ConfirmPasswordText.Location = new System.Drawing.Point(276, 587);
+            this.ConfirmPasswordText.Name = "ConfirmPasswordText";
+            this.ConfirmPasswordText.Size = new System.Drawing.Size(300, 31);
+            this.ConfirmPasswordText.TabIndex = 12;
             // 
-            // textBox2
+            // NewPasswordText
             // 
-            this.textBox2.Location = new System.Drawing.Point(276, 494);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 31);
-            this.textBox2.TabIndex = 11;
+            this.NewPasswordText.Location = new System.Drawing.Point(276, 494);
+            this.NewPasswordText.Name = "NewPasswordText";
+            this.NewPasswordText.Size = new System.Drawing.Size(300, 31);
+            this.NewPasswordText.TabIndex = 11;
             // 
-            // textBox1
+            // CurrentPasswordText
             // 
-            this.textBox1.Location = new System.Drawing.Point(276, 408);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 31);
-            this.textBox1.TabIndex = 10;
+            this.CurrentPasswordText.Location = new System.Drawing.Point(276, 408);
+            this.CurrentPasswordText.Name = "CurrentPasswordText";
+            this.CurrentPasswordText.Size = new System.Drawing.Size(300, 31);
+            this.CurrentPasswordText.TabIndex = 10;
             // 
             // label61
             // 
@@ -2163,6 +2163,7 @@
             // 
             // AddGroceryItemPanel
             // 
+            this.AddGroceryItemPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AddGroceryItemPanel.Controls.Add(this.CancelAddGroceryItemButton);
             this.AddGroceryItemPanel.Controls.Add(this.AddGroceryItemButton);
             this.AddGroceryItemPanel.Controls.Add(this.NewGroceryItemText);
@@ -2222,6 +2223,7 @@
             // 
             // AddFridgeItemPanel
             // 
+            this.AddFridgeItemPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AddFridgeItemPanel.Controls.Add(this.CancelAddFridgeItem);
             this.AddFridgeItemPanel.Controls.Add(this.AddNewFridgeItemButton);
             this.AddFridgeItemPanel.Controls.Add(this.AddFridgeItemText);
@@ -2285,6 +2287,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
+            this.Controls.Add(this.AccountPanel);
             this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.RecipePanel);
             this.Controls.Add(this.FridgePanel);
@@ -2294,7 +2297,6 @@
             this.Controls.Add(this.AddFridgeItemPanel);
             this.Controls.Add(this.AddToMealPlanPanel);
             this.Controls.Add(this.menuPanel);
-            this.Controls.Add(this.AccountPanel);
             this.Controls.Add(this.AddRecipePanel);
             this.Controls.Add(this.AddGroceryItemPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2499,14 +2501,14 @@
         private System.Windows.Forms.Button LogOutButton;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CurrentEmailText;
+        private System.Windows.Forms.TextBox ConfirmPasswordText;
+        private System.Windows.Forms.TextBox NewPasswordText;
+        private System.Windows.Forms.TextBox CurrentPasswordText;
         private System.Windows.Forms.Button ConfirmNewEmailButton;
         private System.Windows.Forms.Button ConfirmNewPasswordButton;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox ConfirmNewEmailText;
+        private System.Windows.Forms.TextBox NewEmailText;
         private System.Windows.Forms.Label RecipeOfTheDayLabel;
         private System.Windows.Forms.Button ClearGroceryListButton;
         private System.Windows.Forms.Button ClearSelectedGroceryButton;

@@ -62,6 +62,12 @@ namespace RecipeTracker
 
             if (!AccountManager.AccountExists(username))
             {
+                if (passwordTextBox != ConfirmPasswordTextBox)
+                {
+                    MessageBox.Show("Passwords do not match. Please try again.");
+                    return;
+                }
+
                 Account newAccount = new Account(username, password, firstName, lastName, email);
                 AccountManager.AddAccount(newAccount);
                 MessageBox.Show("Account created successfully. Please login.");
@@ -80,7 +86,27 @@ namespace RecipeTracker
 
         private void ResetButtonPassword_Click(object sender, EventArgs e)
         {
+            string username = ResetPassUsernameText.Text;
+            string newPassword = ResetPasswordText.Text;
+            string confirmPassword = ConfirmNewPassText.Text;
 
+            if (newPassword != confirmPassword)
+            {
+                MessageBox.Show("Passwords do not match. Please try again.");
+                return;
+            }
+            Account accountToUpdate = AccountManager.Accounts.FirstOrDefault(account => account.Username == username);
+
+            if (accountToUpdate != null)
+            {
+                accountToUpdate.Password = newPassword;
+                AccountManager.SaveAccounts();
+                MessageBox.Show("Password reset successfully. Please login.");
+            }
+            else
+            {
+                MessageBox.Show("Account not found. Please try again.");
+            }
         }
 
         private void CancelResetButton_Click(object sender, EventArgs e)

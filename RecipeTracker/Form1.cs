@@ -57,6 +57,20 @@ namespace RecipeTracker
             dataGridViewRecipes.DataSource = loggedInAccount.Recipes.Values.ToList();  // Use the logged-in account's recipes
             dataGridViewRecipes.Columns["Name"].HeaderText = "Recipe Name";
             dataGridViewRecipes.Columns["Name"].ReadOnly = true;
+            dataGridViewRecipes.Columns["Category"].HeaderText = "Category";
+            dataGridViewRecipes.Columns["Category"].ReadOnly = true;
+            dataGridViewRecipes.Columns["PrepTime"].HeaderText = "Prep Time";
+            dataGridViewRecipes.Columns["PrepTime"].ReadOnly = true;
+            dataGridViewRecipes.Columns["CookTime"].HeaderText = "Cook Time";
+            dataGridViewRecipes.Columns["CookTime"].ReadOnly = true;
+            dataGridViewRecipes.Columns["TotalTime"].HeaderText = "Total Time";
+            dataGridViewRecipes.Columns["TotalTime"].ReadOnly = true;
+            dataGridViewRecipes.Columns["Servings"].HeaderText = "Servings";
+            dataGridViewRecipes.Columns["Servings"].ReadOnly = true;
+            dataGridViewRecipes.Columns["Source"].Visible = false;
+            dataGridViewRecipes.Columns["SourceURL"].Visible = false;
+
+            dataGridViewRecipes.ClearSelection();
 
             dataGridViewRecipes.CellMouseDoubleClick += dataGridViewRecipes_CellMouseDoubleClick;
 
@@ -67,6 +81,8 @@ namespace RecipeTracker
             dataGridViewGrocery.Columns["Name"].ReadOnly = true;
             dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
 
+            dataGridViewGrocery.ClearSelection();
+
             // Populate FridgeItems DataGridView
             dataGridViewFridge.DataSource = null;
             dataGridViewFridge.DataSource = loggedInAccount.FridgeItems;
@@ -74,6 +90,8 @@ namespace RecipeTracker
             dataGridViewFridge.Columns["Name"].ReadOnly = true;
             dataGridViewFridge.Columns["IsBought"].HeaderText = "Used";
             dataGridViewFridge.Columns["IsBought"].ReadOnly = false;
+
+            dataGridViewFridge.ClearSelection();
 
         }
 
@@ -244,6 +262,9 @@ namespace RecipeTracker
 
                 dataGridViewGrocery.DataSource = null;
                 dataGridViewGrocery.DataSource = loggedInAccount.GroceryList;
+                dataGridViewGrocery.Columns["Name"].HeaderText = "Item";
+                dataGridViewGrocery.Columns["Name"].ReadOnly = true;
+                dataGridViewGrocery.Columns["IsBought"].HeaderText = "Bought";
 
                 MessageBox.Show("Ingredients added to your grocery list.");
             }
@@ -575,6 +596,9 @@ namespace RecipeTracker
                 loggedInAccount.Password = NewPasswordText.Text;
                 MessageBox.Show("Password changed successfully.");
             }
+            CurrentPasswordText.Clear();
+            NewPasswordText.Clear();
+            ConfirmPasswordText.Clear();
         }
 
         private void ConfirmNewEmailButton_Click(object sender, EventArgs e)
@@ -596,6 +620,9 @@ namespace RecipeTracker
                 loggedInAccount.Email = NewEmailText.Text;
                 MessageBox.Show("Email changed successfully.");
             }
+            CurrentEmailText.Clear();
+            NewEmailText.Clear();
+            ConfirmNewEmailText.Clear();
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)

@@ -115,5 +115,14 @@
   <ItemGroup>
     <None Include="Resources\file %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrepPal.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,6 +63,16 @@ namespace RecipeTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dish {
+            get {
+                object obj = ResourceManager.GetObject("dish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap file {
             get {
                 object obj = ResourceManager.GetObject("file", resourceCulture);
@@ -86,6 +96,26 @@ namespace RecipeTracker.Properties {
         internal static System.Drawing.Bitmap file__2_ {
             get {
                 object obj = ResourceManager.GetObject("file (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PrepPal {
+            get {
+                object obj = ResourceManager.GetObject("PrepPal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restaurant_cutlery_circular_symbol_of_a_spoon_and_a_fork_in_a_circle {
+            get {
+                object obj = ResourceManager.GetObject("restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

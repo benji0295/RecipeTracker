@@ -30,6 +30,15 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuPanel = new System.Windows.Forms.Panel();
             this.userLabel = new System.Windows.Forms.Label();
@@ -243,6 +252,7 @@
             // 
             // menuPanel
             // 
+            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.menuPanel.Controls.Add(this.userLabel);
             this.menuPanel.Controls.Add(this.pictureBox1);
             this.menuPanel.Controls.Add(this.MealPlanButton);
@@ -261,7 +271,8 @@
             // 
             this.userLabel.AutoSize = true;
             this.userLabel.Font = new System.Drawing.Font("Arial Black", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLabel.Location = new System.Drawing.Point(83, 256);
+            this.userLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.userLabel.Location = new System.Drawing.Point(76, 267);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(167, 74);
             this.userLabel.TabIndex = 7;
@@ -269,65 +280,89 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.file__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 60);
+            this.pictureBox1.Image = global::RecipeTracker.Properties.Resources.dish;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(231, 202);
+            this.pictureBox1.Size = new System.Drawing.Size(280, 267);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // MealPlanButton
             // 
+            this.MealPlanButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.MealPlanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MealPlanButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MealPlanButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.MealPlanButton.Location = new System.Drawing.Point(4, 674);
             this.MealPlanButton.Name = "MealPlanButton";
-            this.MealPlanButton.Size = new System.Drawing.Size(309, 157);
+            this.MealPlanButton.Size = new System.Drawing.Size(312, 157);
             this.MealPlanButton.TabIndex = 5;
             this.MealPlanButton.Text = "My Meal Plan";
-            this.MealPlanButton.UseVisualStyleBackColor = true;
+            this.MealPlanButton.UseVisualStyleBackColor = false;
             this.MealPlanButton.Click += new System.EventHandler(this.MealPlanButton_Click);
             // 
             // MainButton
             // 
+            this.MainButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.MainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.MainButton.Location = new System.Drawing.Point(4, 345);
             this.MainButton.Name = "MainButton";
             this.MainButton.Size = new System.Drawing.Size(312, 157);
             this.MainButton.TabIndex = 4;
             this.MainButton.Text = "Main Menu";
-            this.MainButton.UseVisualStyleBackColor = true;
+            this.MainButton.UseVisualStyleBackColor = false;
             this.MainButton.Click += new System.EventHandler(this.MainButton_Click);
             // 
             // GroceryButton
             // 
+            this.GroceryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.GroceryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GroceryButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroceryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.GroceryButton.Location = new System.Drawing.Point(3, 837);
             this.GroceryButton.Name = "GroceryButton";
             this.GroceryButton.Size = new System.Drawing.Size(312, 157);
             this.GroceryButton.TabIndex = 2;
             this.GroceryButton.Text = "My Grocery List";
-            this.GroceryButton.UseVisualStyleBackColor = true;
+            this.GroceryButton.UseVisualStyleBackColor = false;
             this.GroceryButton.Click += new System.EventHandler(this.GroceryButton_Click);
             // 
             // FridgeButton
             // 
+            this.FridgeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.FridgeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FridgeButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FridgeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.FridgeButton.Location = new System.Drawing.Point(3, 1000);
             this.FridgeButton.Name = "FridgeButton";
             this.FridgeButton.Size = new System.Drawing.Size(312, 157);
             this.FridgeButton.TabIndex = 1;
             this.FridgeButton.Text = "My Fridge";
-            this.FridgeButton.UseVisualStyleBackColor = true;
+            this.FridgeButton.UseVisualStyleBackColor = false;
             this.FridgeButton.Click += new System.EventHandler(this.FridgeButton_Click);
             // 
             // RecipeButton
             // 
+            this.RecipeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.RecipeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RecipeButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecipeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.RecipeButton.Location = new System.Drawing.Point(4, 508);
             this.RecipeButton.Name = "RecipeButton";
             this.RecipeButton.Size = new System.Drawing.Size(312, 157);
             this.RecipeButton.TabIndex = 0;
             this.RecipeButton.Text = "My Recipes";
-            this.RecipeButton.UseVisualStyleBackColor = true;
+            this.RecipeButton.UseVisualStyleBackColor = false;
             this.RecipeButton.Click += new System.EventHandler(this.RecipeButton_Click);
             // 
             // AccountButton
             // 
+            this.AccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccountButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.AccountButton.Location = new System.Drawing.Point(3, 1163);
             this.AccountButton.Name = "AccountButton";
             this.AccountButton.Size = new System.Drawing.Size(312, 157);
@@ -338,6 +373,7 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.MainPanel.Controls.Add(this.RecipeOfTheDayLabel);
             this.MainPanel.Controls.Add(this.label53);
             this.MainPanel.Controls.Add(this.label1);
@@ -350,6 +386,7 @@
             // 
             this.RecipeOfTheDayLabel.AutoSize = true;
             this.RecipeOfTheDayLabel.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecipeOfTheDayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.RecipeOfTheDayLabel.Location = new System.Drawing.Point(153, 390);
             this.RecipeOfTheDayLabel.Name = "RecipeOfTheDayLabel";
             this.RecipeOfTheDayLabel.Size = new System.Drawing.Size(400, 52);
@@ -360,6 +397,7 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Arial Black", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label53.Location = new System.Drawing.Point(57, 250);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(635, 83);
@@ -370,6 +408,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label1.Location = new System.Drawing.Point(521, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(462, 136);
@@ -378,6 +417,7 @@
             // 
             // AddRecipePanel
             // 
+            this.AddRecipePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.AddRecipePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AddRecipePanel.Controls.Add(this.NewRecipeInstructionsTextBox);
             this.AddRecipePanel.Controls.Add(this.NewRecipeCategoryTextBox);
@@ -407,6 +447,9 @@
             // 
             // NewRecipeInstructionsTextBox
             // 
+            this.NewRecipeInstructionsTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewRecipeInstructionsTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRecipeInstructionsTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewRecipeInstructionsTextBox.Location = new System.Drawing.Point(236, 685);
             this.NewRecipeInstructionsTextBox.Multiline = true;
             this.NewRecipeInstructionsTextBox.Name = "NewRecipeInstructionsTextBox";
@@ -415,27 +458,39 @@
             // 
             // NewRecipeCategoryTextBox
             // 
+            this.NewRecipeCategoryTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewRecipeCategoryTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRecipeCategoryTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewRecipeCategoryTextBox.Location = new System.Drawing.Point(874, 108);
             this.NewRecipeCategoryTextBox.Name = "NewRecipeCategoryTextBox";
-            this.NewRecipeCategoryTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeCategoryTextBox.Size = new System.Drawing.Size(301, 37);
             this.NewRecipeCategoryTextBox.TabIndex = 19;
             // 
             // NewRecipePrepTextBox
             // 
+            this.NewRecipePrepTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewRecipePrepTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRecipePrepTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewRecipePrepTextBox.Location = new System.Drawing.Point(874, 191);
             this.NewRecipePrepTextBox.Name = "NewRecipePrepTextBox";
-            this.NewRecipePrepTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipePrepTextBox.Size = new System.Drawing.Size(301, 37);
             this.NewRecipePrepTextBox.TabIndex = 18;
             // 
             // NewRecipeCookTextBox
             // 
+            this.NewRecipeCookTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewRecipeCookTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRecipeCookTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewRecipeCookTextBox.Location = new System.Drawing.Point(874, 264);
             this.NewRecipeCookTextBox.Name = "NewRecipeCookTextBox";
-            this.NewRecipeCookTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeCookTextBox.Size = new System.Drawing.Size(301, 37);
             this.NewRecipeCookTextBox.TabIndex = 17;
             // 
             // NewRecipeIngredientsTextBox
             // 
+            this.NewRecipeIngredientsTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewRecipeIngredientsTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRecipeIngredientsTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewRecipeIngredientsTextBox.Location = new System.Drawing.Point(237, 439);
             this.NewRecipeIngredientsTextBox.Multiline = true;
             this.NewRecipeIngredientsTextBox.Name = "NewRecipeIngredientsTextBox";
@@ -444,145 +499,183 @@
             // 
             // NewRecipeSourceURLTextBox
             // 
+            this.NewRecipeSourceURLTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewRecipeSourceURLTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRecipeSourceURLTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewRecipeSourceURLTextBox.Location = new System.Drawing.Point(245, 342);
             this.NewRecipeSourceURLTextBox.Name = "NewRecipeSourceURLTextBox";
-            this.NewRecipeSourceURLTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeSourceURLTextBox.Size = new System.Drawing.Size(301, 37);
             this.NewRecipeSourceURLTextBox.TabIndex = 15;
             // 
             // NewRecipeSourceTextBox
             // 
+            this.NewRecipeSourceTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewRecipeSourceTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRecipeSourceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewRecipeSourceTextBox.Location = new System.Drawing.Point(244, 263);
             this.NewRecipeSourceTextBox.Name = "NewRecipeSourceTextBox";
-            this.NewRecipeSourceTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeSourceTextBox.Size = new System.Drawing.Size(301, 37);
             this.NewRecipeSourceTextBox.TabIndex = 14;
             // 
             // NewRecipeSizeTextBox
             // 
+            this.NewRecipeSizeTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewRecipeSizeTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRecipeSizeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewRecipeSizeTextBox.Location = new System.Drawing.Point(244, 185);
             this.NewRecipeSizeTextBox.Name = "NewRecipeSizeTextBox";
-            this.NewRecipeSizeTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeSizeTextBox.Size = new System.Drawing.Size(301, 37);
             this.NewRecipeSizeTextBox.TabIndex = 13;
             // 
             // NewRecipeNameTextBox
             // 
+            this.NewRecipeNameTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewRecipeNameTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRecipeNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewRecipeNameTextBox.Location = new System.Drawing.Point(244, 108);
             this.NewRecipeNameTextBox.Name = "NewRecipeNameTextBox";
-            this.NewRecipeNameTextBox.Size = new System.Drawing.Size(301, 31);
+            this.NewRecipeNameTextBox.Size = new System.Drawing.Size(301, 37);
             this.NewRecipeNameTextBox.TabIndex = 12;
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(108, 675);
+            this.label52.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label52.Location = new System.Drawing.Point(77, 685);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(122, 25);
+            this.label52.Size = new System.Drawing.Size(152, 30);
             this.label52.TabIndex = 11;
             this.label52.Text = "Instructions";
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(112, 439);
+            this.label51.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label51.Location = new System.Drawing.Point(86, 442);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(118, 25);
+            this.label51.Size = new System.Drawing.Size(143, 30);
             this.label51.TabIndex = 10;
             this.label51.Text = "Ingredients";
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(102, 348);
+            this.label50.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label50.Location = new System.Drawing.Point(86, 345);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(128, 25);
+            this.label50.Size = new System.Drawing.Size(148, 30);
             this.label50.TabIndex = 9;
             this.label50.Text = "Source URL";
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(151, 267);
+            this.label49.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label49.Location = new System.Drawing.Point(136, 267);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(80, 25);
+            this.label49.Size = new System.Drawing.Size(93, 30);
             this.label49.TabIndex = 8;
             this.label49.Text = "Source";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(759, 194);
+            this.label48.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label48.Location = new System.Drawing.Point(730, 194);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(110, 25);
+            this.label48.Size = new System.Drawing.Size(129, 30);
             this.label48.TabIndex = 7;
             this.label48.Text = "Prep Time";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(754, 270);
+            this.label47.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label47.Location = new System.Drawing.Point(724, 270);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(115, 25);
+            this.label47.Size = new System.Drawing.Size(135, 30);
             this.label47.TabIndex = 6;
             this.label47.Text = "Cook Time";
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(98, 191);
+            this.label46.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label46.Location = new System.Drawing.Point(74, 188);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(133, 25);
+            this.label46.Size = new System.Drawing.Size(155, 30);
             this.label46.TabIndex = 5;
             this.label46.Text = "Serving Size";
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(697, 111);
+            this.label45.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label45.Location = new System.Drawing.Point(661, 108);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(172, 25);
+            this.label45.Size = new System.Drawing.Size(203, 30);
             this.label45.TabIndex = 4;
             this.label45.Text = "Recipe Category";
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(97, 114);
+            this.label44.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label44.Location = new System.Drawing.Point(64, 108);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(141, 25);
+            this.label44.Size = new System.Drawing.Size(165, 30);
             this.label44.TabIndex = 3;
             this.label44.Text = "Recipe Name";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(455, 26);
+            this.label43.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label43.Location = new System.Drawing.Point(415, 16);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(397, 52);
+            this.label43.Size = new System.Drawing.Size(512, 68);
             this.label43.TabIndex = 2;
             this.label43.Text = "Add A New Recipe";
             // 
             // CancelAddRecipePanelButton
             // 
-            this.CancelAddRecipePanelButton.Location = new System.Drawing.Point(718, 978);
+            this.CancelAddRecipePanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.CancelAddRecipePanelButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelAddRecipePanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.CancelAddRecipePanelButton.Location = new System.Drawing.Point(718, 959);
             this.CancelAddRecipePanelButton.Name = "CancelAddRecipePanelButton";
-            this.CancelAddRecipePanelButton.Size = new System.Drawing.Size(168, 66);
+            this.CancelAddRecipePanelButton.Size = new System.Drawing.Size(185, 87);
             this.CancelAddRecipePanelButton.TabIndex = 1;
             this.CancelAddRecipePanelButton.Text = "Cancel";
-            this.CancelAddRecipePanelButton.UseVisualStyleBackColor = true;
+            this.CancelAddRecipePanelButton.UseVisualStyleBackColor = false;
             this.CancelAddRecipePanelButton.Click += new System.EventHandler(this.CancelAddRecipePanelButton_Click);
             // 
             // AddRecipePanelButton
             // 
-            this.AddRecipePanelButton.Location = new System.Drawing.Point(396, 974);
+            this.AddRecipePanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.AddRecipePanelButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddRecipePanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.AddRecipePanelButton.Location = new System.Drawing.Point(427, 957);
             this.AddRecipePanelButton.Name = "AddRecipePanelButton";
-            this.AddRecipePanelButton.Size = new System.Drawing.Size(168, 69);
+            this.AddRecipePanelButton.Size = new System.Drawing.Size(185, 87);
             this.AddRecipePanelButton.TabIndex = 0;
             this.AddRecipePanelButton.Text = "Add Recipe";
-            this.AddRecipePanelButton.UseVisualStyleBackColor = true;
+            this.AddRecipePanelButton.UseVisualStyleBackColor = false;
             this.AddRecipePanelButton.Click += new System.EventHandler(this.AddRecipePanelButton_Click);
             // 
             // AddToMealPlanPanel
             // 
+            this.AddToMealPlanPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.AddToMealPlanPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AddToMealPlanPanel.Controls.Add(this.label36);
             this.AddToMealPlanPanel.Controls.Add(this.sundayBreakfastCheck);
@@ -623,7 +716,9 @@
             // label36
             // 
             this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label36.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.label36.Location = new System.Drawing.Point(126, 146);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(100, 29);
@@ -634,6 +729,7 @@
             // 
             this.sundayBreakfastCheck.AutoSize = true;
             this.sundayBreakfastCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.sundayBreakfastCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.sundayBreakfastCheck.Location = new System.Drawing.Point(111, 196);
             this.sundayBreakfastCheck.Name = "sundayBreakfastCheck";
             this.sundayBreakfastCheck.Size = new System.Drawing.Size(135, 29);
@@ -645,6 +741,7 @@
             // 
             this.sundayLunchCheck.AutoSize = true;
             this.sundayLunchCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.sundayLunchCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.sundayLunchCheck.Location = new System.Drawing.Point(123, 242);
             this.sundayLunchCheck.Name = "sundayLunchCheck";
             this.sundayLunchCheck.Size = new System.Drawing.Size(103, 29);
@@ -656,6 +753,7 @@
             // 
             this.wednesdayDinnerCheck.AutoSize = true;
             this.wednesdayDinnerCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.wednesdayDinnerCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.wednesdayDinnerCheck.Location = new System.Drawing.Point(123, 286);
             this.wednesdayDinnerCheck.Name = "wednesdayDinnerCheck";
             this.wednesdayDinnerCheck.Size = new System.Drawing.Size(107, 29);
@@ -667,6 +765,7 @@
             // 
             this.wednesdayLunchCheck.AutoSize = true;
             this.wednesdayLunchCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.wednesdayLunchCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.wednesdayLunchCheck.Location = new System.Drawing.Point(131, 455);
             this.wednesdayLunchCheck.Name = "wednesdayLunchCheck";
             this.wednesdayLunchCheck.Size = new System.Drawing.Size(103, 29);
@@ -678,6 +777,7 @@
             // 
             this.wednesdayBreakfastCheck.AutoSize = true;
             this.wednesdayBreakfastCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.wednesdayBreakfastCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.wednesdayBreakfastCheck.Location = new System.Drawing.Point(120, 409);
             this.wednesdayBreakfastCheck.Name = "wednesdayBreakfastCheck";
             this.wednesdayBreakfastCheck.Size = new System.Drawing.Size(135, 29);
@@ -689,6 +789,7 @@
             // 
             this.sundayDinnerCheck.AutoSize = true;
             this.sundayDinnerCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.sundayDinnerCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.sundayDinnerCheck.Location = new System.Drawing.Point(131, 502);
             this.sundayDinnerCheck.Name = "sundayDinnerCheck";
             this.sundayDinnerCheck.Size = new System.Drawing.Size(107, 29);
@@ -700,6 +801,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.label39.Location = new System.Drawing.Point(118, 359);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(146, 29);
@@ -710,6 +812,7 @@
             // 
             this.saturdayDinnerCheck.AutoSize = true;
             this.saturdayDinnerCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saturdayDinnerCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.saturdayDinnerCheck.Location = new System.Drawing.Point(465, 720);
             this.saturdayDinnerCheck.Name = "saturdayDinnerCheck";
             this.saturdayDinnerCheck.Size = new System.Drawing.Size(107, 29);
@@ -721,6 +824,7 @@
             // 
             this.saturdayLunchCheck.AutoSize = true;
             this.saturdayLunchCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saturdayLunchCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.saturdayLunchCheck.Location = new System.Drawing.Point(465, 669);
             this.saturdayLunchCheck.Name = "saturdayLunchCheck";
             this.saturdayLunchCheck.Size = new System.Drawing.Size(103, 29);
@@ -732,6 +836,7 @@
             // 
             this.saturdayBreakfastCheck.AutoSize = true;
             this.saturdayBreakfastCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saturdayBreakfastCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.saturdayBreakfastCheck.Location = new System.Drawing.Point(452, 620);
             this.saturdayBreakfastCheck.Name = "saturdayBreakfastCheck";
             this.saturdayBreakfastCheck.Size = new System.Drawing.Size(135, 29);
@@ -743,6 +848,7 @@
             // 
             this.fridayDinnerCheck.AutoSize = true;
             this.fridayDinnerCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.fridayDinnerCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.fridayDinnerCheck.Location = new System.Drawing.Point(809, 502);
             this.fridayDinnerCheck.Name = "fridayDinnerCheck";
             this.fridayDinnerCheck.Size = new System.Drawing.Size(107, 29);
@@ -754,6 +860,7 @@
             // 
             this.fridayLunchCheck.AutoSize = true;
             this.fridayLunchCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.fridayLunchCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.fridayLunchCheck.Location = new System.Drawing.Point(809, 449);
             this.fridayLunchCheck.Name = "fridayLunchCheck";
             this.fridayLunchCheck.Size = new System.Drawing.Size(103, 29);
@@ -765,6 +872,7 @@
             // 
             this.fridayBreakfastCheck.AutoSize = true;
             this.fridayBreakfastCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.fridayBreakfastCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.fridayBreakfastCheck.Location = new System.Drawing.Point(793, 406);
             this.fridayBreakfastCheck.Name = "fridayBreakfastCheck";
             this.fridayBreakfastCheck.Size = new System.Drawing.Size(135, 29);
@@ -776,6 +884,7 @@
             // 
             this.thursdayDinnerCheck.AutoSize = true;
             this.thursdayDinnerCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.thursdayDinnerCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.thursdayDinnerCheck.Location = new System.Drawing.Point(461, 509);
             this.thursdayDinnerCheck.Name = "thursdayDinnerCheck";
             this.thursdayDinnerCheck.Size = new System.Drawing.Size(107, 29);
@@ -787,6 +896,7 @@
             // 
             this.thursdayLunchCheck.AutoSize = true;
             this.thursdayLunchCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.thursdayLunchCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.thursdayLunchCheck.Location = new System.Drawing.Point(461, 455);
             this.thursdayLunchCheck.Name = "thursdayLunchCheck";
             this.thursdayLunchCheck.Size = new System.Drawing.Size(103, 29);
@@ -798,6 +908,7 @@
             // 
             this.thursdayBreakfastCheck.AutoSize = true;
             this.thursdayBreakfastCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.thursdayBreakfastCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.thursdayBreakfastCheck.Location = new System.Drawing.Point(452, 409);
             this.thursdayBreakfastCheck.Name = "thursdayBreakfastCheck";
             this.thursdayBreakfastCheck.Size = new System.Drawing.Size(135, 29);
@@ -809,6 +920,7 @@
             // 
             this.tuesdayDinnerCheck.AutoSize = true;
             this.tuesdayDinnerCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tuesdayDinnerCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.tuesdayDinnerCheck.Location = new System.Drawing.Point(797, 286);
             this.tuesdayDinnerCheck.Name = "tuesdayDinnerCheck";
             this.tuesdayDinnerCheck.Size = new System.Drawing.Size(107, 29);
@@ -820,6 +932,7 @@
             // 
             this.tuesdayLunchCheck.AutoSize = true;
             this.tuesdayLunchCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tuesdayLunchCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.tuesdayLunchCheck.Location = new System.Drawing.Point(801, 242);
             this.tuesdayLunchCheck.Name = "tuesdayLunchCheck";
             this.tuesdayLunchCheck.Size = new System.Drawing.Size(103, 29);
@@ -831,6 +944,7 @@
             // 
             this.tuesdayBreakfastCheck.AutoSize = true;
             this.tuesdayBreakfastCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tuesdayBreakfastCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.tuesdayBreakfastCheck.Location = new System.Drawing.Point(793, 196);
             this.tuesdayBreakfastCheck.Name = "tuesdayBreakfastCheck";
             this.tuesdayBreakfastCheck.Size = new System.Drawing.Size(135, 29);
@@ -842,6 +956,7 @@
             // 
             this.mondayDinnerCheck.AutoSize = true;
             this.mondayDinnerCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mondayDinnerCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.mondayDinnerCheck.Location = new System.Drawing.Point(454, 286);
             this.mondayDinnerCheck.Name = "mondayDinnerCheck";
             this.mondayDinnerCheck.Size = new System.Drawing.Size(107, 29);
@@ -853,6 +968,7 @@
             // 
             this.mondayLunchCheck.AutoSize = true;
             this.mondayLunchCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mondayLunchCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.mondayLunchCheck.Location = new System.Drawing.Point(458, 242);
             this.mondayLunchCheck.Name = "mondayLunchCheck";
             this.mondayLunchCheck.Size = new System.Drawing.Size(103, 29);
@@ -864,6 +980,7 @@
             // 
             this.mondayBreakfastCheck.AutoSize = true;
             this.mondayBreakfastCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mondayBreakfastCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.mondayBreakfastCheck.Location = new System.Drawing.Point(443, 196);
             this.mondayBreakfastCheck.Name = "mondayBreakfastCheck";
             this.mondayBreakfastCheck.Size = new System.Drawing.Size(135, 29);
@@ -875,6 +992,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.label42.Location = new System.Drawing.Point(460, 568);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(115, 29);
@@ -885,6 +1003,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.label41.Location = new System.Drawing.Point(815, 359);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(85, 29);
@@ -895,6 +1014,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.label40.Location = new System.Drawing.Point(451, 359);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(121, 29);
@@ -905,6 +1025,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.label38.Location = new System.Drawing.Point(804, 146);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(108, 29);
@@ -915,6 +1036,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.label37.Location = new System.Drawing.Point(456, 146);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(105, 29);
@@ -923,36 +1045,44 @@
             // 
             // CancelAddRecipeButton
             // 
-            this.CancelAddRecipeButton.Location = new System.Drawing.Point(622, 782);
+            this.CancelAddRecipeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.CancelAddRecipeButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelAddRecipeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.CancelAddRecipeButton.Location = new System.Drawing.Point(584, 776);
             this.CancelAddRecipeButton.Name = "CancelAddRecipeButton";
-            this.CancelAddRecipeButton.Size = new System.Drawing.Size(170, 86);
+            this.CancelAddRecipeButton.Size = new System.Drawing.Size(180, 95);
             this.CancelAddRecipeButton.TabIndex = 2;
             this.CancelAddRecipeButton.Text = "Cancel";
-            this.CancelAddRecipeButton.UseVisualStyleBackColor = true;
+            this.CancelAddRecipeButton.UseVisualStyleBackColor = false;
             this.CancelAddRecipeButton.Click += new System.EventHandler(this.CancelAddRecipeButton_Click);
             // 
             // RecipeAddToMealPlanButton
             // 
-            this.RecipeAddToMealPlanButton.Location = new System.Drawing.Point(243, 782);
+            this.RecipeAddToMealPlanButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.RecipeAddToMealPlanButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecipeAddToMealPlanButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.RecipeAddToMealPlanButton.Location = new System.Drawing.Point(284, 776);
             this.RecipeAddToMealPlanButton.Name = "RecipeAddToMealPlanButton";
-            this.RecipeAddToMealPlanButton.Size = new System.Drawing.Size(170, 86);
+            this.RecipeAddToMealPlanButton.Size = new System.Drawing.Size(178, 95);
             this.RecipeAddToMealPlanButton.TabIndex = 1;
             this.RecipeAddToMealPlanButton.Text = "Add To Meal Plan";
-            this.RecipeAddToMealPlanButton.UseVisualStyleBackColor = true;
+            this.RecipeAddToMealPlanButton.UseVisualStyleBackColor = false;
             this.RecipeAddToMealPlanButton.Click += new System.EventHandler(this.RecipeAddToMealPlanButton_Click_1);
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Arial Black", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(185, 27);
+            this.label35.Font = new System.Drawing.Font("Arial Black", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.label35.Location = new System.Drawing.Point(130, 23);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(747, 74);
+            this.label35.Size = new System.Drawing.Size(834, 83);
             this.label35.TabIndex = 0;
             this.label35.Text = "Add Recipe To Meal Plan";
             // 
             // RecipePanel
             // 
+            this.RecipePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.RecipePanel.Controls.Add(this.label2);
             this.RecipePanel.Controls.Add(this.DeleteRecipeButton);
             this.RecipePanel.Controls.Add(this.AddRecipeButton);
@@ -965,31 +1095,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(567, 24);
+            this.label2.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label2.Location = new System.Drawing.Point(441, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(404, 83);
+            this.label2.Size = new System.Drawing.Size(659, 136);
             this.label2.TabIndex = 0;
             this.label2.Text = "My Recipes";
             // 
             // DeleteRecipeButton
             // 
-            this.DeleteRecipeButton.Location = new System.Drawing.Point(875, 1228);
+            this.DeleteRecipeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.DeleteRecipeButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteRecipeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.DeleteRecipeButton.Location = new System.Drawing.Point(815, 1199);
             this.DeleteRecipeButton.Name = "DeleteRecipeButton";
-            this.DeleteRecipeButton.Size = new System.Drawing.Size(225, 67);
+            this.DeleteRecipeButton.Size = new System.Drawing.Size(269, 105);
             this.DeleteRecipeButton.TabIndex = 3;
             this.DeleteRecipeButton.Text = "Delete Recipe";
-            this.DeleteRecipeButton.UseVisualStyleBackColor = true;
+            this.DeleteRecipeButton.UseVisualStyleBackColor = false;
             this.DeleteRecipeButton.Click += new System.EventHandler(this.DeleteRecipeButton_Click);
             // 
             // AddRecipeButton
             // 
-            this.AddRecipeButton.Location = new System.Drawing.Point(502, 1228);
+            this.AddRecipeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.AddRecipeButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddRecipeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.AddRecipeButton.Location = new System.Drawing.Point(464, 1199);
             this.AddRecipeButton.Name = "AddRecipeButton";
-            this.AddRecipeButton.Size = new System.Drawing.Size(225, 67);
+            this.AddRecipeButton.Size = new System.Drawing.Size(269, 105);
             this.AddRecipeButton.TabIndex = 2;
             this.AddRecipeButton.Text = "Add Recipe";
-            this.AddRecipeButton.UseVisualStyleBackColor = true;
+            this.AddRecipeButton.UseVisualStyleBackColor = false;
             this.AddRecipeButton.Click += new System.EventHandler(this.AddRecipeButton_Click);
             // 
             // dataGridViewRecipes
@@ -998,20 +1135,48 @@
             this.dataGridViewRecipes.AllowUserToDeleteRows = false;
             this.dataGridViewRecipes.AllowUserToResizeColumns = false;
             this.dataGridViewRecipes.AllowUserToResizeRows = false;
-            this.dataGridViewRecipes.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRecipes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewRecipes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewRecipes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewRecipes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRecipes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRecipes.Location = new System.Drawing.Point(0, 119);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRecipes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewRecipes.EnableHeadersVisualStyles = false;
+            this.dataGridViewRecipes.Location = new System.Drawing.Point(0, 163);
             this.dataGridViewRecipes.Name = "dataGridViewRecipes";
             this.dataGridViewRecipes.ReadOnly = true;
             this.dataGridViewRecipes.RowHeadersVisible = false;
             this.dataGridViewRecipes.RowHeadersWidth = 82;
             this.dataGridViewRecipes.RowTemplate.Height = 33;
             this.dataGridViewRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRecipes.Size = new System.Drawing.Size(1547, 1077);
+            this.dataGridViewRecipes.Size = new System.Drawing.Size(1547, 1033);
             this.dataGridViewRecipes.TabIndex = 1;
             // 
             // RecipeInfoPanel
             // 
+            this.RecipeInfoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.RecipeInfoPanel.Controls.Add(this.TotalTimeTextBox);
             this.RecipeInfoPanel.Controls.Add(this.ServingSizeTextBox);
             this.RecipeInfoPanel.Controls.Add(this.InstructionsLabel);
@@ -1037,188 +1202,220 @@
             // 
             // TotalTimeTextBox
             // 
-            this.TotalTimeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.TotalTimeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.TotalTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TotalTimeTextBox.Location = new System.Drawing.Point(124, 214);
+            this.TotalTimeTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTimeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.TotalTimeTextBox.Location = new System.Drawing.Point(151, 181);
             this.TotalTimeTextBox.Name = "TotalTimeTextBox";
-            this.TotalTimeTextBox.Size = new System.Drawing.Size(100, 24);
+            this.TotalTimeTextBox.Size = new System.Drawing.Size(136, 30);
             this.TotalTimeTextBox.TabIndex = 15;
             // 
             // ServingSizeTextBox
             // 
-            this.ServingSizeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ServingSizeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.ServingSizeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ServingSizeTextBox.Location = new System.Drawing.Point(152, 76);
+            this.ServingSizeTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServingSizeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.ServingSizeTextBox.Location = new System.Drawing.Point(171, 28);
             this.ServingSizeTextBox.Name = "ServingSizeTextBox";
-            this.ServingSizeTextBox.Size = new System.Drawing.Size(129, 24);
+            this.ServingSizeTextBox.Size = new System.Drawing.Size(159, 30);
             this.ServingSizeTextBox.TabIndex = 12;
             // 
             // InstructionsLabel
             // 
             this.InstructionsLabel.AutoSize = true;
-            this.InstructionsLabel.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InstructionsLabel.Location = new System.Drawing.Point(649, 697);
+            this.InstructionsLabel.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructionsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.InstructionsLabel.Location = new System.Drawing.Point(577, 652);
             this.InstructionsLabel.Name = "InstructionsLabel";
-            this.InstructionsLabel.Size = new System.Drawing.Size(198, 38);
+            this.InstructionsLabel.Size = new System.Drawing.Size(347, 68);
             this.InstructionsLabel.TabIndex = 6;
             this.InstructionsLabel.Text = "Instructions";
             // 
             // IngredientsLabel
             // 
             this.IngredientsLabel.AutoSize = true;
-            this.IngredientsLabel.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold);
-            this.IngredientsLabel.Location = new System.Drawing.Point(649, 244);
+            this.IngredientsLabel.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IngredientsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.IngredientsLabel.Location = new System.Drawing.Point(577, 244);
             this.IngredientsLabel.Name = "IngredientsLabel";
-            this.IngredientsLabel.Size = new System.Drawing.Size(186, 38);
+            this.IngredientsLabel.Size = new System.Drawing.Size(329, 68);
             this.IngredientsLabel.TabIndex = 5;
             this.IngredientsLabel.Text = "Ingredients";
             // 
             // PrepTimeTextBox
             // 
-            this.PrepTimeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.PrepTimeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.PrepTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PrepTimeTextBox.Location = new System.Drawing.Point(124, 121);
+            this.PrepTimeTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrepTimeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.PrepTimeTextBox.Location = new System.Drawing.Point(145, 77);
             this.PrepTimeTextBox.Name = "PrepTimeTextBox";
-            this.PrepTimeTextBox.Size = new System.Drawing.Size(100, 24);
+            this.PrepTimeTextBox.Size = new System.Drawing.Size(135, 30);
             this.PrepTimeTextBox.TabIndex = 13;
             // 
             // CookTimeTextBox
             // 
-            this.CookTimeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.CookTimeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.CookTimeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CookTimeTextBox.Location = new System.Drawing.Point(128, 167);
+            this.CookTimeTextBox.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CookTimeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.CookTimeTextBox.Location = new System.Drawing.Point(146, 127);
             this.CookTimeTextBox.Name = "CookTimeTextBox";
-            this.CookTimeTextBox.Size = new System.Drawing.Size(100, 24);
+            this.CookTimeTextBox.Size = new System.Drawing.Size(141, 30);
             this.CookTimeTextBox.TabIndex = 14;
             // 
             // AddToMealPlanButton
             // 
-            this.AddToMealPlanButton.Location = new System.Drawing.Point(263, 1243);
+            this.AddToMealPlanButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.AddToMealPlanButton.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddToMealPlanButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.AddToMealPlanButton.Location = new System.Drawing.Point(340, 1202);
             this.AddToMealPlanButton.Name = "AddToMealPlanButton";
-            this.AddToMealPlanButton.Size = new System.Drawing.Size(209, 67);
+            this.AddToMealPlanButton.Size = new System.Drawing.Size(262, 115);
             this.AddToMealPlanButton.TabIndex = 18;
             this.AddToMealPlanButton.Text = "Add To Meal Plan";
-            this.AddToMealPlanButton.UseVisualStyleBackColor = true;
+            this.AddToMealPlanButton.UseVisualStyleBackColor = false;
             this.AddToMealPlanButton.Click += new System.EventHandler(this.AddToMealPlanButton_Click);
             // 
             // AddIngredientsButton
             // 
-            this.AddIngredientsButton.Location = new System.Drawing.Point(25, 1243);
+            this.AddIngredientsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.AddIngredientsButton.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddIngredientsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.AddIngredientsButton.Location = new System.Drawing.Point(56, 1202);
             this.AddIngredientsButton.Name = "AddIngredientsButton";
-            this.AddIngredientsButton.Size = new System.Drawing.Size(209, 69);
+            this.AddIngredientsButton.Size = new System.Drawing.Size(262, 115);
             this.AddIngredientsButton.TabIndex = 17;
             this.AddIngredientsButton.Text = "Add Ingredients To Grocery List";
-            this.AddIngredientsButton.UseVisualStyleBackColor = true;
+            this.AddIngredientsButton.UseVisualStyleBackColor = false;
             this.AddIngredientsButton.Click += new System.EventHandler(this.AddIngredientsButton_Click);
             // 
             // SourceTextBox
             // 
-            this.SourceTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.SourceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.SourceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SourceTextBox.Location = new System.Drawing.Point(1076, 48);
+            this.SourceTextBox.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SourceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.SourceTextBox.Location = new System.Drawing.Point(1221, 48);
             this.SourceTextBox.Multiline = true;
             this.SourceTextBox.Name = "SourceTextBox";
-            this.SourceTextBox.Size = new System.Drawing.Size(448, 80);
+            this.SourceTextBox.Size = new System.Drawing.Size(306, 80);
             this.SourceTextBox.TabIndex = 16;
             this.SourceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // InstructionsTextBox
             // 
-            this.InstructionsTextBox.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.InstructionsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InstructionsTextBox.Location = new System.Drawing.Point(25, 767);
+            this.InstructionsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.InstructionsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.InstructionsTextBox.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructionsTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.InstructionsTextBox.Location = new System.Drawing.Point(25, 719);
             this.InstructionsTextBox.Multiline = true;
             this.InstructionsTextBox.Name = "InstructionsTextBox";
             this.InstructionsTextBox.ReadOnly = true;
-            this.InstructionsTextBox.Size = new System.Drawing.Size(1493, 468);
+            this.InstructionsTextBox.Size = new System.Drawing.Size(1493, 477);
             this.InstructionsTextBox.TabIndex = 11;
             // 
             // IngredientsTextBox
             // 
-            this.IngredientsTextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.IngredientsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IngredientsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.IngredientsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.IngredientsTextBox.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IngredientsTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.IngredientsTextBox.Location = new System.Drawing.Point(25, 310);
             this.IngredientsTextBox.Multiline = true;
             this.IngredientsTextBox.Name = "IngredientsTextBox";
             this.IngredientsTextBox.ReadOnly = true;
-            this.IngredientsTextBox.Size = new System.Drawing.Size(1493, 358);
+            this.IngredientsTextBox.Size = new System.Drawing.Size(1493, 345);
             this.IngredientsTextBox.TabIndex = 10;
             // 
             // RecipeNameText
             // 
-            this.RecipeNameText.BackColor = System.Drawing.SystemColors.Control;
+            this.RecipeNameText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.RecipeNameText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RecipeNameText.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecipeNameText.Location = new System.Drawing.Point(595, 15);
+            this.RecipeNameText.Font = new System.Drawing.Font("Arial Black", 28.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecipeNameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.RecipeNameText.Location = new System.Drawing.Point(358, 6);
             this.RecipeNameText.Multiline = true;
             this.RecipeNameText.Name = "RecipeNameText";
             this.RecipeNameText.ReadOnly = true;
-            this.RecipeNameText.Size = new System.Drawing.Size(349, 51);
+            this.RecipeNameText.Size = new System.Drawing.Size(815, 168);
             this.RecipeNameText.TabIndex = 9;
             this.RecipeNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BackToRecipeButton
             // 
-            this.BackToRecipeButton.Location = new System.Drawing.Point(1309, 1244);
+            this.BackToRecipeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.BackToRecipeButton.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackToRecipeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.BackToRecipeButton.Location = new System.Drawing.Point(1278, 1198);
             this.BackToRecipeButton.Name = "BackToRecipeButton";
-            this.BackToRecipeButton.Size = new System.Drawing.Size(209, 67);
+            this.BackToRecipeButton.Size = new System.Drawing.Size(262, 115);
             this.BackToRecipeButton.TabIndex = 8;
             this.BackToRecipeButton.Text = "Back To Recipes";
-            this.BackToRecipeButton.UseVisualStyleBackColor = true;
+            this.BackToRecipeButton.UseVisualStyleBackColor = false;
             this.BackToRecipeButton.Click += new System.EventHandler(this.BackToRecipeButton_Click);
             // 
             // SourceLabel
             // 
             this.SourceLabel.AutoSize = true;
-            this.SourceLabel.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SourceLabel.Location = new System.Drawing.Point(1259, 21);
+            this.SourceLabel.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SourceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.SourceLabel.Location = new System.Drawing.Point(1342, 21);
             this.SourceLabel.Name = "SourceLabel";
-            this.SourceLabel.Size = new System.Drawing.Size(82, 24);
+            this.SourceLabel.Size = new System.Drawing.Size(107, 33);
             this.SourceLabel.TabIndex = 7;
             this.SourceLabel.Text = "Source";
             // 
             // TotalTimeLabel
             // 
             this.TotalTimeLabel.AutoSize = true;
-            this.TotalTimeLabel.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalTimeLabel.Location = new System.Drawing.Point(5, 214);
+            this.TotalTimeLabel.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.TotalTimeLabel.Location = new System.Drawing.Point(3, 181);
             this.TotalTimeLabel.Name = "TotalTimeLabel";
-            this.TotalTimeLabel.Size = new System.Drawing.Size(120, 24);
+            this.TotalTimeLabel.Size = new System.Drawing.Size(142, 30);
             this.TotalTimeLabel.TabIndex = 4;
             this.TotalTimeLabel.Text = "Total Time:";
             // 
             // ServingSizeLabel
             // 
             this.ServingSizeLabel.AutoSize = true;
-            this.ServingSizeLabel.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServingSizeLabel.Location = new System.Drawing.Point(3, 77);
+            this.ServingSizeLabel.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServingSizeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.ServingSizeLabel.Location = new System.Drawing.Point(3, 28);
             this.ServingSizeLabel.Name = "ServingSizeLabel";
-            this.ServingSizeLabel.Size = new System.Drawing.Size(143, 24);
+            this.ServingSizeLabel.Size = new System.Drawing.Size(162, 30);
             this.ServingSizeLabel.TabIndex = 3;
             this.ServingSizeLabel.Text = "Serving Size:";
             // 
             // CookTimeLabel
             // 
             this.CookTimeLabel.AutoSize = true;
-            this.CookTimeLabel.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CookTimeLabel.Location = new System.Drawing.Point(3, 168);
+            this.CookTimeLabel.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CookTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.CookTimeLabel.Location = new System.Drawing.Point(3, 127);
             this.CookTimeLabel.Name = "CookTimeLabel";
-            this.CookTimeLabel.Size = new System.Drawing.Size(125, 24);
+            this.CookTimeLabel.Size = new System.Drawing.Size(142, 30);
             this.CookTimeLabel.TabIndex = 2;
             this.CookTimeLabel.Text = "Cook Time:";
             // 
             // PrepTimeLabel
             // 
             this.PrepTimeLabel.AutoSize = true;
-            this.PrepTimeLabel.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrepTimeLabel.Location = new System.Drawing.Point(3, 122);
+            this.PrepTimeLabel.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrepTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.PrepTimeLabel.Location = new System.Drawing.Point(3, 77);
             this.PrepTimeLabel.Name = "PrepTimeLabel";
-            this.PrepTimeLabel.Size = new System.Drawing.Size(119, 24);
+            this.PrepTimeLabel.Size = new System.Drawing.Size(136, 30);
             this.PrepTimeLabel.TabIndex = 1;
             this.PrepTimeLabel.Text = "Prep Time:";
             // 
             // GroceryPanel
             // 
+            this.GroceryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.GroceryPanel.Controls.Add(this.SelectAllGroceryItemsButton);
             this.GroceryPanel.Controls.Add(this.AddGroceriesToFridgeButton);
             this.GroceryPanel.Controls.Add(this.ClearGroceryListButton);
@@ -1234,100 +1431,155 @@
             // 
             // SelectAllGroceryItemsButton
             // 
+            this.SelectAllGroceryItemsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.SelectAllGroceryItemsButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.SelectAllGroceryItemsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.SelectAllGroceryItemsButton.Location = new System.Drawing.Point(1160, 729);
             this.SelectAllGroceryItemsButton.Name = "SelectAllGroceryItemsButton";
-            this.SelectAllGroceryItemsButton.Size = new System.Drawing.Size(342, 107);
+            this.SelectAllGroceryItemsButton.Size = new System.Drawing.Size(385, 107);
             this.SelectAllGroceryItemsButton.TabIndex = 7;
             this.SelectAllGroceryItemsButton.Text = "Select All Items";
-            this.SelectAllGroceryItemsButton.UseVisualStyleBackColor = true;
+            this.SelectAllGroceryItemsButton.UseVisualStyleBackColor = false;
             this.SelectAllGroceryItemsButton.Click += new System.EventHandler(this.SelectAllGroceryItemsButton_Click);
             // 
             // AddGroceriesToFridgeButton
             // 
+            this.AddGroceriesToFridgeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.AddGroceriesToFridgeButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.AddGroceriesToFridgeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.AddGroceriesToFridgeButton.Location = new System.Drawing.Point(1160, 873);
             this.AddGroceriesToFridgeButton.Name = "AddGroceriesToFridgeButton";
-            this.AddGroceriesToFridgeButton.Size = new System.Drawing.Size(342, 110);
+            this.AddGroceriesToFridgeButton.Size = new System.Drawing.Size(385, 110);
             this.AddGroceriesToFridgeButton.TabIndex = 6;
             this.AddGroceriesToFridgeButton.Text = "Add Selected Items To Fridge";
-            this.AddGroceriesToFridgeButton.UseVisualStyleBackColor = true;
+            this.AddGroceriesToFridgeButton.UseVisualStyleBackColor = false;
             this.AddGroceriesToFridgeButton.Click += new System.EventHandler(this.AddGroceriesToFridgeButton_Click);
             // 
             // ClearGroceryListButton
             // 
+            this.ClearGroceryListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.ClearGroceryListButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.ClearGroceryListButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.ClearGroceryListButton.Location = new System.Drawing.Point(1160, 1173);
             this.ClearGroceryListButton.Name = "ClearGroceryListButton";
-            this.ClearGroceryListButton.Size = new System.Drawing.Size(342, 114);
+            this.ClearGroceryListButton.Size = new System.Drawing.Size(385, 114);
             this.ClearGroceryListButton.TabIndex = 5;
             this.ClearGroceryListButton.Text = "Clear Grocery List";
-            this.ClearGroceryListButton.UseVisualStyleBackColor = true;
+            this.ClearGroceryListButton.UseVisualStyleBackColor = false;
             this.ClearGroceryListButton.Click += new System.EventHandler(this.ClearGroceryListButton_Click);
             // 
             // ClearSelectedGroceryButton
             // 
+            this.ClearSelectedGroceryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.ClearSelectedGroceryButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.ClearSelectedGroceryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.ClearSelectedGroceryButton.Location = new System.Drawing.Point(1160, 1015);
             this.ClearSelectedGroceryButton.Name = "ClearSelectedGroceryButton";
-            this.ClearSelectedGroceryButton.Size = new System.Drawing.Size(342, 114);
+            this.ClearSelectedGroceryButton.Size = new System.Drawing.Size(385, 114);
             this.ClearSelectedGroceryButton.TabIndex = 4;
             this.ClearSelectedGroceryButton.Text = "Clear Selected Items";
-            this.ClearSelectedGroceryButton.UseVisualStyleBackColor = true;
+            this.ClearSelectedGroceryButton.UseVisualStyleBackColor = false;
             this.ClearSelectedGroceryButton.Click += new System.EventHandler(this.ClearSelectedGroceryButton_Click);
             // 
             // DeleteGroceryButton
             // 
+            this.DeleteGroceryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.DeleteGroceryButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteGroceryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.DeleteGroceryButton.Location = new System.Drawing.Point(1160, 571);
             this.DeleteGroceryButton.Name = "DeleteGroceryButton";
-            this.DeleteGroceryButton.Size = new System.Drawing.Size(342, 114);
+            this.DeleteGroceryButton.Size = new System.Drawing.Size(385, 114);
             this.DeleteGroceryButton.TabIndex = 3;
             this.DeleteGroceryButton.Text = "Delete Item";
-            this.DeleteGroceryButton.UseVisualStyleBackColor = true;
+            this.DeleteGroceryButton.UseVisualStyleBackColor = false;
             this.DeleteGroceryButton.Click += new System.EventHandler(this.DeleteGroceryButton_Click);
             // 
             // AddGroceryButton
             // 
+            this.AddGroceryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.AddGroceryButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddGroceryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.AddGroceryButton.Location = new System.Drawing.Point(1160, 415);
             this.AddGroceryButton.Name = "AddGroceryButton";
-            this.AddGroceryButton.Size = new System.Drawing.Size(342, 110);
+            this.AddGroceryButton.Size = new System.Drawing.Size(385, 110);
             this.AddGroceryButton.TabIndex = 2;
             this.AddGroceryButton.Text = "Add Item";
-            this.AddGroceryButton.UseVisualStyleBackColor = true;
+            this.AddGroceryButton.UseVisualStyleBackColor = false;
             this.AddGroceryButton.Click += new System.EventHandler(this.AddGroceryButton_Click);
             // 
             // dataGridViewGrocery
             // 
             this.dataGridViewGrocery.AllowUserToAddRows = false;
             this.dataGridViewGrocery.AllowUserToDeleteRows = false;
+            this.dataGridViewGrocery.AllowUserToResizeColumns = false;
+            this.dataGridViewGrocery.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.dataGridViewGrocery.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewGrocery.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewGrocery.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGrocery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewGrocery.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.dataGridViewGrocery.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGrocery.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewGrocery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGrocery.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewGrocery.EnableHeadersVisualStyles = false;
+            this.dataGridViewGrocery.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.dataGridViewGrocery.Location = new System.Drawing.Point(0, 167);
             this.dataGridViewGrocery.Name = "dataGridViewGrocery";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGrocery.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewGrocery.RowHeadersVisible = false;
             this.dataGridViewGrocery.RowHeadersWidth = 82;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.dataGridViewGrocery.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewGrocery.RowTemplate.Height = 33;
             this.dataGridViewGrocery.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewGrocery.Size = new System.Drawing.Size(1109, 1155);
+            this.dataGridViewGrocery.Size = new System.Drawing.Size(1154, 1155);
             this.dataGridViewGrocery.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(449, 29);
+            this.label3.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label3.Location = new System.Drawing.Point(336, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(592, 90);
+            this.label3.Size = new System.Drawing.Size(894, 136);
             this.label3.TabIndex = 0;
             this.label3.Text = "My Grocery List";
             // 
             // FridgePanel
             // 
+            this.FridgePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.FridgePanel.Controls.Add(this.AddSelectedFridgeToGroceryButton);
             this.FridgePanel.Controls.Add(this.DeleteSelectedFridgeButton);
             this.FridgePanel.Controls.Add(this.SelectAllFridgeButton);
@@ -1342,88 +1594,123 @@
             // 
             // AddSelectedFridgeToGroceryButton
             // 
-            this.AddSelectedFridgeToGroceryButton.Location = new System.Drawing.Point(1146, 856);
+            this.AddSelectedFridgeToGroceryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.AddSelectedFridgeToGroceryButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSelectedFridgeToGroceryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.AddSelectedFridgeToGroceryButton.Location = new System.Drawing.Point(1159, 825);
             this.AddSelectedFridgeToGroceryButton.Name = "AddSelectedFridgeToGroceryButton";
-            this.AddSelectedFridgeToGroceryButton.Size = new System.Drawing.Size(340, 109);
+            this.AddSelectedFridgeToGroceryButton.Size = new System.Drawing.Size(385, 110);
             this.AddSelectedFridgeToGroceryButton.TabIndex = 6;
             this.AddSelectedFridgeToGroceryButton.Text = "Add Selected Items To Grocery List";
-            this.AddSelectedFridgeToGroceryButton.UseVisualStyleBackColor = true;
+            this.AddSelectedFridgeToGroceryButton.UseVisualStyleBackColor = false;
             this.AddSelectedFridgeToGroceryButton.Click += new System.EventHandler(this.AddSelectedFridgeToGroceryButton_Click);
             // 
             // DeleteSelectedFridgeButton
             // 
-            this.DeleteSelectedFridgeButton.Location = new System.Drawing.Point(1148, 1015);
+            this.DeleteSelectedFridgeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.DeleteSelectedFridgeButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteSelectedFridgeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.DeleteSelectedFridgeButton.Location = new System.Drawing.Point(1160, 993);
             this.DeleteSelectedFridgeButton.Name = "DeleteSelectedFridgeButton";
-            this.DeleteSelectedFridgeButton.Size = new System.Drawing.Size(340, 110);
+            this.DeleteSelectedFridgeButton.Size = new System.Drawing.Size(385, 110);
             this.DeleteSelectedFridgeButton.TabIndex = 5;
             this.DeleteSelectedFridgeButton.Text = "Delete Selected Items";
-            this.DeleteSelectedFridgeButton.UseVisualStyleBackColor = true;
+            this.DeleteSelectedFridgeButton.UseVisualStyleBackColor = false;
             this.DeleteSelectedFridgeButton.Click += new System.EventHandler(this.DeleteSelectedFridgeButton_Click);
             // 
             // SelectAllFridgeButton
             // 
-            this.SelectAllFridgeButton.Location = new System.Drawing.Point(1146, 696);
+            this.SelectAllFridgeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.SelectAllFridgeButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectAllFridgeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.SelectAllFridgeButton.Location = new System.Drawing.Point(1163, 668);
             this.SelectAllFridgeButton.Name = "SelectAllFridgeButton";
-            this.SelectAllFridgeButton.Size = new System.Drawing.Size(341, 110);
+            this.SelectAllFridgeButton.Size = new System.Drawing.Size(385, 110);
             this.SelectAllFridgeButton.TabIndex = 4;
             this.SelectAllFridgeButton.Text = "Select All Items";
-            this.SelectAllFridgeButton.UseVisualStyleBackColor = true;
+            this.SelectAllFridgeButton.UseVisualStyleBackColor = false;
             this.SelectAllFridgeButton.Click += new System.EventHandler(this.SelectAllFridgeButton_Click);
             // 
             // DeleteFromFridgeButton
             // 
-            this.DeleteFromFridgeButton.Location = new System.Drawing.Point(1146, 1164);
+            this.DeleteFromFridgeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.DeleteFromFridgeButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteFromFridgeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.DeleteFromFridgeButton.Location = new System.Drawing.Point(1159, 1166);
             this.DeleteFromFridgeButton.Name = "DeleteFromFridgeButton";
-            this.DeleteFromFridgeButton.Size = new System.Drawing.Size(341, 110);
+            this.DeleteFromFridgeButton.Size = new System.Drawing.Size(385, 110);
             this.DeleteFromFridgeButton.TabIndex = 3;
             this.DeleteFromFridgeButton.Text = "Delete Item";
-            this.DeleteFromFridgeButton.UseVisualStyleBackColor = true;
+            this.DeleteFromFridgeButton.UseVisualStyleBackColor = false;
             this.DeleteFromFridgeButton.Click += new System.EventHandler(this.DeleteFromFridgeButton_Click);
             // 
             // AddToFridgeButton
             // 
-            this.AddToFridgeButton.Location = new System.Drawing.Point(1146, 542);
+            this.AddToFridgeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.AddToFridgeButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddToFridgeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.AddToFridgeButton.Location = new System.Drawing.Point(1160, 505);
             this.AddToFridgeButton.Name = "AddToFridgeButton";
-            this.AddToFridgeButton.Size = new System.Drawing.Size(342, 110);
+            this.AddToFridgeButton.Size = new System.Drawing.Size(385, 110);
             this.AddToFridgeButton.TabIndex = 2;
             this.AddToFridgeButton.Text = "Add Item";
-            this.AddToFridgeButton.UseVisualStyleBackColor = true;
+            this.AddToFridgeButton.UseVisualStyleBackColor = false;
             this.AddToFridgeButton.Click += new System.EventHandler(this.AddToFridgeButton_Click);
             // 
             // dataGridViewFridge
             // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.dataGridViewFridge.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewFridge.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewFridge.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewFridge.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewFridge.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.dataGridViewFridge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewFridge.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewFridge.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFridge.Location = new System.Drawing.Point(0, 121);
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewFridge.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewFridge.EnableHeadersVisualStyles = false;
+            this.dataGridViewFridge.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.dataGridViewFridge.Location = new System.Drawing.Point(0, 166);
             this.dataGridViewFridge.Name = "dataGridViewFridge";
             this.dataGridViewFridge.RowHeadersVisible = false;
             this.dataGridViewFridge.RowHeadersWidth = 82;
             this.dataGridViewFridge.RowTemplate.Height = 33;
             this.dataGridViewFridge.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewFridge.Size = new System.Drawing.Size(1084, 1202);
+            this.dataGridViewFridge.Size = new System.Drawing.Size(1154, 1110);
             this.dataGridViewFridge.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(555, 15);
+            this.label4.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label4.Location = new System.Drawing.Point(492, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(377, 90);
+            this.label4.Size = new System.Drawing.Size(567, 136);
             this.label4.TabIndex = 0;
             this.label4.Text = "My Fridge";
             // 
             // AccountPanel
             // 
+            this.AccountPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.AccountPanel.Controls.Add(this.ConfirmNewEmailButton);
             this.AccountPanel.Controls.Add(this.ConfirmNewPasswordButton);
             this.AccountPanel.Controls.Add(this.ConfirmNewEmailText);
@@ -1449,134 +1736,176 @@
             // 
             // ConfirmNewEmailButton
             // 
+            this.ConfirmNewEmailButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.ConfirmNewEmailButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmNewEmailButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.ConfirmNewEmailButton.Location = new System.Drawing.Point(1070, 688);
             this.ConfirmNewEmailButton.Name = "ConfirmNewEmailButton";
             this.ConfirmNewEmailButton.Size = new System.Drawing.Size(202, 86);
             this.ConfirmNewEmailButton.TabIndex = 17;
             this.ConfirmNewEmailButton.Text = "Confirm";
-            this.ConfirmNewEmailButton.UseVisualStyleBackColor = true;
+            this.ConfirmNewEmailButton.UseVisualStyleBackColor = false;
             this.ConfirmNewEmailButton.Click += new System.EventHandler(this.ConfirmNewEmailButton_Click);
             // 
             // ConfirmNewPasswordButton
             // 
+            this.ConfirmNewPasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.ConfirmNewPasswordButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmNewPasswordButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.ConfirmNewPasswordButton.Location = new System.Drawing.Point(230, 689);
             this.ConfirmNewPasswordButton.Name = "ConfirmNewPasswordButton";
             this.ConfirmNewPasswordButton.Size = new System.Drawing.Size(202, 86);
             this.ConfirmNewPasswordButton.TabIndex = 16;
             this.ConfirmNewPasswordButton.Text = "Confirm";
-            this.ConfirmNewPasswordButton.UseVisualStyleBackColor = true;
+            this.ConfirmNewPasswordButton.UseVisualStyleBackColor = false;
             this.ConfirmNewPasswordButton.Click += new System.EventHandler(this.ConfirmNewPasswordButton_Click);
             // 
             // ConfirmNewEmailText
             // 
+            this.ConfirmNewEmailText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ConfirmNewEmailText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmNewEmailText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.ConfirmNewEmailText.Location = new System.Drawing.Point(1062, 587);
             this.ConfirmNewEmailText.Name = "ConfirmNewEmailText";
-            this.ConfirmNewEmailText.Size = new System.Drawing.Size(300, 31);
+            this.ConfirmNewEmailText.Size = new System.Drawing.Size(300, 32);
             this.ConfirmNewEmailText.TabIndex = 15;
             // 
             // NewEmailText
             // 
+            this.NewEmailText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewEmailText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewEmailText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewEmailText.Location = new System.Drawing.Point(1062, 491);
             this.NewEmailText.Name = "NewEmailText";
-            this.NewEmailText.Size = new System.Drawing.Size(300, 31);
+            this.NewEmailText.Size = new System.Drawing.Size(300, 32);
             this.NewEmailText.TabIndex = 14;
             // 
             // CurrentEmailText
             // 
+            this.CurrentEmailText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CurrentEmailText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentEmailText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.CurrentEmailText.Location = new System.Drawing.Point(1062, 411);
             this.CurrentEmailText.Name = "CurrentEmailText";
-            this.CurrentEmailText.Size = new System.Drawing.Size(300, 31);
+            this.CurrentEmailText.Size = new System.Drawing.Size(300, 32);
             this.CurrentEmailText.TabIndex = 13;
             // 
             // ConfirmPasswordText
             // 
+            this.ConfirmPasswordText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ConfirmPasswordText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPasswordText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.ConfirmPasswordText.Location = new System.Drawing.Point(276, 587);
             this.ConfirmPasswordText.Name = "ConfirmPasswordText";
-            this.ConfirmPasswordText.Size = new System.Drawing.Size(300, 31);
+            this.ConfirmPasswordText.PasswordChar = '●';
+            this.ConfirmPasswordText.Size = new System.Drawing.Size(300, 32);
             this.ConfirmPasswordText.TabIndex = 12;
             // 
             // NewPasswordText
             // 
+            this.NewPasswordText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NewPasswordText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPasswordText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.NewPasswordText.Location = new System.Drawing.Point(276, 494);
             this.NewPasswordText.Name = "NewPasswordText";
-            this.NewPasswordText.Size = new System.Drawing.Size(300, 31);
+            this.NewPasswordText.PasswordChar = '●';
+            this.NewPasswordText.Size = new System.Drawing.Size(300, 32);
             this.NewPasswordText.TabIndex = 11;
             // 
             // CurrentPasswordText
             // 
+            this.CurrentPasswordText.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CurrentPasswordText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPasswordText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.CurrentPasswordText.Location = new System.Drawing.Point(276, 408);
             this.CurrentPasswordText.Name = "CurrentPasswordText";
-            this.CurrentPasswordText.Size = new System.Drawing.Size(300, 31);
+            this.CurrentPasswordText.Size = new System.Drawing.Size(300, 32);
             this.CurrentPasswordText.TabIndex = 10;
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(911, 593);
+            this.label61.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label61.Location = new System.Drawing.Point(873, 590);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(145, 25);
+            this.label61.Size = new System.Drawing.Size(174, 30);
             this.label61.TabIndex = 9;
             this.label61.Text = "Confirm Email";
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(82, 594);
+            this.label60.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label60.Location = new System.Drawing.Point(44, 591);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(186, 25);
+            this.label60.Size = new System.Drawing.Size(222, 30);
             this.label60.TabIndex = 8;
             this.label60.Text = "Confirm Password";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(939, 497);
+            this.label59.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label59.Location = new System.Drawing.Point(911, 495);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(113, 25);
+            this.label59.Size = new System.Drawing.Size(136, 30);
             this.label59.TabIndex = 7;
             this.label59.Text = "New Email";
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(914, 417);
+            this.label58.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label58.Location = new System.Drawing.Point(883, 412);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(142, 25);
+            this.label58.Size = new System.Drawing.Size(170, 30);
             this.label58.TabIndex = 6;
             this.label58.Text = "Current Email";
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(114, 497);
+            this.label57.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label57.Location = new System.Drawing.Point(82, 497);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(154, 25);
+            this.label57.Size = new System.Drawing.Size(184, 30);
             this.label57.TabIndex = 5;
             this.label57.Text = "New Password";
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(87, 414);
+            this.label56.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label56.Location = new System.Drawing.Point(52, 408);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(183, 25);
+            this.label56.Size = new System.Drawing.Size(218, 30);
             this.label56.TabIndex = 4;
             this.label56.Text = "Current Password";
             // 
             // LogOutButton
             // 
+            this.LogOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.LogOutButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.LogOutButton.Location = new System.Drawing.Point(1286, 1202);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(202, 86);
             this.LogOutButton.TabIndex = 3;
             this.LogOutButton.Text = "Log Out";
-            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.UseVisualStyleBackColor = false;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // label55
             // 
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label55.Location = new System.Drawing.Point(979, 310);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(293, 52);
@@ -1587,6 +1916,7 @@
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label54.Location = new System.Drawing.Point(149, 307);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(385, 52);
@@ -1596,15 +1926,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(536, 40);
+            this.label5.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label5.Location = new System.Drawing.Point(423, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(451, 90);
+            this.label5.Size = new System.Drawing.Size(677, 136);
             this.label5.TabIndex = 0;
             this.label5.Text = "My Account";
             // 
             // MealPlanPanel
             // 
+            this.MealPlanPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.MealPlanPanel.Controls.Add(this.AddAMealButton);
             this.MealPlanPanel.Controls.Add(this.ClearMealPlanButton);
             this.MealPlanPanel.Controls.Add(this.thursdayBreakfastText);
@@ -1664,26 +1996,33 @@
             // 
             // AddAMealButton
             // 
-            this.AddAMealButton.Location = new System.Drawing.Point(514, 1181);
+            this.AddAMealButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.AddAMealButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAMealButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.AddAMealButton.Location = new System.Drawing.Point(486, 1185);
             this.AddAMealButton.Name = "AddAMealButton";
-            this.AddAMealButton.Size = new System.Drawing.Size(190, 87);
+            this.AddAMealButton.Size = new System.Drawing.Size(219, 113);
             this.AddAMealButton.TabIndex = 51;
             this.AddAMealButton.Text = "Add A Meal";
-            this.AddAMealButton.UseVisualStyleBackColor = true;
+            this.AddAMealButton.UseVisualStyleBackColor = false;
             this.AddAMealButton.Click += new System.EventHandler(this.AddAMealButton_Click);
             // 
             // ClearMealPlanButton
             // 
-            this.ClearMealPlanButton.Location = new System.Drawing.Point(797, 1182);
+            this.ClearMealPlanButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.ClearMealPlanButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearMealPlanButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.ClearMealPlanButton.Location = new System.Drawing.Point(763, 1187);
             this.ClearMealPlanButton.Name = "ClearMealPlanButton";
-            this.ClearMealPlanButton.Size = new System.Drawing.Size(190, 86);
+            this.ClearMealPlanButton.Size = new System.Drawing.Size(219, 113);
             this.ClearMealPlanButton.TabIndex = 50;
             this.ClearMealPlanButton.Text = "Clear Meal Plan";
-            this.ClearMealPlanButton.UseVisualStyleBackColor = true;
+            this.ClearMealPlanButton.UseVisualStyleBackColor = false;
             this.ClearMealPlanButton.Click += new System.EventHandler(this.ClearMealPlanButton_Click);
             // 
             // thursdayBreakfastText
             // 
+            this.thursdayBreakfastText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.thursdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.thursdayBreakfastText.Location = new System.Drawing.Point(1044, 277);
             this.thursdayBreakfastText.Name = "thursdayBreakfastText";
@@ -1693,6 +2032,7 @@
             // 
             // thursdayLunchText
             // 
+            this.thursdayLunchText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.thursdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.thursdayLunchText.Location = new System.Drawing.Point(1044, 335);
             this.thursdayLunchText.Name = "thursdayLunchText";
@@ -1702,6 +2042,7 @@
             // 
             // thursdayDinnerText
             // 
+            this.thursdayDinnerText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.thursdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.thursdayDinnerText.Location = new System.Drawing.Point(1044, 399);
             this.thursdayDinnerText.Name = "thursdayDinnerText";
@@ -1711,6 +2052,7 @@
             // 
             // fridayBreakfastText
             // 
+            this.fridayBreakfastText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.fridayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fridayBreakfastText.Location = new System.Drawing.Point(1033, 587);
             this.fridayBreakfastText.Name = "fridayBreakfastText";
@@ -1720,6 +2062,7 @@
             // 
             // fridayLunchText
             // 
+            this.fridayLunchText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.fridayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fridayLunchText.Location = new System.Drawing.Point(1033, 652);
             this.fridayLunchText.Name = "fridayLunchText";
@@ -1729,6 +2072,7 @@
             // 
             // fridayDinnerText
             // 
+            this.fridayDinnerText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.fridayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fridayDinnerText.Location = new System.Drawing.Point(1033, 723);
             this.fridayDinnerText.Name = "fridayDinnerText";
@@ -1738,6 +2082,7 @@
             // 
             // saturdayBreakfastText
             // 
+            this.saturdayBreakfastText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.saturdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.saturdayBreakfastText.Location = new System.Drawing.Point(1033, 895);
             this.saturdayBreakfastText.Name = "saturdayBreakfastText";
@@ -1747,6 +2092,7 @@
             // 
             // saturdayLunchText
             // 
+            this.saturdayLunchText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.saturdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.saturdayLunchText.Location = new System.Drawing.Point(1033, 963);
             this.saturdayLunchText.Name = "saturdayLunchText";
@@ -1756,6 +2102,7 @@
             // 
             // saturdayDinnerText
             // 
+            this.saturdayDinnerText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.saturdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.saturdayDinnerText.Location = new System.Drawing.Point(1033, 1034);
             this.saturdayDinnerText.Name = "saturdayDinnerText";
@@ -1765,6 +2112,7 @@
             // 
             // wednesdayDinnerText
             // 
+            this.wednesdayDinnerText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.wednesdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.wednesdayDinnerText.Location = new System.Drawing.Point(223, 1126);
             this.wednesdayDinnerText.Name = "wednesdayDinnerText";
@@ -1774,6 +2122,7 @@
             // 
             // wednesdayLunchText
             // 
+            this.wednesdayLunchText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.wednesdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.wednesdayLunchText.Location = new System.Drawing.Point(223, 1063);
             this.wednesdayLunchText.Name = "wednesdayLunchText";
@@ -1783,6 +2132,7 @@
             // 
             // wednesdayBreakfastText
             // 
+            this.wednesdayBreakfastText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.wednesdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.wednesdayBreakfastText.Location = new System.Drawing.Point(223, 1003);
             this.wednesdayBreakfastText.Name = "wednesdayBreakfastText";
@@ -1792,6 +2142,7 @@
             // 
             // tuesdayDinnerText
             // 
+            this.tuesdayDinnerText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.tuesdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tuesdayDinnerText.Location = new System.Drawing.Point(219, 873);
             this.tuesdayDinnerText.Name = "tuesdayDinnerText";
@@ -1801,6 +2152,7 @@
             // 
             // tuesdayLunchText
             // 
+            this.tuesdayLunchText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.tuesdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tuesdayLunchText.Location = new System.Drawing.Point(219, 807);
             this.tuesdayLunchText.Name = "tuesdayLunchText";
@@ -1810,6 +2162,7 @@
             // 
             // tuesdayBreakfastText
             // 
+            this.tuesdayBreakfastText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.tuesdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tuesdayBreakfastText.Location = new System.Drawing.Point(223, 744);
             this.tuesdayBreakfastText.Name = "tuesdayBreakfastText";
@@ -1819,6 +2172,7 @@
             // 
             // mondayDinnerText
             // 
+            this.mondayDinnerText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.mondayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mondayDinnerText.Location = new System.Drawing.Point(219, 637);
             this.mondayDinnerText.Name = "mondayDinnerText";
@@ -1828,6 +2182,7 @@
             // 
             // mondayLunchText
             // 
+            this.mondayLunchText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.mondayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mondayLunchText.Location = new System.Drawing.Point(219, 568);
             this.mondayLunchText.Name = "mondayLunchText";
@@ -1837,6 +2192,7 @@
             // 
             // mondayBreakfastText
             // 
+            this.mondayBreakfastText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.mondayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mondayBreakfastText.Location = new System.Drawing.Point(219, 508);
             this.mondayBreakfastText.Name = "mondayBreakfastText";
@@ -1846,6 +2202,7 @@
             // 
             // sundayDinnerText
             // 
+            this.sundayDinnerText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.sundayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sundayDinnerText.Location = new System.Drawing.Point(219, 399);
             this.sundayDinnerText.Name = "sundayDinnerText";
@@ -1855,6 +2212,7 @@
             // 
             // sundayLunchText
             // 
+            this.sundayLunchText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.sundayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sundayLunchText.Location = new System.Drawing.Point(219, 338);
             this.sundayLunchText.Name = "sundayLunchText";
@@ -1864,6 +2222,7 @@
             // 
             // sundayBreakfastText
             // 
+            this.sundayBreakfastText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.sundayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sundayBreakfastText.Location = new System.Drawing.Point(219, 273);
             this.sundayBreakfastText.Name = "sundayBreakfastText";
@@ -2085,6 +2444,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label13.Location = new System.Drawing.Point(257, 232);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(97, 30);
@@ -2095,6 +2455,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label12.Location = new System.Drawing.Point(1056, 837);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(116, 30);
@@ -2105,6 +2466,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label11.Location = new System.Drawing.Point(1056, 542);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(83, 30);
@@ -2115,6 +2477,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label10.Location = new System.Drawing.Point(1056, 232);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(121, 30);
@@ -2125,6 +2488,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label9.Location = new System.Drawing.Point(257, 948);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(143, 30);
@@ -2135,6 +2499,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label8.Location = new System.Drawing.Point(257, 697);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 30);
@@ -2145,6 +2510,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Black", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.label7.Location = new System.Drawing.Point(257, 460);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 30);
@@ -2154,15 +2520,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(499, 29);
+            this.label6.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label6.Location = new System.Drawing.Point(388, 27);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(499, 90);
+            this.label6.Size = new System.Drawing.Size(751, 136);
             this.label6.TabIndex = 0;
             this.label6.Text = "My Meal Plan";
             // 
             // AddGroceryItemPanel
             // 
+            this.AddGroceryItemPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.AddGroceryItemPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AddGroceryItemPanel.Controls.Add(this.CancelAddGroceryItemButton);
             this.AddGroceryItemPanel.Controls.Add(this.AddGroceryItemButton);
@@ -2176,26 +2544,33 @@
             // 
             // CancelAddGroceryItemButton
             // 
+            this.CancelAddGroceryItemButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.CancelAddGroceryItemButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelAddGroceryItemButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.CancelAddGroceryItemButton.Location = new System.Drawing.Point(257, 267);
             this.CancelAddGroceryItemButton.Name = "CancelAddGroceryItemButton";
             this.CancelAddGroceryItemButton.Size = new System.Drawing.Size(143, 52);
             this.CancelAddGroceryItemButton.TabIndex = 4;
             this.CancelAddGroceryItemButton.Text = "Cancel";
-            this.CancelAddGroceryItemButton.UseVisualStyleBackColor = true;
+            this.CancelAddGroceryItemButton.UseVisualStyleBackColor = false;
             this.CancelAddGroceryItemButton.Click += new System.EventHandler(this.CancelAddGroceryItemButton_Click);
             // 
             // AddGroceryItemButton
             // 
+            this.AddGroceryItemButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.AddGroceryItemButton.Font = new System.Drawing.Font("Arial Black", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddGroceryItemButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
             this.AddGroceryItemButton.Location = new System.Drawing.Point(51, 265);
             this.AddGroceryItemButton.Name = "AddGroceryItemButton";
             this.AddGroceryItemButton.Size = new System.Drawing.Size(143, 52);
             this.AddGroceryItemButton.TabIndex = 3;
-            this.AddGroceryItemButton.Text = "Add Item";
-            this.AddGroceryItemButton.UseVisualStyleBackColor = true;
+            this.AddGroceryItemButton.Text = "Add";
+            this.AddGroceryItemButton.UseVisualStyleBackColor = false;
             this.AddGroceryItemButton.Click += new System.EventHandler(this.AddGroceryItemButton_Click);
             // 
             // NewGroceryItemText
             // 
+            this.NewGroceryItemText.BackColor = System.Drawing.Color.WhiteSmoke;
             this.NewGroceryItemText.Location = new System.Drawing.Point(114, 164);
             this.NewGroceryItemText.Name = "NewGroceryItemText";
             this.NewGroceryItemText.Size = new System.Drawing.Size(300, 31);
@@ -2204,10 +2579,11 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.label63.Location = new System.Drawing.Point(40, 164);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(67, 31);
+            this.label63.Size = new System.Drawing.Size(72, 32);
             this.label63.TabIndex = 1;
             this.label63.Text = "Item";
             // 
@@ -2215,6 +2591,7 @@
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.label62.Location = new System.Drawing.Point(33, 42);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(381, 52);
@@ -2287,17 +2664,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
-            this.Controls.Add(this.AccountPanel);
-            this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.RecipePanel);
+            this.Controls.Add(this.AccountPanel);
             this.Controls.Add(this.FridgePanel);
+            this.Controls.Add(this.AddRecipePanel);
+            this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.GroceryPanel);
+            this.Controls.Add(this.AddToMealPlanPanel);
             this.Controls.Add(this.MealPlanPanel);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.AddFridgeItemPanel);
-            this.Controls.Add(this.AddToMealPlanPanel);
             this.Controls.Add(this.menuPanel);
-            this.Controls.Add(this.AddRecipePanel);
             this.Controls.Add(this.AddGroceryItemPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";

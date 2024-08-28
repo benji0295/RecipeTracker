@@ -40,6 +40,19 @@ namespace RecipeTracker
             AddGroceryItemPanel.Visible = false;
             AddFridgeItemPanel.Visible = false;
 
+            // Items In Grocery List Label
+            ItemsInGroceryListLabel.Text = loggedInAccount.GroceryList.Count.ToString();
+
+            // Used Items In Fridge Label
+            foreach (var item in loggedInAccount.FridgeItems)
+            {
+                if (item.IsBought)
+                {
+                    UsedItemsInFridgeLabel.Text = (int.Parse(UsedItemsInFridgeLabel.Text) + 1).ToString();
+                }
+            }
+
+            // Recipe Of The Day Label
             try
             {
                 Recipe recipeOfTheDay = Recipe.GetRandomRecipe(loggedInAccount);

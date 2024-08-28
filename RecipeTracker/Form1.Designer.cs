@@ -50,6 +50,10 @@
             this.RecipeButton = new System.Windows.Forms.Button();
             this.AccountButton = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.UsedItemsInFridgeLabel = new System.Windows.Forms.Label();
+            this.ItemsInGroceryListLabel = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
             this.RecipeOfTheDayLabel = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -374,6 +378,10 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
+            this.MainPanel.Controls.Add(this.UsedItemsInFridgeLabel);
+            this.MainPanel.Controls.Add(this.ItemsInGroceryListLabel);
+            this.MainPanel.Controls.Add(this.label67);
+            this.MainPanel.Controls.Add(this.label66);
             this.MainPanel.Controls.Add(this.RecipeOfTheDayLabel);
             this.MainPanel.Controls.Add(this.label53);
             this.MainPanel.Controls.Add(this.label1);
@@ -382,12 +390,58 @@
             this.MainPanel.Size = new System.Drawing.Size(1554, 1323);
             this.MainPanel.TabIndex = 2;
             // 
+            // UsedItemsInFridgeLabel
+            // 
+            this.UsedItemsInFridgeLabel.AutoSize = true;
+            this.UsedItemsInFridgeLabel.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsedItemsInFridgeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.UsedItemsInFridgeLabel.Location = new System.Drawing.Point(1140, 713);
+            this.UsedItemsInFridgeLabel.Name = "UsedItemsInFridgeLabel";
+            this.UsedItemsInFridgeLabel.Size = new System.Drawing.Size(121, 136);
+            this.UsedItemsInFridgeLabel.TabIndex = 6;
+            this.UsedItemsInFridgeLabel.Text = "0";
+            this.UsedItemsInFridgeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ItemsInGroceryListLabel
+            // 
+            this.ItemsInGroceryListLabel.AutoSize = true;
+            this.ItemsInGroceryListLabel.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemsInGroceryListLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.ItemsInGroceryListLabel.Location = new System.Drawing.Point(315, 710);
+            this.ItemsInGroceryListLabel.Name = "ItemsInGroceryListLabel";
+            this.ItemsInGroceryListLabel.Size = new System.Drawing.Size(121, 136);
+            this.ItemsInGroceryListLabel.TabIndex = 5;
+            this.ItemsInGroceryListLabel.Text = "0";
+            this.ItemsInGroceryListLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Arial Black", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label67.Location = new System.Drawing.Point(855, 642);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(633, 74);
+            this.label67.TabIndex = 4;
+            this.label67.Text = "Used Items In Fridge";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Arial Black", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.label66.Location = new System.Drawing.Point(57, 642);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(649, 74);
+            this.label66.TabIndex = 3;
+            this.label66.Text = "Items In Grocery List";
+            // 
             // RecipeOfTheDayLabel
             // 
             this.RecipeOfTheDayLabel.AutoSize = true;
             this.RecipeOfTheDayLabel.Font = new System.Drawing.Font("Arial Black", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecipeOfTheDayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.RecipeOfTheDayLabel.Location = new System.Drawing.Point(153, 390);
+            this.RecipeOfTheDayLabel.Location = new System.Drawing.Point(575, 430);
             this.RecipeOfTheDayLabel.Name = "RecipeOfTheDayLabel";
             this.RecipeOfTheDayLabel.Size = new System.Drawing.Size(400, 52);
             this.RecipeOfTheDayLabel.TabIndex = 2;
@@ -398,7 +452,7 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Arial Black", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.label53.Location = new System.Drawing.Point(57, 250);
+            this.label53.Location = new System.Drawing.Point(465, 314);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(635, 83);
             this.label53.TabIndex = 1;
@@ -409,7 +463,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.label1.Location = new System.Drawing.Point(521, 27);
+            this.label1.Location = new System.Drawing.Point(557, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(462, 136);
             this.label1.TabIndex = 0;
@@ -2026,7 +2080,7 @@
             this.thursdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.thursdayBreakfastText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thursdayBreakfastText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.thursdayBreakfastText.Location = new System.Drawing.Point(949, 231);
+            this.thursdayBreakfastText.Location = new System.Drawing.Point(949, 234);
             this.thursdayBreakfastText.Name = "thursdayBreakfastText";
             this.thursdayBreakfastText.ReadOnly = true;
             this.thursdayBreakfastText.Size = new System.Drawing.Size(268, 25);
@@ -2038,7 +2092,7 @@
             this.thursdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.thursdayLunchText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thursdayLunchText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.thursdayLunchText.Location = new System.Drawing.Point(949, 296);
+            this.thursdayLunchText.Location = new System.Drawing.Point(949, 298);
             this.thursdayLunchText.Name = "thursdayLunchText";
             this.thursdayLunchText.ReadOnly = true;
             this.thursdayLunchText.Size = new System.Drawing.Size(271, 25);
@@ -2050,7 +2104,7 @@
             this.thursdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.thursdayDinnerText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thursdayDinnerText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.thursdayDinnerText.Location = new System.Drawing.Point(949, 356);
+            this.thursdayDinnerText.Location = new System.Drawing.Point(949, 360);
             this.thursdayDinnerText.Name = "thursdayDinnerText";
             this.thursdayDinnerText.ReadOnly = true;
             this.thursdayDinnerText.Size = new System.Drawing.Size(271, 25);
@@ -2062,7 +2116,7 @@
             this.fridayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fridayBreakfastText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fridayBreakfastText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.fridayBreakfastText.Location = new System.Drawing.Point(946, 485);
+            this.fridayBreakfastText.Location = new System.Drawing.Point(944, 484);
             this.fridayBreakfastText.Name = "fridayBreakfastText";
             this.fridayBreakfastText.ReadOnly = true;
             this.fridayBreakfastText.Size = new System.Drawing.Size(271, 25);
@@ -2074,7 +2128,7 @@
             this.fridayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fridayLunchText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fridayLunchText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.fridayLunchText.Location = new System.Drawing.Point(946, 547);
+            this.fridayLunchText.Location = new System.Drawing.Point(946, 551);
             this.fridayLunchText.Name = "fridayLunchText";
             this.fridayLunchText.ReadOnly = true;
             this.fridayLunchText.Size = new System.Drawing.Size(271, 25);
@@ -2086,7 +2140,7 @@
             this.fridayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fridayDinnerText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fridayDinnerText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.fridayDinnerText.Location = new System.Drawing.Point(946, 605);
+            this.fridayDinnerText.Location = new System.Drawing.Point(944, 612);
             this.fridayDinnerText.Name = "fridayDinnerText";
             this.fridayDinnerText.ReadOnly = true;
             this.fridayDinnerText.Size = new System.Drawing.Size(271, 25);
@@ -2098,7 +2152,7 @@
             this.saturdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.saturdayBreakfastText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saturdayBreakfastText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.saturdayBreakfastText.Location = new System.Drawing.Point(946, 743);
+            this.saturdayBreakfastText.Location = new System.Drawing.Point(944, 747);
             this.saturdayBreakfastText.Name = "saturdayBreakfastText";
             this.saturdayBreakfastText.ReadOnly = true;
             this.saturdayBreakfastText.Size = new System.Drawing.Size(279, 25);
@@ -2110,7 +2164,7 @@
             this.saturdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.saturdayLunchText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saturdayLunchText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.saturdayLunchText.Location = new System.Drawing.Point(946, 807);
+            this.saturdayLunchText.Location = new System.Drawing.Point(946, 814);
             this.saturdayLunchText.Name = "saturdayLunchText";
             this.saturdayLunchText.ReadOnly = true;
             this.saturdayLunchText.Size = new System.Drawing.Size(279, 25);
@@ -2122,7 +2176,7 @@
             this.saturdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.saturdayDinnerText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saturdayDinnerText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.saturdayDinnerText.Location = new System.Drawing.Point(946, 876);
+            this.saturdayDinnerText.Location = new System.Drawing.Point(946, 883);
             this.saturdayDinnerText.Name = "saturdayDinnerText";
             this.saturdayDinnerText.ReadOnly = true;
             this.saturdayDinnerText.Size = new System.Drawing.Size(279, 25);
@@ -2131,13 +2185,13 @@
             // wednesdayDinnerText
             // 
             this.wednesdayDinnerText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
-            this.wednesdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.wednesdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.wednesdayDinnerText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wednesdayDinnerText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.wednesdayDinnerText.Location = new System.Drawing.Point(298, 1124);
+            this.wednesdayDinnerText.Location = new System.Drawing.Point(298, 1127);
             this.wednesdayDinnerText.Name = "wednesdayDinnerText";
             this.wednesdayDinnerText.ReadOnly = true;
-            this.wednesdayDinnerText.Size = new System.Drawing.Size(271, 32);
+            this.wednesdayDinnerText.Size = new System.Drawing.Size(271, 25);
             this.wednesdayDinnerText.TabIndex = 40;
             // 
             // wednesdayLunchText
@@ -2146,7 +2200,7 @@
             this.wednesdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.wednesdayLunchText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wednesdayLunchText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.wednesdayLunchText.Location = new System.Drawing.Point(299, 1064);
+            this.wednesdayLunchText.Location = new System.Drawing.Point(298, 1065);
             this.wednesdayLunchText.Name = "wednesdayLunchText";
             this.wednesdayLunchText.ReadOnly = true;
             this.wednesdayLunchText.Size = new System.Drawing.Size(271, 25);
@@ -2158,7 +2212,7 @@
             this.wednesdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.wednesdayBreakfastText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wednesdayBreakfastText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.wednesdayBreakfastText.Location = new System.Drawing.Point(299, 1006);
+            this.wednesdayBreakfastText.Location = new System.Drawing.Point(299, 1009);
             this.wednesdayBreakfastText.Name = "wednesdayBreakfastText";
             this.wednesdayBreakfastText.ReadOnly = true;
             this.wednesdayBreakfastText.Size = new System.Drawing.Size(273, 25);
@@ -2170,7 +2224,7 @@
             this.tuesdayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tuesdayDinnerText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tuesdayDinnerText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.tuesdayDinnerText.Location = new System.Drawing.Point(298, 876);
+            this.tuesdayDinnerText.Location = new System.Drawing.Point(298, 879);
             this.tuesdayDinnerText.Name = "tuesdayDinnerText";
             this.tuesdayDinnerText.ReadOnly = true;
             this.tuesdayDinnerText.Size = new System.Drawing.Size(271, 25);
@@ -2182,7 +2236,7 @@
             this.tuesdayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tuesdayLunchText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tuesdayLunchText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.tuesdayLunchText.Location = new System.Drawing.Point(298, 807);
+            this.tuesdayLunchText.Location = new System.Drawing.Point(298, 809);
             this.tuesdayLunchText.Name = "tuesdayLunchText";
             this.tuesdayLunchText.ReadOnly = true;
             this.tuesdayLunchText.Size = new System.Drawing.Size(271, 25);
@@ -2194,7 +2248,7 @@
             this.tuesdayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tuesdayBreakfastText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tuesdayBreakfastText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.tuesdayBreakfastText.Location = new System.Drawing.Point(298, 744);
+            this.tuesdayBreakfastText.Location = new System.Drawing.Point(298, 745);
             this.tuesdayBreakfastText.Name = "tuesdayBreakfastText";
             this.tuesdayBreakfastText.ReadOnly = true;
             this.tuesdayBreakfastText.Size = new System.Drawing.Size(274, 25);
@@ -2206,7 +2260,7 @@
             this.mondayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mondayDinnerText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mondayDinnerText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.mondayDinnerText.Location = new System.Drawing.Point(298, 605);
+            this.mondayDinnerText.Location = new System.Drawing.Point(298, 608);
             this.mondayDinnerText.Name = "mondayDinnerText";
             this.mondayDinnerText.ReadOnly = true;
             this.mondayDinnerText.Size = new System.Drawing.Size(271, 25);
@@ -2218,7 +2272,7 @@
             this.mondayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mondayLunchText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mondayLunchText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.mondayLunchText.Location = new System.Drawing.Point(298, 546);
+            this.mondayLunchText.Location = new System.Drawing.Point(298, 551);
             this.mondayLunchText.Name = "mondayLunchText";
             this.mondayLunchText.ReadOnly = true;
             this.mondayLunchText.Size = new System.Drawing.Size(274, 25);
@@ -2230,7 +2284,7 @@
             this.mondayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mondayBreakfastText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mondayBreakfastText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.mondayBreakfastText.Location = new System.Drawing.Point(298, 485);
+            this.mondayBreakfastText.Location = new System.Drawing.Point(298, 488);
             this.mondayBreakfastText.Name = "mondayBreakfastText";
             this.mondayBreakfastText.ReadOnly = true;
             this.mondayBreakfastText.Size = new System.Drawing.Size(277, 25);
@@ -2242,7 +2296,7 @@
             this.sundayDinnerText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sundayDinnerText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sundayDinnerText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.sundayDinnerText.Location = new System.Drawing.Point(298, 356);
+            this.sundayDinnerText.Location = new System.Drawing.Point(298, 359);
             this.sundayDinnerText.Name = "sundayDinnerText";
             this.sundayDinnerText.ReadOnly = true;
             this.sundayDinnerText.Size = new System.Drawing.Size(262, 25);
@@ -2254,7 +2308,7 @@
             this.sundayLunchText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sundayLunchText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sundayLunchText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.sundayLunchText.Location = new System.Drawing.Point(298, 293);
+            this.sundayLunchText.Location = new System.Drawing.Point(299, 296);
             this.sundayLunchText.Name = "sundayLunchText";
             this.sundayLunchText.ReadOnly = true;
             this.sundayLunchText.Size = new System.Drawing.Size(262, 25);
@@ -2266,7 +2320,7 @@
             this.sundayBreakfastText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sundayBreakfastText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sundayBreakfastText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.sundayBreakfastText.Location = new System.Drawing.Point(298, 231);
+            this.sundayBreakfastText.Location = new System.Drawing.Point(298, 234);
             this.sundayBreakfastText.Name = "sundayBreakfastText";
             this.sundayBreakfastText.ReadOnly = true;
             this.sundayBreakfastText.Size = new System.Drawing.Size(263, 25);
@@ -2728,6 +2782,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1873, 1323);
             this.Controls.Add(this.MealPlanPanel);
+            this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.RecipePanel);
             this.Controls.Add(this.AccountPanel);
             this.Controls.Add(this.FridgePanel);
@@ -2735,7 +2790,6 @@
             this.Controls.Add(this.RecipeInfoPanel);
             this.Controls.Add(this.GroceryPanel);
             this.Controls.Add(this.AddToMealPlanPanel);
-            this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.AddFridgeItemPanel);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.AddGroceryItemPanel);
@@ -2969,6 +3023,10 @@
         private System.Windows.Forms.TextBox AddFridgeItemText;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label UsedItemsInFridgeLabel;
+        private System.Windows.Forms.Label ItemsInGroceryListLabel;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label66;
     }
 }
 

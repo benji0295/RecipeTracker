@@ -273,6 +273,7 @@
             this.CreatePasswordTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CreatePasswordTextBox.Location = new System.Drawing.Point(247, 456);
             this.CreatePasswordTextBox.Name = "CreatePasswordTextBox";
+            this.CreatePasswordTextBox.PasswordChar = '●';
             this.CreatePasswordTextBox.Size = new System.Drawing.Size(406, 31);
             this.CreatePasswordTextBox.TabIndex = 8;
             // 
@@ -281,6 +282,7 @@
             this.ConfirmPasswordTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(247, 535);
             this.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
+            this.ConfirmPasswordTextBox.PasswordChar = '●';
             this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(406, 31);
             this.ConfirmPasswordTextBox.TabIndex = 7;
             // 
@@ -300,7 +302,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
-            this.label9.Location = new System.Drawing.Point(46, 538);
+            this.label9.Location = new System.Drawing.Point(31, 539);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(195, 24);
             this.label9.TabIndex = 5;
@@ -311,7 +313,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
-            this.label8.Location = new System.Drawing.Point(126, 462);
+            this.label8.Location = new System.Drawing.Point(117, 463);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 24);
             this.label8.TabIndex = 4;
@@ -383,8 +385,9 @@
             this.ConfirmNewPassText.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ConfirmNewPassText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmNewPassText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.ConfirmNewPassText.Location = new System.Drawing.Point(313, 464);
+            this.ConfirmNewPassText.Location = new System.Drawing.Point(339, 464);
             this.ConfirmNewPassText.Name = "ConfirmNewPassText";
+            this.ConfirmNewPassText.PasswordChar = '●';
             this.ConfirmNewPassText.Size = new System.Drawing.Size(301, 32);
             this.ConfirmNewPassText.TabIndex = 8;
             // 
@@ -393,8 +396,9 @@
             this.ResetPasswordText.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ResetPasswordText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetPasswordText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.ResetPasswordText.Location = new System.Drawing.Point(313, 357);
+            this.ResetPasswordText.Location = new System.Drawing.Point(339, 360);
             this.ResetPasswordText.Name = "ResetPasswordText";
+            this.ResetPasswordText.PasswordChar = '●';
             this.ResetPasswordText.Size = new System.Drawing.Size(301, 32);
             this.ResetPasswordText.TabIndex = 7;
             // 
@@ -403,7 +407,7 @@
             this.ResetPassUsernameText.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ResetPassUsernameText.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetPassUsernameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.ResetPassUsernameText.Location = new System.Drawing.Point(313, 255);
+            this.ResetPassUsernameText.Location = new System.Drawing.Point(339, 258);
             this.ResetPassUsernameText.Name = "ResetPassUsernameText";
             this.ResetPassUsernameText.Size = new System.Drawing.Size(301, 32);
             this.ResetPassUsernameText.TabIndex = 6;
@@ -424,7 +428,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
-            this.label13.Location = new System.Drawing.Point(141, 363);
+            this.label13.Location = new System.Drawing.Point(159, 365);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(156, 24);
             this.label13.TabIndex = 4;
@@ -435,7 +439,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
-            this.label12.Location = new System.Drawing.Point(185, 261);
+            this.label12.Location = new System.Drawing.Point(216, 262);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(112, 24);
             this.label12.TabIndex = 3;
@@ -446,7 +450,7 @@
             this.CancelResetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.CancelResetButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelResetButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.CancelResetButton.Location = new System.Drawing.Point(416, 596);
+            this.CancelResetButton.Location = new System.Drawing.Point(431, 596);
             this.CancelResetButton.Name = "CancelResetButton";
             this.CancelResetButton.Size = new System.Drawing.Size(198, 96);
             this.CancelResetButton.TabIndex = 2;
@@ -459,7 +463,7 @@
             this.ResetButtonPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(211)))));
             this.ResetButtonPassword.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButtonPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.ResetButtonPassword.Location = new System.Drawing.Point(130, 596);
+            this.ResetButtonPassword.Location = new System.Drawing.Point(155, 596);
             this.ResetButtonPassword.Name = "ResetButtonPassword";
             this.ResetButtonPassword.Size = new System.Drawing.Size(198, 96);
             this.ResetButtonPassword.TabIndex = 1;
@@ -483,9 +487,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 785);
-            this.Controls.Add(this.ResetPasswordPanel);
-            this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CreateAccountPanel);
+            this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.ResetPasswordPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.Text = "Login";

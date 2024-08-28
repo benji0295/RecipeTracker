@@ -42,6 +42,7 @@ namespace RecipeTracker
         private void createAccountLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LoginPanel.Visible = false;
+            ResetPasswordPanel.Visible = false;
             CreateAccountPanel.Visible = true;
         }
 
@@ -62,7 +63,7 @@ namespace RecipeTracker
 
             if (!AccountManager.AccountExists(username))
             {
-                if (passwordTextBox != ConfirmPasswordTextBox)
+                if (CreatePasswordTextBox.Text != ConfirmPasswordTextBox.Text)
                 {
                     MessageBox.Show("Passwords do not match. Please try again.");
                     return;
@@ -75,12 +76,26 @@ namespace RecipeTracker
             else
             {
                 MessageBox.Show("Account already exists. Please login or create a new account.");
+                CreateAccountPanel.Visible = false;
+                LoginPanel.Visible = true;
+                CreateUsernameTextBox.Text = "";
+                CreatePasswordTextBox.Text = "";
+                ConfirmPasswordTextBox.Text = "";
+                FirstNameTextBox.Text = "";
+                LastNameTextBox.Text = "";
+                EmailTextBox.Text = "";
             }
         }
 
         private void CancelCreateAccountButton_Click(object sender, EventArgs e)
         {
             CreateAccountPanel.Visible = false;
+            CreateUsernameTextBox.Text = "";
+            CreatePasswordTextBox.Text = "";
+            ConfirmPasswordTextBox.Text = "";
+            FirstNameTextBox.Text = "";
+            LastNameTextBox.Text = "";
+            EmailTextBox.Text = "";
             LoginPanel.Visible = true;
         }
 
@@ -112,6 +127,9 @@ namespace RecipeTracker
         private void CancelResetButton_Click(object sender, EventArgs e)
         {
             ResetPasswordPanel.Visible = false;
+            ResetPassUsernameText.Text = "";
+            ResetPasswordText.Text = "";
+            ConfirmNewPassText.Text = "";
             LoginPanel.Visible = true;
         }
     }
